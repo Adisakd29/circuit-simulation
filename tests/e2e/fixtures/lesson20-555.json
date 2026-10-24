@@ -1,0 +1,316 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 30,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "2026-10-21T05:43:46.719Z",
+ "title": "บทที่ 20 ไอซี 555",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PS1",
+    "label": "PS1",
+    "kind": "dcsupply",
+    "placement": {
+     "kind": "table",
+     "x": -40,
+     "z": -102,
+     "rotation": 0
+    },
+    "params": {
+     "voltage": 5,
+     "currentLimit": 0.5,
+     "internalResistance": 0.01,
+     "outputOn": true
+    }
+   },
+   {
+    "id": "U1",
+    "label": "U1",
+    "kind": "timer555",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "f10",
+     "rotation": 0
+    },
+    "params": {
+     "model": "NE555",
+     "outHighDrop": 1.2,
+     "outHighResistance": 5,
+     "outLowResistance": 15,
+     "dischargeResistance": 18,
+     "quiescentResistance": 1800,
+     "minSupply": 4.5,
+     "maxSupply": 16,
+     "maxOutputCurrent": 0.2
+    }
+   },
+   {
+    "id": "RA",
+    "label": "RA",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "tp11",
+     "rotation": 90
+    },
+    "params": {
+     "resistance": 1000,
+     "powerRating": 0.25,
+     "span": 3
+    }
+   },
+   {
+    "id": "RB",
+    "label": "RB",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "c11",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 10000,
+     "powerRating": 0.25,
+     "span": 4
+    }
+   },
+   {
+    "id": "R1",
+    "label": "R1",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "i12",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 330,
+     "powerRating": 0.25,
+     "span": 4
+    }
+   },
+   {
+    "id": "LED1",
+    "label": "LED1",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "g16",
+     "rotation": 0
+    },
+    "params": {
+     "color": "red",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   },
+   {
+    "id": "C1",
+    "label": "C1",
+    "kind": "capacitor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j11",
+     "rotation": 90
+    },
+    "params": {
+     "capacitance": 0.000047,
+     "ratedVoltage": 16,
+     "polarized": true,
+     "initialVoltage": 0,
+     "span": 2
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "w_mvhosh0e3ubuelz",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhosh0e3vp952x",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhosh0e3wqye9x",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhosh0e3x3v5zm",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhosh0e3ypzppr",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a10"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp10"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhosh0e3zafvv0",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j10"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn10"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhosh0e40vcwbr",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b15"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b12"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhosh0e41ffvjc",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "d12"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g11"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhosh0f42l99vu",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j17"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn17"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhosh0f43eczst",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j13"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp14"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": "timer555",
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

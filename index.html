@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Circuit Lab 3D</title>
+  <meta name="description" content="ห้องปฏิบัติการวงจรเสมือน 3 มิติ สำหรับนักเรียน ปวช./ปวส." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- ฟอนต์จาก Google Fonts โหลดแบบไม่บล็อกหน้า: ถ้าเครือข่ายบล็อก/ช้า หน้ายังเริ่มได้ทันทีด้วยฟอนต์สำรองของเครื่อง -->
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="/src/styles.css" />
+</head>
+<body>
+  <div id="app" class="app">
+    <header class="topbar" role="toolbar" aria-label="แถบเครื่องมือหลัก">
+      <button class="icon-btn panel-toggle" id="btn-left" aria-label="เปิดคลังอุปกรณ์และแลป"><span class="fb">อุปกรณ์</span></button>
+      <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Circuit Lab <b>3D</b></span></div>
+      <div class="tb-more" id="tb-more">
+      <div class="tb-group" aria-label="ไฟล์">
+        <button class="tb" id="btn-new" title="งานใหม่ (New)"><span class="fb">New</span></button>
+        <button class="tb" id="btn-open" title="เปิดไฟล์ JSON (Open)"><span class="fb">Open</span></button>
+        <button class="tb" id="btn-save" title="บันทึกเป็นไฟล์ JSON (Save, Ctrl+S)"><span class="fb">Save</span></button>
+      </div>
+      <div class="tb-group" aria-label="มุมมอง">
+        <button class="tb" id="btn-reset" title="รีเซ็ตมุมกล้อง (Reset view)"><span class="fb">Reset view</span></button>
+        <div class="seg" role="radiogroup" aria-label="มุมมองกล้อง">
+          <button id="btn-persp" role="radio" title="มุมมอง Perspective"><span class="fb">3D</span></button>
+          <button id="btn-top" role="radio" title="มุมมองจากด้านบน (Top view)"><span class="fb">Top</span></button>
+        </div>
+        <button class="tb" id="btn-quality" title="คุณภาพภาพ: สูง = แสงสะท้อนโลหะและเงา, ประหยัด = เร็วกว่าบนมือถือ/เครื่องช้า"><span class="fb">ภาพ</span></button>
+      </div>
+      </div>
+      <div class="tb-group" aria-label="แก้ไข">
+        <button class="tb" id="btn-undo" title="ย้อนกลับ (Undo, Ctrl+Z)"><span class="fb">Undo</span></button>
+        <button class="tb" id="btn-redo" title="ทำซ้ำ (Redo, Ctrl+Y)"><span class="fb">Redo</span></button>
+      </div>
+      <div class="tb-group" aria-label="การจำลอง">
+        <button class="tb run" id="btn-run" title="เริ่มจำลอง (Run)"><span class="fb">Run</span></button>
+        <button class="tb" id="btn-stop" title="หยุดจำลอง (Stop)"><span class="fb">Stop</span></button>
+      </div>
+      <div class="tb-spacer"></div>
+      <input id="doc-title" class="doc-title" aria-label="ชื่องาน" maxlength="60" />
+      <button class="icon-btn only-mobile" id="btn-more" aria-label="เมนูไฟล์และมุมมอง" aria-expanded="false" aria-controls="tb-more"><span class="fb">เมนู</span></button>
+      <button class="icon-btn panel-toggle" id="btn-right" aria-label="เปิดแผงคุณสมบัติและผลการวัด"><span class="fb">ผล</span></button>
+      <input type="file" id="file-input" accept="application/json,.json" hidden />
+    </header>
+
+    <aside class="panel left" id="left" aria-label="คลังอุปกรณ์และแลป">
+      <div class="tabs" role="tablist">
+        <button role="tab" id="tab-lib" aria-selected="true">อุปกรณ์</button>
+        <button role="tab" id="tab-lessons" aria-selected="false">แลป</button>
+        <button class="icon-btn only-mobile drawer-close" data-close="left" aria-label="ปิด"><span class="fb">✕</span></button>
+      </div>
+      <div class="tab-body" id="lib-body"><p class="empty">กำลังโหลดคลังอุปกรณ์…</p></div>
+      <div class="tab-body" id="lessons-body" hidden></div>
+    </aside>
+
+    <main class="stage" id="stage">
+      <div class="tools" role="radiogroup" aria-label="เครื่องมือในพื้นที่ทำงาน" id="tools"></div>
+      <div class="hint" id="hint" role="status" aria-live="polite"></div>
+      <div class="quick" id="quick"></div>
+      <div class="sim-banner" id="sim-banner" hidden></div>
+      <div class="boot-status" id="boot-status" role="status">กำลังโหลด Circuit Lab 3D…</div>
+    </main>
+
+    <aside class="panel right" id="right" aria-label="คุณสมบัติและผลการวัด">
+      <div class="panel-head"><h2 id="right-title">คุณสมบัติ</h2><button class="icon-btn only-mobile drawer-close" data-close="right" aria-label="ปิด"><span class="fb">✕</span></button></div>
+      <div id="props" class="props"></div>
+      <section class="results" aria-labelledby="results-h">
+        <h2 id="results-h">ผลการวัดและการวินิจฉัย</h2>
+        <div id="results"></div>
+      </section>
+    </aside>
+
+    <footer class="bottombar" id="bottom" aria-label="เครื่องมือวัดและสถานะ">
+      <div class="meters" id="meters"></div>
+      <div class="status">
+        <span id="sim-status" class="pill"></span>
+        <span id="save-status" class="pill subtle"></span>
+        <span id="status-msg" class="msg" role="status" aria-live="polite"></span>
+      </div>
+    </footer>
+    <div class="scrim" id="scrim" hidden></div>
+    <dialog id="dialog"></dialog>
+  </div>
+  <script>
+    // ถ้าสคริปต์หลักโหลด/ทำงานไม่ได้ (เครือข่ายขัดข้อง, เบราว์เซอร์เก่ามาก) แสดงข้อความแทนหน้าที่ปุ่มกดไม่ได้
+    setTimeout(function () {
+      if (document.documentElement.getAttribute('data-boot')) return;
+      var el = document.getElementById('boot-status');
+      if (!el) return;
+      el.className = 'boot-status err';
+      el.innerHTML = '<b>โหลดโปรแกรมไม่สำเร็จ</b><p>สคริปต์หลักยังไม่ทำงานหลังรอ 15 วินาที (อินเทอร์เน็ตช้า/ขาด หรือเบราว์เซอร์ไม่รองรับ JavaScript รุ่นใหม่) ปุ่มต่าง ๆ จึงยังใช้ไม่ได้</p><button type="button" onclick="location.reload()">โหลดหน้าใหม่</button>';
+    }, 15000);
+  </script>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

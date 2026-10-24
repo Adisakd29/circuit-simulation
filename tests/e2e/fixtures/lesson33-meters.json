@@ -1,0 +1,185 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 30,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "2026-10-22T00:00:00.000Z",
+ "title": "แลป 33 มัลติมิเตอร์",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PS1",
+    "label": "PS1",
+    "kind": "dcsupply",
+    "placement": {
+     "kind": "table",
+     "x": -40,
+     "z": -102,
+     "rotation": 0
+    },
+    "params": {
+     "voltage": 10,
+     "currentLimit": 0.2,
+     "internalResistance": 0.01,
+     "outputOn": true
+    }
+   },
+   {
+    "id": "R1",
+    "label": "R1",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "a5",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 100000,
+     "powerRating": 0.25,
+     "span": 4
+    }
+   },
+   {
+    "id": "R2",
+    "label": "R2",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "b9",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 100000,
+     "powerRating": 0.25,
+     "span": 4
+    }
+   },
+   {
+    "id": "DMM1",
+    "label": "DMM1",
+    "kind": "dmm",
+    "placement": {
+     "kind": "table",
+     "x": 42,
+     "z": -0.5,
+     "rotation": 0
+    },
+    "params": {
+     "mode": "dcv",
+     "inputResistance": 10000000,
+     "mvInputResistance": 1000000,
+     "shuntA": 0.01,
+     "shuntMa": 1,
+     "fuseA": 11,
+     "fuseMa": 0.44,
+     "ohmVoc": 1.2,
+     "ohmRs": 1000
+    }
+   },
+   {
+    "id": "VOM1",
+    "label": "VOM1",
+    "kind": "vom",
+    "placement": {
+     "kind": "table",
+     "x": -50.5,
+     "z": 1,
+     "rotation": 0
+    },
+    "params": {
+     "sel": "dcv10",
+     "sensitivityDC": 20000,
+     "sensitivityAC": 9000,
+     "battery": 3,
+     "centerOhm": 20,
+     "fuse": 0.5
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "wp",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "d5"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wn",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "d13"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wdv",
+    "a": {
+     "kind": "pin",
+     "partId": "DMM1",
+     "pin": "V"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "c9"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wdc",
+    "a": {
+     "kind": "pin",
+     "partId": "DMM1",
+     "pin": "COM"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "c13"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": "meters",
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

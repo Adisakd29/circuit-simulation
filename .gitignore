@@ -1,0 +1,7 @@
+node_modules/
+dist/
+dist-single/
+artifact/
+e2e-out/
+src/mcu/firmware-data.ts
+tests/tmp/

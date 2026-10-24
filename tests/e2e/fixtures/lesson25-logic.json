@@ -1,0 +1,340 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 30,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "2026-10-21T12:02:59.734Z",
+ "title": "บทที่ 25 เกตตรรกะ 74HC",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PS1",
+    "label": "PS1",
+    "kind": "dcsupply",
+    "placement": {
+     "kind": "table",
+     "x": -40,
+     "z": -102,
+     "rotation": 0
+    },
+    "params": {
+     "voltage": 5,
+     "currentLimit": 0.1,
+     "internalResistance": 0.01,
+     "outputOn": true
+    }
+   },
+   {
+    "id": "U1",
+    "label": "U1",
+    "kind": "logic",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "f10",
+     "rotation": 0
+    },
+    "params": {
+     "outputResistance": 50,
+     "vMin": 2,
+     "vMax": 6,
+     "maxOutputCurrent": 0.025,
+     "model": "74HC08"
+    }
+   },
+   {
+    "id": "RA",
+    "label": "RA",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j10",
+     "rotation": 90
+    },
+    "params": {
+     "resistance": 10000,
+     "powerRating": 0.25,
+     "span": 2
+    }
+   },
+   {
+    "id": "SA",
+    "label": "SA",
+    "kind": "switch",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h20",
+     "rotation": 0
+    },
+    "params": {
+     "closed": true,
+     "onResistance": 0.05
+    }
+   },
+   {
+    "id": "SB",
+    "label": "SB",
+    "kind": "switch",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h24",
+     "rotation": 0
+    },
+    "params": {
+     "closed": false,
+     "onResistance": 0.05
+    }
+   },
+   {
+    "id": "RL",
+    "label": "RL",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "i12",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 470,
+     "powerRating": 0.25,
+     "span": 5
+    }
+   },
+   {
+    "id": "LED1",
+    "label": "LED1",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "g17",
+     "rotation": 0
+    },
+    "params": {
+     "color": "red",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   },
+   {
+    "id": "RB",
+    "label": "RB",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j11",
+     "rotation": 90
+    },
+    "params": {
+     "resistance": 10000,
+     "powerRating": 0.25,
+     "span": 2
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "w_mvi2c5cib585yei",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi2c5cib6wyjxs",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi2c5cib7g33ae",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi2c5cib8pc1ls",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi2c5cib9jorkv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a10"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp10"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi2c5ciba2dlty",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j16"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn16"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi2c5cjbbgglx7",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j20"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp20"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi2c5ckbcez6hy",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j22"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i10"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi2c5clbdpelu8",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j24"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp24"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi2c5clbe2l03i",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j26"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i11"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi2c5clbf5hqsc",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j18"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn18"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": "logic",
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

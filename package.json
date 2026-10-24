@@ -1,0 +1,28 @@
+{
+  "name": "circuit-lab-3d",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Circuit Lab 3D — ห้องปฏิบัติการวงจรเสมือน (ระยะที่ 1)",
+  "scripts": {
+    "dev": "node scripts/embed-firmware.mjs && vite",
+    "build": "node scripts/embed-firmware.mjs && tsc --noEmit && vite build",
+    "build:single": "node scripts/embed-firmware.mjs && tsc --noEmit && vite build --mode single",
+    "preview": "vite preview",
+    "test": "node scripts/embed-firmware.mjs && vitest run",
+    "typecheck": "node scripts/embed-firmware.mjs && tsc --noEmit",
+    "build:artifact": "npm run build:single && node scripts/make-artifact.mjs",
+    "firmware": "node scripts/embed-firmware.mjs"
+  },
+  "dependencies": {
+    "rp2040js": "1.4.1",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@types/three": "^0.186.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.4",
+    "vite-plugin-singlefile": "^2.3.4",
+    "vitest": "^5.0.5"
+  }
+}

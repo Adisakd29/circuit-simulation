@@ -1,0 +1,176 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 30,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "2026-10-22T07:20:52.314Z",
+ "title": "บทที่ 29 HC-SR04",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PICO1",
+    "label": "PICO1",
+    "kind": "pico",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h1",
+     "rotation": 0
+    },
+    "params": {
+     "code": "from machine import Pin, time_pulse_us\nimport time\ntrig = Pin(14, Pin.OUT)\necho = Pin(15, Pin.IN)\ntrig.value(0)\nwhile True:\n    trig.value(1)\n    time.sleep_us(10)\n    trig.value(0)\n    t = time_pulse_us(echo, 1, 30000)\n    if t > 0:\n        print(\"D =\", round(t / 58, 1))\n    else:\n        print(\"ไม่มีวัตถุ\", t)\n    time.sleep_ms(60)\n",
+     "autorun": true
+    }
+   },
+   {
+    "id": "US1",
+    "label": "US1",
+    "kind": "sonar",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j21",
+     "rotation": 0
+    },
+    "params": {
+     "model": "HC-SR04",
+     "distance": 20,
+     "temperature": 25,
+     "vMin": 4.5,
+     "vMax": 5.5
+    }
+   },
+   {
+    "id": "R1",
+    "label": "R1",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h23",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 1000,
+     "powerRating": 0.25,
+     "span": 4
+    }
+   },
+   {
+    "id": "R2",
+    "label": "R2",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "g27",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 2000,
+     "powerRating": 0.25,
+     "span": 3
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "w_mvj7p6qf1g2zxv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i21"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a1"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvj7p6qg2p1g05",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i24"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a3"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvj7p6qg3lehv4",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i22"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j19"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvj7p6qh4nfk9y",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i27"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j20"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvj7p6qi5cqydq",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i30"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g24"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": "sonar",
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

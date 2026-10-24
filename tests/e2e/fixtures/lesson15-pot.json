@@ -1,0 +1,137 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 30,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "2026-10-21T01:13:21.461Z",
+ "title": "บทที่ 15 VR",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PS1",
+    "label": "PS1",
+    "kind": "dcsupply",
+    "placement": {
+     "kind": "table",
+     "x": -40,
+     "z": -102,
+     "rotation": 0
+    },
+    "params": {
+     "voltage": 5,
+     "currentLimit": 1,
+     "internalResistance": 0.01,
+     "outputOn": true
+    }
+   },
+   {
+    "id": "VR1",
+    "label": "VR1",
+    "kind": "potentiometer",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "e10",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 10000,
+     "position": 0.5,
+     "endResistance": 3,
+     "powerRating": 0.5
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "w_mvhf4pis1ukxdk",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhf4pis2iszyx",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhf4pit3rk9ry",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a10"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp10"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhf4pit4ydakb",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a12"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn12"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": {
+    "kind": "hole",
+    "boardId": "bb1",
+    "hole": "c11"
+   },
+   "black": {
+    "kind": "hole",
+    "boardId": "bb1",
+    "hole": "tn26"
+   }
+  }
+ },
+ "studentWork": {
+  "lessonId": "pot",
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

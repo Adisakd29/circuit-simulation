@@ -1,0 +1,292 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 30,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "2026-10-20T18:09:34.603Z",
+ "title": "บทที่ 14 slew rate",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PSP",
+    "label": "PSP",
+    "kind": "dcsupply",
+    "placement": {
+     "kind": "table",
+     "x": -40,
+     "z": -102,
+     "rotation": 0
+    },
+    "params": {
+     "voltage": 12,
+     "currentLimit": 0.1,
+     "internalResistance": 0.01,
+     "outputOn": true
+    }
+   },
+   {
+    "id": "PSN",
+    "label": "PSN",
+    "kind": "dcsupply",
+    "placement": {
+     "kind": "table",
+     "x": -92,
+     "z": -102,
+     "rotation": 0
+    },
+    "params": {
+     "voltage": 12,
+     "currentLimit": 0.1,
+     "internalResistance": 0.01,
+     "outputOn": true
+    }
+   },
+   {
+    "id": "U1",
+    "label": "U1",
+    "kind": "opamp",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "f10",
+     "rotation": 0
+    },
+    "params": {
+     "model": "LM741",
+     "gain": 200000,
+     "outputResistance": 75,
+     "headroom": 1.5,
+     "maxSupply": 36,
+     "inputResistance": 2000000,
+     "quiescentResistance": 14000,
+     "gbw": 1000000,
+     "slewRate": 500000
+    }
+   },
+   {
+    "id": "FG1",
+    "label": "FG1",
+    "kind": "fgen",
+    "placement": {
+     "kind": "table",
+     "x": 45,
+     "z": -103,
+     "rotation": 0
+    },
+    "params": {
+     "wave": "square",
+     "frequency": 5000,
+     "vpp": 10,
+     "offset": 0,
+     "outputImpedance": 50,
+     "outputOn": true
+    }
+   },
+   {
+    "id": "OSC1",
+    "label": "OSC1",
+    "kind": "scope",
+    "placement": {
+     "kind": "table",
+     "x": -0.5,
+     "z": 59.5,
+     "rotation": 0
+    },
+    "params": {
+     "inputResistance": 1000000,
+     "timeDiv": 0.00001,
+     "vdiv1": 2,
+     "vdiv2": 2,
+     "ch1On": true,
+     "ch2On": true,
+     "trigSource": "ch1",
+     "trigLevel": 0,
+     "trigSlope": "rise",
+     "bodeStart": 100,
+     "bodeStop": 1000000,
+     "bodePpd": 20,
+     "bodeRef": "ch1"
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "w_mvgzzq161cznv1",
+    "a": {
+     "kind": "pin",
+     "partId": "PSP",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a11"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvgzzq162ke154",
+    "a": {
+     "kind": "pin",
+     "partId": "PSP",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvgzzq163ycypj",
+    "a": {
+     "kind": "pin",
+     "partId": "PSN",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn3"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvgzzq164ppqax",
+    "a": {
+     "kind": "pin",
+     "partId": "PSN",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j13"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvgzzq16552u75",
+    "a": {
+     "kind": "pin",
+     "partId": "FG1",
+     "pin": "OUT"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j12"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvgzzq166s0yz3",
+    "a": {
+     "kind": "pin",
+     "partId": "FG1",
+     "pin": "COM"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn4"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvgzzq167n7y76",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i12"
+    },
+    "b": {
+     "kind": "pin",
+     "partId": "OSC1",
+     "pin": "CH1"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvgzzq178u0fnn",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b12"
+    },
+    "b": {
+     "kind": "pin",
+     "partId": "OSC1",
+     "pin": "CH2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvgzzq179fjk75",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn6"
+    },
+    "b": {
+     "kind": "pin",
+     "partId": "OSC1",
+     "pin": "GND"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvgzzq17ammiht",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "c12"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h11"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": "slew",
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

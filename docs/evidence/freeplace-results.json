@@ -1,0 +1,1827 @@
+[
+ {
+  "name": "desktop-1366: ไม่มี scroll แนวนอนทั้งหน้า",
+  "pass": true,
+  "detail": "1366"
+ },
+ {
+  "name": "desktop-1366: แถบเครื่องมือด้านบนไม่ล้น",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1366: ปุ่มที่มองเห็นทุกปุ่มมีไอคอน/ข้อความ",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "desktop-1366: ปุ่มที่มองเห็นทุกปุ่มมีชื่อสำหรับผู้ใช้ (aria-label/title/ข้อความ)",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "desktop-1366: คลังอุปกรณ์มีรายการ",
+  "pass": true,
+  "detail": "16"
+ },
+ {
+  "name": "desktop-1366: แถบเครื่องมือในพื้นที่ทำงานอยู่ในกรอบและไม่ทับกัน",
+  "pass": true,
+  "detail": "[[284, 64, 338, 342.375], [980, 64, 1034, 166], [272, 52, 1046, 676]]"
+ },
+ {
+  "name": "desktop-1366: แท็บบททดลองแสดงรายการ",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1366: ลากตัวต้านทานจากคลังไปวางบนโต๊ะนอกบอร์ด",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -6, \"z\": 13, \"rotation\": 0} tip=ปล่อยเพื่อวางบนโต๊ะ · ขายังไม่ต่อกับวงจร (ต่อสายเข้าขาได้)"
+ },
+ {
+  "name": "desktop-1366: ระหว่างลากมีป้ายบอกว่า \"วางบนโต๊ะ\"",
+  "pass": true,
+  "detail": "ปล่อยเพื่อวางบนโต๊ะ · ขายังไม่ต่อกับวงจร (ต่อสายเข้าขาได้)"
+ },
+ {
+  "name": "desktop-1366: ตำแหน่งที่ปล่อย = ตำแหน่งที่วาง (กึ่งกลางอุปกรณ์ห่างจุดปล่อย ≤ 1 ช่อง)",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -6, \"z\": 13, \"rotation\": 0} drop=(-4,13)"
+ },
+ {
+  "name": "desktop-1366: การลากหนึ่งครั้ง = Undo หนึ่งรายการ",
+  "pass": true,
+  "detail": "[True, 'วาง R1 บนโต๊ะ']"
+ },
+ {
+  "name": "desktop-1366: ลากแหล่งจ่ายมาวางบนโต๊ะ",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -26, \"z\": -2, \"rotation\": 0}"
+ },
+ {
+  "name": "desktop-1366: ต่อสายจากขั้วแหล่งจ่ายเข้าขาตัวต้านทานบนโต๊ะ",
+  "pass": true,
+  "detail": "[{\"id\": \"w_mvgq02b231hk5v\", \"a\": {\"kind\": \"pin\", \"partId\": \"dcsupply_mvgq00vl2hzuxw\", \"pin\": \"pos\"}, \"b\": {\"kind\": \"pin\", \"partId\": \"resistor_mvgpzxi41lyqzn\", \"pin\": \"1\"}, \"color\": \"#e53935\", \"arc\": 2, \"bend\": 0}, {\"id\": \"w_mvgq02o84h2h0p\", \"a\": {\"kind\": \"pin\", \"partId\": \"resistor_mvgpzxi41lyqzn\", \""
+ },
+ {
+  "name": "desktop-1366: ต่อสายจากขาตัวต้านทานบนโต๊ะเข้ารูบนบอร์ด",
+  "pass": true,
+  "detail": "ต่อสาย R1 ขา 2 → รู j20"
+ },
+ {
+  "name": "desktop-1366: เน็ต: ขา R ขา 2 = รู f20 (สายเชื่อมจริง)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1366: ลากตัวต้านทานที่มีสายไปที่ใหม่บนโต๊ะ",
+  "pass": true,
+  "detail": "{'kind': 'table', 'x': -6, 'z': 13, 'rotation': 0} → {'kind': 'table', 'x': 0, 'z': 13, 'rotation': 0}"
+ },
+ {
+  "name": "desktop-1366: สายยังอ้างขาเดิม (pin id ไม่เปลี่ยน) หลังย้าย",
+  "pass": true,
+  "detail": "{\"kind\":\"pin\",\"partId\":\"resistor_mvgpzxi41lyqzn\",\"pin\":\"1\"}"
+ },
+ {
+  "name": "desktop-1366: ปลายสายวาดที่ตำแหน่งขาใหม่",
+  "pass": true,
+  "detail": "0"
+ },
+ {
+  "name": "desktop-1366: เน็ตหลังย้ายยังถูกต้อง (+ ↔ ขา 1)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1366: ลากจากโต๊ะไปเสียบบอร์ด (ขาลงรู)",
+  "pass": true,
+  "detail": "{\"kind\": \"board\", \"boardId\": \"bb1\", \"anchor\": \"b8\", \"rotation\": 0} tip=ปล่อยเพื่อเสียบลงบอร์ด · ขาลงรู b8, b12"
+ },
+ {
+  "name": "desktop-1366: ระหว่างลากเหนือรูมีป้าย \"เสียบลงบอร์ด\"",
+  "pass": true,
+  "detail": "ปล่อยเพื่อเสียบลงบอร์ด · ขาลงรู b8, b12"
+ },
+ {
+  "name": "desktop-1366: สายที่ต่อขาไว้ยังต่อขาเดิมหลังเสียบบอร์ด + เน็ตรวมกลุ่มรู",
+  "pass": true,
+  "detail": "b8"
+ },
+ {
+  "name": "desktop-1366: Undo การย้ายลงบอร์ด → กลับมาอยู่บนโต๊ะ",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1366: Redo → กลับไปอยู่บนบอร์ด",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1366: ต่อสายจากรูข้างขา 2 → ขั้วลบ",
+  "pass": true,
+  "detail": "ต่อสาย รู c12 → PS1 ขั้ว − (ดำ)"
+ },
+ {
+  "name": "desktop-1366: ยกจากบอร์ดออกมาวางบนโต๊ะ",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -7, \"z\": 13.5, \"rotation\": 0}"
+ },
+ {
+  "name": "desktop-1366: สายที่เสียบรูยังอยู่ในรูเดิม",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1366: ขา 2 ไม่เชื่อมกับขั้วลบแล้ว (ยกออกแล้วตัดจริง)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1366: ยกเลิกระหว่างลาก (Esc) → ตำแหน่งเดิม ไม่เพิ่ม Undo",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1366: ลากจากคลังแล้วปล่อยนอกพื้นที่ทำงาน = ยกเลิก",
+  "pass": true,
+  "detail": "ยกเลิกการวาง (ปล่อยนอกพื้นที่ทำงาน)"
+ },
+ {
+  "name": "desktop-1366: วาง Raspberry Pi Pico บนโต๊ะข้างบอร์ด",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -9.5, \"z\": -21.5, \"rotation\": 0} วาง PICO1 บนโต๊ะ"
+ },
+ {
+  "name": "desktop-1366: ต่อสาย Pico GP15 → รู j26 (เน็ตเดียวกับ f26)",
+  "pass": true,
+  "detail": "ต่อสาย PICO1 ขา 20 GP15 → รู j26"
+ },
+ {
+  "name": "desktop-1366: เลือกเบรดบอร์ดได้",
+  "pass": true,
+  "detail": "{\"t\": \"board\", \"id\": \"bb1\"}"
+ },
+ {
+  "name": "desktop-1366: ลากย้ายเบรดบอร์ดทั้งแผ่น",
+  "pass": true,
+  "detail": "{'id': 'bb1', 'model': 'CL-400', 'x': 0, 'z': 0} → {'id': 'bb1', 'model': 'CL-400', 'x': 3, 'z': -1} ย้ายเบรดบอร์ด"
+ },
+ {
+  "name": "desktop-1366: หลังย้ายบอร์ด สาย Pico GP15 ยังเชื่อม f26",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1366: Save/Load: อุปกรณ์บนโต๊ะ บนบอร์ด สายทุกเส้น และตำแหน่งบอร์ดครบ",
+  "pass": true,
+  "detail": "parts 3/3 wires 4/4"
+ },
+ {
+  "name": "desktop-1366: แก้ค่าความต้านทานในแผงคุณสมบัติ",
+  "pass": true,
+  "detail": "2200"
+ },
+ {
+  "name": "desktop-1366: ช่องที่กำลังแก้อยู่ในส่วนที่มองเห็น",
+  "pass": true,
+  "detail": "[True, True]"
+ },
+ {
+  "name": "desktop-1366→หมุนจอ 768×1366: ไม่มี scroll แนวนอนทั้งหน้า",
+  "pass": true,
+  "detail": "768"
+ },
+ {
+  "name": "desktop-1366→หมุนจอ 768×1366: แถบเครื่องมือด้านบนไม่ล้น",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1366→หมุนจอ 768×1366: ปุ่มที่มองเห็นทุกปุ่มมีไอคอน/ข้อความ",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "desktop-1366→หมุนจอ 768×1366: ปุ่มที่มองเห็นทุกปุ่มมีชื่อสำหรับผู้ใช้ (aria-label/title/ข้อความ)",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "desktop-1366→หมุนจอ 768×1366: คลังอุปกรณ์มีรายการ",
+  "pass": true,
+  "detail": "16"
+ },
+ {
+  "name": "desktop-1366→หมุนจอ 768×1366: แถบเครื่องมือในพื้นที่ทำงานอยู่ในกรอบและไม่ทับกัน",
+  "pass": true,
+  "detail": "[[8, 60, 254, 114], [658, 60, 760, 114], [0, 52, 768, 1258.25]]"
+ },
+ {
+  "name": "desktop-1366: หมุนจอแล้ววงจร/ตำแหน่ง/สายเหมือนเดิม",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1366: Run จำลองได้",
+  "pass": true,
+  "detail": "จำลองตามเวลา"
+ },
+ {
+  "name": "desktop-1366: ไม่มี JavaScript error",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "desktop-1920: ไม่มี scroll แนวนอนทั้งหน้า",
+  "pass": true,
+  "detail": "1920"
+ },
+ {
+  "name": "desktop-1920: แถบเครื่องมือด้านบนไม่ล้น",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1920: ปุ่มที่มองเห็นทุกปุ่มมีไอคอน/ข้อความ",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "desktop-1920: ปุ่มที่มองเห็นทุกปุ่มมีชื่อสำหรับผู้ใช้ (aria-label/title/ข้อความ)",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "desktop-1920: คลังอุปกรณ์มีรายการ",
+  "pass": true,
+  "detail": "16"
+ },
+ {
+  "name": "desktop-1920: แถบเครื่องมือในพื้นที่ทำงานอยู่ในกรอบและไม่ทับกัน",
+  "pass": true,
+  "detail": "[[284, 64, 338, 342.375], [1534, 64, 1588, 166], [272, 52, 1600, 988]]"
+ },
+ {
+  "name": "desktop-1920: แท็บบททดลองแสดงรายการ",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1920: ลากตัวต้านทานจากคลังไปวางบนโต๊ะนอกบอร์ด",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -6, \"z\": 13, \"rotation\": 0} tip=ปล่อยเพื่อวางบนโต๊ะ · ขายังไม่ต่อกับวงจร (ต่อสายเข้าขาได้)"
+ },
+ {
+  "name": "desktop-1920: ระหว่างลากมีป้ายบอกว่า \"วางบนโต๊ะ\"",
+  "pass": true,
+  "detail": "ปล่อยเพื่อวางบนโต๊ะ · ขายังไม่ต่อกับวงจร (ต่อสายเข้าขาได้)"
+ },
+ {
+  "name": "desktop-1920: ตำแหน่งที่ปล่อย = ตำแหน่งที่วาง (กึ่งกลางอุปกรณ์ห่างจุดปล่อย ≤ 1 ช่อง)",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -6, \"z\": 13, \"rotation\": 0} drop=(-4,13)"
+ },
+ {
+  "name": "desktop-1920: การลากหนึ่งครั้ง = Undo หนึ่งรายการ",
+  "pass": true,
+  "detail": "[True, 'วาง R1 บนโต๊ะ']"
+ },
+ {
+  "name": "desktop-1920: ลากแหล่งจ่ายมาวางบนโต๊ะ",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -26, \"z\": -2, \"rotation\": 0}"
+ },
+ {
+  "name": "desktop-1920: ต่อสายจากขั้วแหล่งจ่ายเข้าขาตัวต้านทานบนโต๊ะ",
+  "pass": true,
+  "detail": "[{\"id\": \"w_mvgq2aqt336vu8\", \"a\": {\"kind\": \"pin\", \"partId\": \"dcsupply_mvgq29sz210bns\", \"pin\": \"pos\"}, \"b\": {\"kind\": \"pin\", \"partId\": \"resistor_mvgq24n11yr49f\", \"pin\": \"1\"}, \"color\": \"#e53935\", \"arc\": 2, \"bend\": 0}, {\"id\": \"w_mvgq2b2x4zfsny\", \"a\": {\"kind\": \"pin\", \"partId\": \"resistor_mvgq24n11yr49f\", \""
+ },
+ {
+  "name": "desktop-1920: ต่อสายจากขาตัวต้านทานบนโต๊ะเข้ารูบนบอร์ด",
+  "pass": true,
+  "detail": "ต่อสาย R1 ขา 2 → รู j20"
+ },
+ {
+  "name": "desktop-1920: เน็ต: ขา R ขา 2 = รู f20 (สายเชื่อมจริง)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1920: ลากตัวต้านทานที่มีสายไปที่ใหม่บนโต๊ะ",
+  "pass": true,
+  "detail": "{'kind': 'table', 'x': -6, 'z': 13, 'rotation': 0} → {'kind': 'table', 'x': 0, 'z': 13, 'rotation': 0}"
+ },
+ {
+  "name": "desktop-1920: สายยังอ้างขาเดิม (pin id ไม่เปลี่ยน) หลังย้าย",
+  "pass": true,
+  "detail": "{\"kind\":\"pin\",\"partId\":\"resistor_mvgq24n11yr49f\",\"pin\":\"1\"}"
+ },
+ {
+  "name": "desktop-1920: ปลายสายวาดที่ตำแหน่งขาใหม่",
+  "pass": true,
+  "detail": "0"
+ },
+ {
+  "name": "desktop-1920: เน็ตหลังย้ายยังถูกต้อง (+ ↔ ขา 1)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1920: ลากจากโต๊ะไปเสียบบอร์ด (ขาลงรู)",
+  "pass": true,
+  "detail": "{\"kind\": \"board\", \"boardId\": \"bb1\", \"anchor\": \"b7\", \"rotation\": 0} tip=ปล่อยเพื่อเสียบลงบอร์ด · ขาลงรู b7, b11"
+ },
+ {
+  "name": "desktop-1920: ระหว่างลากเหนือรูมีป้าย \"เสียบลงบอร์ด\"",
+  "pass": true,
+  "detail": "ปล่อยเพื่อเสียบลงบอร์ด · ขาลงรู b7, b11"
+ },
+ {
+  "name": "desktop-1920: สายที่ต่อขาไว้ยังต่อขาเดิมหลังเสียบบอร์ด + เน็ตรวมกลุ่มรู",
+  "pass": true,
+  "detail": "b7"
+ },
+ {
+  "name": "desktop-1920: Undo การย้ายลงบอร์ด → กลับมาอยู่บนโต๊ะ",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1920: Redo → กลับไปอยู่บนบอร์ด",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1920: ต่อสายจากรูข้างขา 2 → ขั้วลบ",
+  "pass": true,
+  "detail": "ต่อสาย รู c11 → PS1 ขั้ว − (ดำ)"
+ },
+ {
+  "name": "desktop-1920: ยกจากบอร์ดออกมาวางบนโต๊ะ",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -8, \"z\": 13.5, \"rotation\": 0}"
+ },
+ {
+  "name": "desktop-1920: สายที่เสียบรูยังอยู่ในรูเดิม",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1920: ขา 2 ไม่เชื่อมกับขั้วลบแล้ว (ยกออกแล้วตัดจริง)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1920: ยกเลิกระหว่างลาก (Esc) → ตำแหน่งเดิม ไม่เพิ่ม Undo",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1920: ลากจากคลังแล้วปล่อยนอกพื้นที่ทำงาน = ยกเลิก",
+  "pass": true,
+  "detail": "ยกเลิกการวาง (ปล่อยนอกพื้นที่ทำงาน)"
+ },
+ {
+  "name": "desktop-1920: วาง Raspberry Pi Pico บนโต๊ะข้างบอร์ด",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -9.5, \"z\": -21.5, \"rotation\": 0} วาง PICO1 บนโต๊ะ"
+ },
+ {
+  "name": "desktop-1920: ต่อสาย Pico GP15 → รู j26 (เน็ตเดียวกับ f26)",
+  "pass": true,
+  "detail": "ต่อสาย PICO1 ขา 20 GP15 → รู j26"
+ },
+ {
+  "name": "desktop-1920: เลือกเบรดบอร์ดได้",
+  "pass": true,
+  "detail": "{\"t\": \"board\", \"id\": \"bb1\"}"
+ },
+ {
+  "name": "desktop-1920: ลากย้ายเบรดบอร์ดทั้งแผ่น",
+  "pass": true,
+  "detail": "{'id': 'bb1', 'model': 'CL-400', 'x': 0, 'z': 0} → {'id': 'bb1', 'model': 'CL-400', 'x': 3, 'z': -1} ย้ายเบรดบอร์ด"
+ },
+ {
+  "name": "desktop-1920: หลังย้ายบอร์ด สาย Pico GP15 ยังเชื่อม f26",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1920: Save/Load: อุปกรณ์บนโต๊ะ บนบอร์ด สายทุกเส้น และตำแหน่งบอร์ดครบ",
+  "pass": true,
+  "detail": "parts 3/3 wires 4/4"
+ },
+ {
+  "name": "desktop-1920: แก้ค่าความต้านทานในแผงคุณสมบัติ",
+  "pass": true,
+  "detail": "2200"
+ },
+ {
+  "name": "desktop-1920: ช่องที่กำลังแก้อยู่ในส่วนที่มองเห็น",
+  "pass": true,
+  "detail": "[True, True]"
+ },
+ {
+  "name": "desktop-1920→หมุนจอ 1080×1920: ไม่มี scroll แนวนอนทั้งหน้า",
+  "pass": true,
+  "detail": "1080"
+ },
+ {
+  "name": "desktop-1920→หมุนจอ 1080×1920: แถบเครื่องมือด้านบนไม่ล้น",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1920→หมุนจอ 1080×1920: ปุ่มที่มองเห็นทุกปุ่มมีไอคอน/ข้อความ",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "desktop-1920→หมุนจอ 1080×1920: ปุ่มที่มองเห็นทุกปุ่มมีชื่อสำหรับผู้ใช้ (aria-label/title/ข้อความ)",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "desktop-1920→หมุนจอ 1080×1920: คลังอุปกรณ์มีรายการ",
+  "pass": true,
+  "detail": "16"
+ },
+ {
+  "name": "desktop-1920→หมุนจอ 1080×1920: แถบเครื่องมือในพื้นที่ทำงานอยู่ในกรอบและไม่ทับกัน",
+  "pass": true,
+  "detail": "[[8, 60, 254, 114], [970, 60, 1072, 114], [0, 52, 1080, 1812.25]]"
+ },
+ {
+  "name": "desktop-1920: หมุนจอแล้ววงจร/ตำแหน่ง/สายเหมือนเดิม",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "desktop-1920: Run จำลองได้",
+  "pass": true,
+  "detail": "จำลองตามเวลา"
+ },
+ {
+  "name": "desktop-1920: ไม่มี JavaScript error",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "phone-390x844: ไม่มี scroll แนวนอนทั้งหน้า",
+  "pass": true,
+  "detail": "390"
+ },
+ {
+  "name": "phone-390x844: แถบเครื่องมือด้านบนไม่ล้น",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-390x844: ปุ่มที่มองเห็นทุกปุ่มมีไอคอน/ข้อความ",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "phone-390x844: ปุ่มที่มองเห็นทุกปุ่มมีชื่อสำหรับผู้ใช้ (aria-label/title/ข้อความ)",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "phone-390x844: คลังอุปกรณ์มีรายการ",
+  "pass": true,
+  "detail": "16"
+ },
+ {
+  "name": "phone-390x844: แถบเครื่องมือในพื้นที่ทำงานอยู่ในกรอบและไม่ทับกัน",
+  "pass": true,
+  "detail": "[[8, 60, 224, 108], [292, 60, 382, 108], [0, 52, 390, 736.25]]"
+ },
+ {
+  "name": "phone-390x844: แท็บบททดลองแสดงรายการ",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-390x844: ปัดเลื่อนรายการคลังด้วยนิ้ว → รายการเลื่อน ไม่มีอุปกรณ์ถูกเพิ่ม/เริ่มลาก",
+  "pass": true,
+  "detail": "scrollTop 0→376 parts=0 tool=select status="
+ },
+ {
+  "name": "phone-390x844: ลากตัวต้านทานจากคลังไปวางบนโต๊ะนอกบอร์ด",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -6, \"z\": 13, \"rotation\": 0} tip=ปล่อยเพื่อวางบนโต๊ะ · ขายังไม่ต่อกับวงจร (ต่อสายเข้าขาได้)"
+ },
+ {
+  "name": "phone-390x844: ระหว่างลากมีป้ายบอกว่า \"วางบนโต๊ะ\"",
+  "pass": true,
+  "detail": "ปล่อยเพื่อวางบนโต๊ะ · ขายังไม่ต่อกับวงจร (ต่อสายเข้าขาได้)"
+ },
+ {
+  "name": "phone-390x844: ตำแหน่งที่ปล่อย = ตำแหน่งที่วาง (กึ่งกลางอุปกรณ์ห่างจุดปล่อย ≤ 1 ช่อง)",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -6, \"z\": 13, \"rotation\": 0} drop=(-4,13)"
+ },
+ {
+  "name": "phone-390x844: การลากหนึ่งครั้ง = Undo หนึ่งรายการ",
+  "pass": true,
+  "detail": "[True, 'วาง R1 บนโต๊ะ']"
+ },
+ {
+  "name": "phone-390x844: ลากแหล่งจ่ายมาวางบนโต๊ะ",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -6, \"z\": -17, \"rotation\": 0}"
+ },
+ {
+  "name": "phone-390x844: ต่อสายจากขั้วแหล่งจ่ายเข้าขาตัวต้านทานบนโต๊ะ",
+  "pass": true,
+  "detail": "[{\"id\": \"w_mvgq4sot3xmpoq\", \"a\": {\"kind\": \"pin\", \"partId\": \"dcsupply_mvgq4rus2qswk2\", \"pin\": \"pos\"}, \"b\": {\"kind\": \"pin\", \"partId\": \"resistor_mvgq4pdg1wcv5a\", \"pin\": \"1\"}, \"color\": \"#e53935\", \"arc\": 2, \"bend\": 0}, {\"id\": \"w_mvgq4t514atnh7\", \"a\": {\"kind\": \"pin\", \"partId\": \"resistor_mvgq4pdg1wcv5a\", \""
+ },
+ {
+  "name": "phone-390x844: ต่อสายจากขาตัวต้านทานบนโต๊ะเข้ารูบนบอร์ด",
+  "pass": true,
+  "detail": "ต่อสาย R1 ขา 2 → รู j20"
+ },
+ {
+  "name": "phone-390x844: เน็ต: ขา R ขา 2 = รู f20 (สายเชื่อมจริง)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-390x844: แตะเลือกอุปกรณ์ก่อนลาก (touch)",
+  "pass": true,
+  "detail": "{\"t\":\"part\",\"id\":\"resistor_mvgq4pdg1wcv5a\"}"
+ },
+ {
+  "name": "phone-390x844: ลากตัวต้านทานที่มีสายไปที่ใหม่บนโต๊ะ",
+  "pass": true,
+  "detail": "{'kind': 'table', 'x': -6, 'z': 13, 'rotation': 0} → {'kind': 'table', 'x': 0, 'z': 13, 'rotation': 0}"
+ },
+ {
+  "name": "phone-390x844: สายยังอ้างขาเดิม (pin id ไม่เปลี่ยน) หลังย้าย",
+  "pass": true,
+  "detail": "{\"kind\":\"pin\",\"partId\":\"resistor_mvgq4pdg1wcv5a\",\"pin\":\"1\"}"
+ },
+ {
+  "name": "phone-390x844: ปลายสายวาดที่ตำแหน่งขาใหม่",
+  "pass": true,
+  "detail": "0"
+ },
+ {
+  "name": "phone-390x844: เน็ตหลังย้ายยังถูกต้อง (+ ↔ ขา 1)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-390x844: ลากจากโต๊ะไปเสียบบอร์ด (ขาลงรู)",
+  "pass": true,
+  "detail": "{\"kind\": \"board\", \"boardId\": \"bb1\", \"anchor\": \"a8\", \"rotation\": 0} tip=ปล่อยเพื่อเสียบลงบอร์ด · ขาลงรู a8, a12"
+ },
+ {
+  "name": "phone-390x844: ระหว่างลากเหนือรูมีป้าย \"เสียบลงบอร์ด\"",
+  "pass": true,
+  "detail": "ปล่อยเพื่อเสียบลงบอร์ด · ขาลงรู a8, a12"
+ },
+ {
+  "name": "phone-390x844: สายที่ต่อขาไว้ยังต่อขาเดิมหลังเสียบบอร์ด + เน็ตรวมกลุ่มรู",
+  "pass": true,
+  "detail": "a8"
+ },
+ {
+  "name": "phone-390x844: Undo การย้ายลงบอร์ด → กลับมาอยู่บนโต๊ะ",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-390x844: Redo → กลับไปอยู่บนบอร์ด",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-390x844: ต่อสายจากรูข้างขา 2 → ขั้วลบ",
+  "pass": true,
+  "detail": "ต่อสาย รู c12 → PS1 ขั้ว − (ดำ)"
+ },
+ {
+  "name": "phone-390x844: ยกจากบอร์ดออกมาวางบนโต๊ะ",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -7.5, \"z\": 13.5, \"rotation\": 0}"
+ },
+ {
+  "name": "phone-390x844: สายที่เสียบรูยังอยู่ในรูเดิม",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-390x844: ขา 2 ไม่เชื่อมกับขั้วลบแล้ว (ยกออกแล้วตัดจริง)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-390x844: ยกเลิกระหว่างลาก (นิ้วที่สอง) → ตำแหน่งเดิม ไม่เพิ่ม Undo",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-390x844: วาง Raspberry Pi Pico บนโต๊ะข้างบอร์ด",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -11, \"z\": -22, \"rotation\": 0} วาง PICO1 บนโต๊ะ"
+ },
+ {
+  "name": "phone-390x844: ต่อสาย Pico GP15 → รู j26 (เน็ตเดียวกับ f26)",
+  "pass": true,
+  "detail": "ต่อสาย PICO1 ขา 20 GP15 → รู j26"
+ },
+ {
+  "name": "phone-390x844: เลือกเบรดบอร์ดได้",
+  "pass": true,
+  "detail": "{\"t\": \"board\", \"id\": \"bb1\"}"
+ },
+ {
+  "name": "phone-390x844: ลากย้ายเบรดบอร์ดทั้งแผ่น",
+  "pass": true,
+  "detail": "{'id': 'bb1', 'model': 'CL-400', 'x': 0, 'z': 0} → {'id': 'bb1', 'model': 'CL-400', 'x': 3, 'z': -1} ย้ายเบรดบอร์ด"
+ },
+ {
+  "name": "phone-390x844: หลังย้ายบอร์ด สาย Pico GP15 ยังเชื่อม f26",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-390x844: Save/Load: อุปกรณ์บนโต๊ะ บนบอร์ด สายทุกเส้น และตำแหน่งบอร์ดครบ",
+  "pass": true,
+  "detail": "parts 3/3 wires 4/4"
+ },
+ {
+  "name": "phone-390x844: แก้ค่าความต้านทานในแผงคุณสมบัติ",
+  "pass": true,
+  "detail": "2200"
+ },
+ {
+  "name": "phone-390x844: ช่องที่กำลังแก้อยู่ในส่วนที่มองเห็น",
+  "pass": true,
+  "detail": "[True, True]"
+ },
+ {
+  "name": "phone-390x844→หมุนจอ 844×390: ไม่มี scroll แนวนอนทั้งหน้า",
+  "pass": true,
+  "detail": "844"
+ },
+ {
+  "name": "phone-390x844→หมุนจอ 844×390: แถบเครื่องมือด้านบนไม่ล้น",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-390x844→หมุนจอ 844×390: ปุ่มที่มองเห็นทุกปุ่มมีไอคอน/ข้อความ",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "phone-390x844→หมุนจอ 844×390: ปุ่มที่มองเห็นทุกปุ่มมีชื่อสำหรับผู้ใช้ (aria-label/title/ข้อความ)",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "phone-390x844→หมุนจอ 844×390: คลังอุปกรณ์มีรายการ",
+  "pass": true,
+  "detail": "16"
+ },
+ {
+  "name": "phone-390x844→หมุนจอ 844×390: แถบเครื่องมือในพื้นที่ทำงานอยู่ในกรอบและไม่ทับกัน",
+  "pass": true,
+  "detail": "[[8, 60, 254, 114], [734, 60, 836, 114], [0, 52, 844, 282.25]]"
+ },
+ {
+  "name": "phone-390x844: หมุนจอแล้ววงจร/ตำแหน่ง/สายเหมือนเดิม",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-390x844: Run จำลองได้",
+  "pass": true,
+  "detail": "จำลองตามเวลา"
+ },
+ {
+  "name": "phone-390x844: ไม่มี JavaScript error",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "phone-844x390: ไม่มี scroll แนวนอนทั้งหน้า",
+  "pass": true,
+  "detail": "844"
+ },
+ {
+  "name": "phone-844x390: แถบเครื่องมือด้านบนไม่ล้น",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-844x390: ปุ่มที่มองเห็นทุกปุ่มมีไอคอน/ข้อความ",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "phone-844x390: ปุ่มที่มองเห็นทุกปุ่มมีชื่อสำหรับผู้ใช้ (aria-label/title/ข้อความ)",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "phone-844x390: คลังอุปกรณ์มีรายการ",
+  "pass": true,
+  "detail": "16"
+ },
+ {
+  "name": "phone-844x390: แถบเครื่องมือในพื้นที่ทำงานอยู่ในกรอบและไม่ทับกัน",
+  "pass": true,
+  "detail": "[[8, 60, 254, 114], [734, 60, 836, 114], [0, 52, 844, 282.25]]"
+ },
+ {
+  "name": "phone-844x390: แท็บบททดลองแสดงรายการ",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-844x390: ปัดเลื่อนรายการคลังด้วยนิ้ว → รายการเลื่อน ไม่มีอุปกรณ์ถูกเพิ่ม/เริ่มลาก",
+  "pass": true,
+  "detail": "scrollTop 0→331 parts=0 tool=select status="
+ },
+ {
+  "name": "phone-844x390: ลากตัวต้านทานจากคลังไปวางบนโต๊ะนอกบอร์ด",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -6, \"z\": 13, \"rotation\": 0} tip=ปล่อยเพื่อวางบนโต๊ะ · ขายังไม่ต่อกับวงจร (ต่อสายเข้าขาได้)"
+ },
+ {
+  "name": "phone-844x390: ระหว่างลากมีป้ายบอกว่า \"วางบนโต๊ะ\"",
+  "pass": true,
+  "detail": "ปล่อยเพื่อวางบนโต๊ะ · ขายังไม่ต่อกับวงจร (ต่อสายเข้าขาได้)"
+ },
+ {
+  "name": "phone-844x390: ตำแหน่งที่ปล่อย = ตำแหน่งที่วาง (กึ่งกลางอุปกรณ์ห่างจุดปล่อย ≤ 1 ช่อง)",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -6, \"z\": 13, \"rotation\": 0} drop=(-4,13)"
+ },
+ {
+  "name": "phone-844x390: การลากหนึ่งครั้ง = Undo หนึ่งรายการ",
+  "pass": true,
+  "detail": "[True, 'วาง R1 บนโต๊ะ']"
+ },
+ {
+  "name": "phone-844x390: ลากแหล่งจ่ายมาวางบนโต๊ะ",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -26, \"z\": -2, \"rotation\": 0}"
+ },
+ {
+  "name": "phone-844x390: ต่อสายจากขั้วแหล่งจ่ายเข้าขาตัวต้านทานบนโต๊ะ",
+  "pass": true,
+  "detail": "[{\"id\": \"w_mvgq6bax3zdn3a\", \"a\": {\"kind\": \"pin\", \"partId\": \"dcsupply_mvgq6aiv2j6sm4\", \"pin\": \"pos\"}, \"b\": {\"kind\": \"pin\", \"partId\": \"resistor_mvgq687y143i27\", \"pin\": \"1\"}, \"color\": \"#e53935\", \"arc\": 2, \"bend\": 0}, {\"id\": \"w_mvgq6br44o31xr\", \"a\": {\"kind\": \"pin\", \"partId\": \"resistor_mvgq687y143i27\", \""
+ },
+ {
+  "name": "phone-844x390: ต่อสายจากขาตัวต้านทานบนโต๊ะเข้ารูบนบอร์ด",
+  "pass": true,
+  "detail": "ต่อสาย R1 ขา 2 → รู j20"
+ },
+ {
+  "name": "phone-844x390: เน็ต: ขา R ขา 2 = รู f20 (สายเชื่อมจริง)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-844x390: แตะเลือกอุปกรณ์ก่อนลาก (touch)",
+  "pass": true,
+  "detail": "{\"t\":\"part\",\"id\":\"resistor_mvgq687y143i27\"}"
+ },
+ {
+  "name": "phone-844x390: ลากตัวต้านทานที่มีสายไปที่ใหม่บนโต๊ะ",
+  "pass": true,
+  "detail": "{'kind': 'table', 'x': -6, 'z': 13, 'rotation': 0} → {'kind': 'table', 'x': 0, 'z': 13, 'rotation': 0}"
+ },
+ {
+  "name": "phone-844x390: สายยังอ้างขาเดิม (pin id ไม่เปลี่ยน) หลังย้าย",
+  "pass": true,
+  "detail": "{\"kind\":\"pin\",\"partId\":\"resistor_mvgq687y143i27\",\"pin\":\"1\"}"
+ },
+ {
+  "name": "phone-844x390: ปลายสายวาดที่ตำแหน่งขาใหม่",
+  "pass": true,
+  "detail": "0"
+ },
+ {
+  "name": "phone-844x390: เน็ตหลังย้ายยังถูกต้อง (+ ↔ ขา 1)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-844x390: ลากจากโต๊ะไปเสียบบอร์ด (ขาลงรู)",
+  "pass": true,
+  "detail": "{\"kind\": \"board\", \"boardId\": \"bb1\", \"anchor\": \"b7\", \"rotation\": 0} tip=ปล่อยเพื่อเสียบลงบอร์ด · ขาลงรู b7, b11"
+ },
+ {
+  "name": "phone-844x390: ระหว่างลากเหนือรูมีป้าย \"เสียบลงบอร์ด\"",
+  "pass": true,
+  "detail": "ปล่อยเพื่อเสียบลงบอร์ด · ขาลงรู b7, b11"
+ },
+ {
+  "name": "phone-844x390: สายที่ต่อขาไว้ยังต่อขาเดิมหลังเสียบบอร์ด + เน็ตรวมกลุ่มรู",
+  "pass": true,
+  "detail": "b7"
+ },
+ {
+  "name": "phone-844x390: Undo การย้ายลงบอร์ด → กลับมาอยู่บนโต๊ะ",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-844x390: Redo → กลับไปอยู่บนบอร์ด",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-844x390: ต่อสายจากรูข้างขา 2 → ขั้วลบ",
+  "pass": true,
+  "detail": "ต่อสาย รู c11 → PS1 ขั้ว − (ดำ)"
+ },
+ {
+  "name": "phone-844x390: ยกจากบอร์ดออกมาวางบนโต๊ะ",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -8, \"z\": 13.5, \"rotation\": 0}"
+ },
+ {
+  "name": "phone-844x390: สายที่เสียบรูยังอยู่ในรูเดิม",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-844x390: ขา 2 ไม่เชื่อมกับขั้วลบแล้ว (ยกออกแล้วตัดจริง)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-844x390: ยกเลิกระหว่างลาก (นิ้วที่สอง) → ตำแหน่งเดิม ไม่เพิ่ม Undo",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-844x390: วาง Raspberry Pi Pico บนโต๊ะข้างบอร์ด",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -9.5, \"z\": -21.5, \"rotation\": 0} วาง PICO1 บนโต๊ะ"
+ },
+ {
+  "name": "phone-844x390: ต่อสาย Pico GP15 → รู j26 (เน็ตเดียวกับ f26)",
+  "pass": true,
+  "detail": "ต่อสาย PICO1 ขา 20 GP15 → รู j26"
+ },
+ {
+  "name": "phone-844x390: เลือกเบรดบอร์ดได้",
+  "pass": true,
+  "detail": "{\"t\": \"board\", \"id\": \"bb1\"}"
+ },
+ {
+  "name": "phone-844x390: ลากย้ายเบรดบอร์ดทั้งแผ่น",
+  "pass": true,
+  "detail": "{'id': 'bb1', 'model': 'CL-400', 'x': 0, 'z': 0} → {'id': 'bb1', 'model': 'CL-400', 'x': 3, 'z': -1} ย้ายเบรดบอร์ด"
+ },
+ {
+  "name": "phone-844x390: หลังย้ายบอร์ด สาย Pico GP15 ยังเชื่อม f26",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-844x390: Save/Load: อุปกรณ์บนโต๊ะ บนบอร์ด สายทุกเส้น และตำแหน่งบอร์ดครบ",
+  "pass": true,
+  "detail": "parts 3/3 wires 4/4"
+ },
+ {
+  "name": "phone-844x390: แก้ค่าความต้านทานในแผงคุณสมบัติ",
+  "pass": true,
+  "detail": "2200"
+ },
+ {
+  "name": "phone-844x390: ช่องที่กำลังแก้อยู่ในส่วนที่มองเห็น",
+  "pass": true,
+  "detail": "[True, True]"
+ },
+ {
+  "name": "phone-844x390→หมุนจอ 390×844: ไม่มี scroll แนวนอนทั้งหน้า",
+  "pass": true,
+  "detail": "390"
+ },
+ {
+  "name": "phone-844x390→หมุนจอ 390×844: แถบเครื่องมือด้านบนไม่ล้น",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-844x390→หมุนจอ 390×844: ปุ่มที่มองเห็นทุกปุ่มมีไอคอน/ข้อความ",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "phone-844x390→หมุนจอ 390×844: ปุ่มที่มองเห็นทุกปุ่มมีชื่อสำหรับผู้ใช้ (aria-label/title/ข้อความ)",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "phone-844x390→หมุนจอ 390×844: คลังอุปกรณ์มีรายการ",
+  "pass": true,
+  "detail": "16"
+ },
+ {
+  "name": "phone-844x390→หมุนจอ 390×844: แถบเครื่องมือในพื้นที่ทำงานอยู่ในกรอบและไม่ทับกัน",
+  "pass": true,
+  "detail": "[[8, 60, 224, 108], [292, 60, 382, 108], [0, 52, 390, 736.25]]"
+ },
+ {
+  "name": "phone-844x390: หมุนจอแล้ววงจร/ตำแหน่ง/สายเหมือนเดิม",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "phone-844x390: Run จำลองได้",
+  "pass": true,
+  "detail": "จำลองตามเวลา"
+ },
+ {
+  "name": "phone-844x390: ไม่มี JavaScript error",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "tablet-768x1024: ไม่มี scroll แนวนอนทั้งหน้า",
+  "pass": true,
+  "detail": "768"
+ },
+ {
+  "name": "tablet-768x1024: แถบเครื่องมือด้านบนไม่ล้น",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-768x1024: ปุ่มที่มองเห็นทุกปุ่มมีไอคอน/ข้อความ",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "tablet-768x1024: ปุ่มที่มองเห็นทุกปุ่มมีชื่อสำหรับผู้ใช้ (aria-label/title/ข้อความ)",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "tablet-768x1024: คลังอุปกรณ์มีรายการ",
+  "pass": true,
+  "detail": "16"
+ },
+ {
+  "name": "tablet-768x1024: แถบเครื่องมือในพื้นที่ทำงานอยู่ในกรอบและไม่ทับกัน",
+  "pass": true,
+  "detail": "[[8, 60, 254, 114], [658, 60, 760, 114], [0, 52, 768, 916.25]]"
+ },
+ {
+  "name": "tablet-768x1024: แท็บบททดลองแสดงรายการ",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-768x1024: ปัดเลื่อนรายการคลังด้วยนิ้ว → รายการเลื่อน ไม่มีอุปกรณ์ถูกเพิ่ม/เริ่มลาก",
+  "pass": true,
+  "detail": "scrollTop 0→378 parts=0 tool=select status="
+ },
+ {
+  "name": "tablet-768x1024: ลากตัวต้านทานจากคลังไปวางบนโต๊ะนอกบอร์ด",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -6, \"z\": 13, \"rotation\": 0} tip=ปล่อยเพื่อวางบนโต๊ะ · ขายังไม่ต่อกับวงจร (ต่อสายเข้าขาได้)"
+ },
+ {
+  "name": "tablet-768x1024: ระหว่างลากมีป้ายบอกว่า \"วางบนโต๊ะ\"",
+  "pass": true,
+  "detail": "ปล่อยเพื่อวางบนโต๊ะ · ขายังไม่ต่อกับวงจร (ต่อสายเข้าขาได้)"
+ },
+ {
+  "name": "tablet-768x1024: ตำแหน่งที่ปล่อย = ตำแหน่งที่วาง (กึ่งกลางอุปกรณ์ห่างจุดปล่อย ≤ 1 ช่อง)",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -6, \"z\": 13, \"rotation\": 0} drop=(-4,13)"
+ },
+ {
+  "name": "tablet-768x1024: การลากหนึ่งครั้ง = Undo หนึ่งรายการ",
+  "pass": true,
+  "detail": "[True, 'วาง R1 บนโต๊ะ']"
+ },
+ {
+  "name": "tablet-768x1024: ลากแหล่งจ่ายมาวางบนโต๊ะ",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -6, \"z\": -17, \"rotation\": 0}"
+ },
+ {
+  "name": "tablet-768x1024: ต่อสายจากขั้วแหล่งจ่ายเข้าขาตัวต้านทานบนโต๊ะ",
+  "pass": true,
+  "detail": "[{\"id\": \"w_mvgq7o133z3569\", \"a\": {\"kind\": \"pin\", \"partId\": \"dcsupply_mvgq7mc02lslzn\", \"pin\": \"pos\"}, \"b\": {\"kind\": \"pin\", \"partId\": \"resistor_mvgq7igp1v7kpj\", \"pin\": \"1\"}, \"color\": \"#e53935\", \"arc\": 2, \"bend\": 0}, {\"id\": \"w_mvgq7oh84lngtk\", \"a\": {\"kind\": \"pin\", \"partId\": \"resistor_mvgq7igp1v7kpj\", \""
+ },
+ {
+  "name": "tablet-768x1024: ต่อสายจากขาตัวต้านทานบนโต๊ะเข้ารูบนบอร์ด",
+  "pass": true,
+  "detail": "ต่อสาย R1 ขา 2 → รู j20"
+ },
+ {
+  "name": "tablet-768x1024: เน็ต: ขา R ขา 2 = รู f20 (สายเชื่อมจริง)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-768x1024: แตะเลือกอุปกรณ์ก่อนลาก (touch)",
+  "pass": true,
+  "detail": "{\"t\":\"part\",\"id\":\"resistor_mvgq7igp1v7kpj\"}"
+ },
+ {
+  "name": "tablet-768x1024: ลากตัวต้านทานที่มีสายไปที่ใหม่บนโต๊ะ",
+  "pass": true,
+  "detail": "{'kind': 'table', 'x': -6, 'z': 13, 'rotation': 0} → {'kind': 'table', 'x': 0, 'z': 13, 'rotation': 0}"
+ },
+ {
+  "name": "tablet-768x1024: สายยังอ้างขาเดิม (pin id ไม่เปลี่ยน) หลังย้าย",
+  "pass": true,
+  "detail": "{\"kind\":\"pin\",\"partId\":\"resistor_mvgq7igp1v7kpj\",\"pin\":\"1\"}"
+ },
+ {
+  "name": "tablet-768x1024: ปลายสายวาดที่ตำแหน่งขาใหม่",
+  "pass": true,
+  "detail": "0"
+ },
+ {
+  "name": "tablet-768x1024: เน็ตหลังย้ายยังถูกต้อง (+ ↔ ขา 1)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-768x1024: ลากจากโต๊ะไปเสียบบอร์ด (ขาลงรู)",
+  "pass": true,
+  "detail": "{\"kind\": \"board\", \"boardId\": \"bb1\", \"anchor\": \"a8\", \"rotation\": 0} tip=ปล่อยเพื่อเสียบลงบอร์ด · ขาลงรู a8, a12"
+ },
+ {
+  "name": "tablet-768x1024: ระหว่างลากเหนือรูมีป้าย \"เสียบลงบอร์ด\"",
+  "pass": true,
+  "detail": "ปล่อยเพื่อเสียบลงบอร์ด · ขาลงรู a8, a12"
+ },
+ {
+  "name": "tablet-768x1024: สายที่ต่อขาไว้ยังต่อขาเดิมหลังเสียบบอร์ด + เน็ตรวมกลุ่มรู",
+  "pass": true,
+  "detail": "a8"
+ },
+ {
+  "name": "tablet-768x1024: Undo การย้ายลงบอร์ด → กลับมาอยู่บนโต๊ะ",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-768x1024: Redo → กลับไปอยู่บนบอร์ด",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-768x1024: ต่อสายจากรูข้างขา 2 → ขั้วลบ",
+  "pass": true,
+  "detail": "ต่อสาย รู c12 → PS1 ขั้ว − (ดำ)"
+ },
+ {
+  "name": "tablet-768x1024: ยกจากบอร์ดออกมาวางบนโต๊ะ",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -7, \"z\": 13.5, \"rotation\": 0}"
+ },
+ {
+  "name": "tablet-768x1024: สายที่เสียบรูยังอยู่ในรูเดิม",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-768x1024: ขา 2 ไม่เชื่อมกับขั้วลบแล้ว (ยกออกแล้วตัดจริง)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-768x1024: ยกเลิกระหว่างลาก (นิ้วที่สอง) → ตำแหน่งเดิม ไม่เพิ่ม Undo",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-768x1024: วาง Raspberry Pi Pico บนโต๊ะข้างบอร์ด",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -13.5, \"z\": -23, \"rotation\": 0} วาง PICO1 บนโต๊ะ"
+ },
+ {
+  "name": "tablet-768x1024: ต่อสาย Pico GP15 → รู j26 (เน็ตเดียวกับ f26)",
+  "pass": true,
+  "detail": "ต่อสาย PICO1 ขา 20 GP15 → รู j26"
+ },
+ {
+  "name": "tablet-768x1024: เลือกเบรดบอร์ดได้",
+  "pass": true,
+  "detail": "{\"t\": \"board\", \"id\": \"bb1\"}"
+ },
+ {
+  "name": "tablet-768x1024: ลากย้ายเบรดบอร์ดทั้งแผ่น",
+  "pass": true,
+  "detail": "{'id': 'bb1', 'model': 'CL-400', 'x': 0, 'z': 0} → {'id': 'bb1', 'model': 'CL-400', 'x': 3, 'z': -1} ย้ายเบรดบอร์ด"
+ },
+ {
+  "name": "tablet-768x1024: หลังย้ายบอร์ด สาย Pico GP15 ยังเชื่อม f26",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-768x1024: Save/Load: อุปกรณ์บนโต๊ะ บนบอร์ด สายทุกเส้น และตำแหน่งบอร์ดครบ",
+  "pass": true,
+  "detail": "parts 3/3 wires 4/4"
+ },
+ {
+  "name": "tablet-768x1024: แก้ค่าความต้านทานในแผงคุณสมบัติ",
+  "pass": true,
+  "detail": "2200"
+ },
+ {
+  "name": "tablet-768x1024: ช่องที่กำลังแก้อยู่ในส่วนที่มองเห็น",
+  "pass": true,
+  "detail": "[True, True]"
+ },
+ {
+  "name": "tablet-768x1024→หมุนจอ 1024×768: ไม่มี scroll แนวนอนทั้งหน้า",
+  "pass": true,
+  "detail": "1024"
+ },
+ {
+  "name": "tablet-768x1024→หมุนจอ 1024×768: แถบเครื่องมือด้านบนไม่ล้น",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-768x1024→หมุนจอ 1024×768: ปุ่มที่มองเห็นทุกปุ่มมีไอคอน/ข้อความ",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "tablet-768x1024→หมุนจอ 1024×768: ปุ่มที่มองเห็นทุกปุ่มมีชื่อสำหรับผู้ใช้ (aria-label/title/ข้อความ)",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "tablet-768x1024→หมุนจอ 1024×768: คลังอุปกรณ์มีรายการ",
+  "pass": true,
+  "detail": "16"
+ },
+ {
+  "name": "tablet-768x1024→หมุนจอ 1024×768: แถบเครื่องมือในพื้นที่ทำงานอยู่ในกรอบและไม่ทับกัน",
+  "pass": true,
+  "detail": "[[8, 60, 254, 114], [914, 60, 1016, 114], [0, 52, 1024, 660.25]]"
+ },
+ {
+  "name": "tablet-768x1024: หมุนจอแล้ววงจร/ตำแหน่ง/สายเหมือนเดิม",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-768x1024: Run จำลองได้",
+  "pass": true,
+  "detail": "จำลองตามเวลา"
+ },
+ {
+  "name": "tablet-768x1024: ไม่มี JavaScript error",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "tablet-1024x768: ไม่มี scroll แนวนอนทั้งหน้า",
+  "pass": true,
+  "detail": "1024"
+ },
+ {
+  "name": "tablet-1024x768: แถบเครื่องมือด้านบนไม่ล้น",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768: ปุ่มที่มองเห็นทุกปุ่มมีไอคอน/ข้อความ",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "tablet-1024x768: ปุ่มที่มองเห็นทุกปุ่มมีชื่อสำหรับผู้ใช้ (aria-label/title/ข้อความ)",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "tablet-1024x768: คลังอุปกรณ์มีรายการ",
+  "pass": true,
+  "detail": "16"
+ },
+ {
+  "name": "tablet-1024x768: แถบเครื่องมือในพื้นที่ทำงานอยู่ในกรอบและไม่ทับกัน",
+  "pass": true,
+  "detail": "[[8, 60, 254, 114], [914, 60, 1016, 114], [0, 52, 1024, 660.25]]"
+ },
+ {
+  "name": "tablet-1024x768: แท็บบททดลองแสดงรายการ",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768: ปัดเลื่อนรายการคลังด้วยนิ้ว → รายการเลื่อน ไม่มีอุปกรณ์ถูกเพิ่ม/เริ่มลาก",
+  "pass": true,
+  "detail": "scrollTop 0→369 parts=0 tool=select status="
+ },
+ {
+  "name": "tablet-1024x768: ลากตัวต้านทานจากคลังไปวางบนโต๊ะนอกบอร์ด",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -6, \"z\": 13, \"rotation\": 0} tip=ปล่อยเพื่อวางบนโต๊ะ · ขายังไม่ต่อกับวงจร (ต่อสายเข้าขาได้)"
+ },
+ {
+  "name": "tablet-1024x768: ระหว่างลากมีป้ายบอกว่า \"วางบนโต๊ะ\"",
+  "pass": true,
+  "detail": "ปล่อยเพื่อวางบนโต๊ะ · ขายังไม่ต่อกับวงจร (ต่อสายเข้าขาได้)"
+ },
+ {
+  "name": "tablet-1024x768: ตำแหน่งที่ปล่อย = ตำแหน่งที่วาง (กึ่งกลางอุปกรณ์ห่างจุดปล่อย ≤ 1 ช่อง)",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -6, \"z\": 13, \"rotation\": 0} drop=(-4,13)"
+ },
+ {
+  "name": "tablet-1024x768: การลากหนึ่งครั้ง = Undo หนึ่งรายการ",
+  "pass": true,
+  "detail": "[True, 'วาง R1 บนโต๊ะ']"
+ },
+ {
+  "name": "tablet-1024x768: ลากแหล่งจ่ายมาวางบนโต๊ะ",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -26, \"z\": -2, \"rotation\": 0}"
+ },
+ {
+  "name": "tablet-1024x768: ต่อสายจากขั้วแหล่งจ่ายเข้าขาตัวต้านทานบนโต๊ะ",
+  "pass": true,
+  "detail": "[{\"id\": \"w_mvgqabiu37d69h\", \"a\": {\"kind\": \"pin\", \"partId\": \"dcsupply_mvgqaa2l25wzg3\", \"pin\": \"pos\"}, \"b\": {\"kind\": \"pin\", \"partId\": \"resistor_mvgqa65f1ln59a\", \"pin\": \"1\"}, \"color\": \"#e53935\", \"arc\": 2, \"bend\": 0}, {\"id\": \"w_mvgqabz24edcuk\", \"a\": {\"kind\": \"pin\", \"partId\": \"resistor_mvgqa65f1ln59a\", \""
+ },
+ {
+  "name": "tablet-1024x768: ต่อสายจากขาตัวต้านทานบนโต๊ะเข้ารูบนบอร์ด",
+  "pass": true,
+  "detail": "ต่อสาย R1 ขา 2 → รู j20"
+ },
+ {
+  "name": "tablet-1024x768: เน็ต: ขา R ขา 2 = รู f20 (สายเชื่อมจริง)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768: แตะเลือกอุปกรณ์ก่อนลาก (touch)",
+  "pass": true,
+  "detail": "{\"t\":\"part\",\"id\":\"resistor_mvgqa65f1ln59a\"}"
+ },
+ {
+  "name": "tablet-1024x768: ลากตัวต้านทานที่มีสายไปที่ใหม่บนโต๊ะ",
+  "pass": true,
+  "detail": "{'kind': 'table', 'x': -6, 'z': 13, 'rotation': 0} → {'kind': 'table', 'x': 0, 'z': 13, 'rotation': 0}"
+ },
+ {
+  "name": "tablet-1024x768: สายยังอ้างขาเดิม (pin id ไม่เปลี่ยน) หลังย้าย",
+  "pass": true,
+  "detail": "{\"kind\":\"pin\",\"partId\":\"resistor_mvgqa65f1ln59a\",\"pin\":\"1\"}"
+ },
+ {
+  "name": "tablet-1024x768: ปลายสายวาดที่ตำแหน่งขาใหม่",
+  "pass": true,
+  "detail": "0"
+ },
+ {
+  "name": "tablet-1024x768: เน็ตหลังย้ายยังถูกต้อง (+ ↔ ขา 1)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768: ลากจากโต๊ะไปเสียบบอร์ด (ขาลงรู)",
+  "pass": true,
+  "detail": "{\"kind\": \"board\", \"boardId\": \"bb1\", \"anchor\": \"b7\", \"rotation\": 0} tip=ปล่อยเพื่อเสียบลงบอร์ด · ขาลงรู b7, b11"
+ },
+ {
+  "name": "tablet-1024x768: ระหว่างลากเหนือรูมีป้าย \"เสียบลงบอร์ด\"",
+  "pass": true,
+  "detail": "ปล่อยเพื่อเสียบลงบอร์ด · ขาลงรู b7, b11"
+ },
+ {
+  "name": "tablet-1024x768: สายที่ต่อขาไว้ยังต่อขาเดิมหลังเสียบบอร์ด + เน็ตรวมกลุ่มรู",
+  "pass": true,
+  "detail": "b7"
+ },
+ {
+  "name": "tablet-1024x768: Undo การย้ายลงบอร์ด → กลับมาอยู่บนโต๊ะ",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768: Redo → กลับไปอยู่บนบอร์ด",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768: ต่อสายจากรูข้างขา 2 → ขั้วลบ",
+  "pass": true,
+  "detail": "ต่อสาย รู c11 → PS1 ขั้ว − (ดำ)"
+ },
+ {
+  "name": "tablet-1024x768: ยกจากบอร์ดออกมาวางบนโต๊ะ",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -8, \"z\": 13.5, \"rotation\": 0}"
+ },
+ {
+  "name": "tablet-1024x768: สายที่เสียบรูยังอยู่ในรูเดิม",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768: ขา 2 ไม่เชื่อมกับขั้วลบแล้ว (ยกออกแล้วตัดจริง)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768: ยกเลิกระหว่างลาก (นิ้วที่สอง) → ตำแหน่งเดิม ไม่เพิ่ม Undo",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768: วาง Raspberry Pi Pico บนโต๊ะข้างบอร์ด",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -9.5, \"z\": -21.5, \"rotation\": 0} วาง PICO1 บนโต๊ะ"
+ },
+ {
+  "name": "tablet-1024x768: ต่อสาย Pico GP15 → รู j26 (เน็ตเดียวกับ f26)",
+  "pass": true,
+  "detail": "ต่อสาย PICO1 ขา 20 GP15 → รู j26"
+ },
+ {
+  "name": "tablet-1024x768: เลือกเบรดบอร์ดได้",
+  "pass": true,
+  "detail": "{\"t\": \"board\", \"id\": \"bb1\"}"
+ },
+ {
+  "name": "tablet-1024x768: ลากย้ายเบรดบอร์ดทั้งแผ่น",
+  "pass": true,
+  "detail": "{'id': 'bb1', 'model': 'CL-400', 'x': 0, 'z': 0} → {'id': 'bb1', 'model': 'CL-400', 'x': 3, 'z': -1} ย้ายเบรดบอร์ด"
+ },
+ {
+  "name": "tablet-1024x768: หลังย้ายบอร์ด สาย Pico GP15 ยังเชื่อม f26",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768: Save/Load: อุปกรณ์บนโต๊ะ บนบอร์ด สายทุกเส้น และตำแหน่งบอร์ดครบ",
+  "pass": true,
+  "detail": "parts 3/3 wires 4/4"
+ },
+ {
+  "name": "tablet-1024x768: แก้ค่าความต้านทานในแผงคุณสมบัติ",
+  "pass": true,
+  "detail": "2200"
+ },
+ {
+  "name": "tablet-1024x768: ช่องที่กำลังแก้อยู่ในส่วนที่มองเห็น",
+  "pass": true,
+  "detail": "[True, True]"
+ },
+ {
+  "name": "tablet-1024x768→หมุนจอ 768×1024: ไม่มี scroll แนวนอนทั้งหน้า",
+  "pass": true,
+  "detail": "768"
+ },
+ {
+  "name": "tablet-1024x768→หมุนจอ 768×1024: แถบเครื่องมือด้านบนไม่ล้น",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768→หมุนจอ 768×1024: ปุ่มที่มองเห็นทุกปุ่มมีไอคอน/ข้อความ",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "tablet-1024x768→หมุนจอ 768×1024: ปุ่มที่มองเห็นทุกปุ่มมีชื่อสำหรับผู้ใช้ (aria-label/title/ข้อความ)",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "tablet-1024x768→หมุนจอ 768×1024: คลังอุปกรณ์มีรายการ",
+  "pass": true,
+  "detail": "16"
+ },
+ {
+  "name": "tablet-1024x768→หมุนจอ 768×1024: แถบเครื่องมือในพื้นที่ทำงานอยู่ในกรอบและไม่ทับกัน",
+  "pass": true,
+  "detail": "[[8, 60, 254, 114], [658, 60, 760, 114], [0, 52, 768, 916.25]]"
+ },
+ {
+  "name": "tablet-1024x768: หมุนจอแล้ววงจร/ตำแหน่ง/สายเหมือนเดิม",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768: Run จำลองได้",
+  "pass": true,
+  "detail": "จำลองตามเวลา"
+ },
+ {
+  "name": "tablet-1024x768: ไม่มี JavaScript error",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "tablet-1024x768-mouse: ไม่มี scroll แนวนอนทั้งหน้า",
+  "pass": true,
+  "detail": "1024"
+ },
+ {
+  "name": "tablet-1024x768-mouse: แถบเครื่องมือด้านบนไม่ล้น",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768-mouse: ปุ่มที่มองเห็นทุกปุ่มมีไอคอน/ข้อความ",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "tablet-1024x768-mouse: ปุ่มที่มองเห็นทุกปุ่มมีชื่อสำหรับผู้ใช้ (aria-label/title/ข้อความ)",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "tablet-1024x768-mouse: คลังอุปกรณ์มีรายการ",
+  "pass": true,
+  "detail": "16"
+ },
+ {
+  "name": "tablet-1024x768-mouse: แถบเครื่องมือในพื้นที่ทำงานอยู่ในกรอบและไม่ทับกัน",
+  "pass": true,
+  "detail": "[[8, 60, 254, 114], [914, 60, 1016, 114], [0, 52, 1024, 660.25]]"
+ },
+ {
+  "name": "tablet-1024x768-mouse: แท็บบททดลองแสดงรายการ",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768-mouse: ลากตัวต้านทานจากคลังไปวางบนโต๊ะนอกบอร์ด",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -6, \"z\": 13, \"rotation\": 0} tip=ปล่อยเพื่อวางบนโต๊ะ · ขายังไม่ต่อกับวงจร (ต่อสายเข้าขาได้)"
+ },
+ {
+  "name": "tablet-1024x768-mouse: ระหว่างลากมีป้ายบอกว่า \"วางบนโต๊ะ\"",
+  "pass": true,
+  "detail": "ปล่อยเพื่อวางบนโต๊ะ · ขายังไม่ต่อกับวงจร (ต่อสายเข้าขาได้)"
+ },
+ {
+  "name": "tablet-1024x768-mouse: ตำแหน่งที่ปล่อย = ตำแหน่งที่วาง (กึ่งกลางอุปกรณ์ห่างจุดปล่อย ≤ 1 ช่อง)",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -6, \"z\": 13, \"rotation\": 0} drop=(-4,13)"
+ },
+ {
+  "name": "tablet-1024x768-mouse: การลากหนึ่งครั้ง = Undo หนึ่งรายการ",
+  "pass": true,
+  "detail": "[True, 'วาง R1 บนโต๊ะ']"
+ },
+ {
+  "name": "tablet-1024x768-mouse: ลากแหล่งจ่ายมาวางบนโต๊ะ",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -26, \"z\": -2, \"rotation\": 0}"
+ },
+ {
+  "name": "tablet-1024x768-mouse: ต่อสายจากขั้วแหล่งจ่ายเข้าขาตัวต้านทานบนโต๊ะ",
+  "pass": true,
+  "detail": "[{\"id\": \"w_mvgqcacz33bxk6\", \"a\": {\"kind\": \"pin\", \"partId\": \"dcsupply_mvgqc99u2iefb1\", \"pin\": \"pos\"}, \"b\": {\"kind\": \"pin\", \"partId\": \"resistor_mvgqc5v812e7k6\", \"pin\": \"1\"}, \"color\": \"#e53935\", \"arc\": 2, \"bend\": 0}, {\"id\": \"w_mvgqcaot4nl3sh\", \"a\": {\"kind\": \"pin\", \"partId\": \"resistor_mvgqc5v812e7k6\", \""
+ },
+ {
+  "name": "tablet-1024x768-mouse: ต่อสายจากขาตัวต้านทานบนโต๊ะเข้ารูบนบอร์ด",
+  "pass": true,
+  "detail": "ต่อสาย R1 ขา 2 → รู j20"
+ },
+ {
+  "name": "tablet-1024x768-mouse: เน็ต: ขา R ขา 2 = รู f20 (สายเชื่อมจริง)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768-mouse: ลากตัวต้านทานที่มีสายไปที่ใหม่บนโต๊ะ",
+  "pass": true,
+  "detail": "{'kind': 'table', 'x': -6, 'z': 13, 'rotation': 0} → {'kind': 'table', 'x': 0, 'z': 13, 'rotation': 0}"
+ },
+ {
+  "name": "tablet-1024x768-mouse: สายยังอ้างขาเดิม (pin id ไม่เปลี่ยน) หลังย้าย",
+  "pass": true,
+  "detail": "{\"kind\":\"pin\",\"partId\":\"resistor_mvgqc5v812e7k6\",\"pin\":\"1\"}"
+ },
+ {
+  "name": "tablet-1024x768-mouse: ปลายสายวาดที่ตำแหน่งขาใหม่",
+  "pass": true,
+  "detail": "0"
+ },
+ {
+  "name": "tablet-1024x768-mouse: เน็ตหลังย้ายยังถูกต้อง (+ ↔ ขา 1)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768-mouse: ลากจากโต๊ะไปเสียบบอร์ด (ขาลงรู)",
+  "pass": true,
+  "detail": "{\"kind\": \"board\", \"boardId\": \"bb1\", \"anchor\": \"b7\", \"rotation\": 0} tip=ปล่อยเพื่อเสียบลงบอร์ด · ขาลงรู b7, b11"
+ },
+ {
+  "name": "tablet-1024x768-mouse: ระหว่างลากเหนือรูมีป้าย \"เสียบลงบอร์ด\"",
+  "pass": true,
+  "detail": "ปล่อยเพื่อเสียบลงบอร์ด · ขาลงรู b7, b11"
+ },
+ {
+  "name": "tablet-1024x768-mouse: สายที่ต่อขาไว้ยังต่อขาเดิมหลังเสียบบอร์ด + เน็ตรวมกลุ่มรู",
+  "pass": true,
+  "detail": "b7"
+ },
+ {
+  "name": "tablet-1024x768-mouse: Undo การย้ายลงบอร์ด → กลับมาอยู่บนโต๊ะ",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768-mouse: Redo → กลับไปอยู่บนบอร์ด",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768-mouse: ต่อสายจากรูข้างขา 2 → ขั้วลบ",
+  "pass": true,
+  "detail": "ต่อสาย รู c11 → PS1 ขั้ว − (ดำ)"
+ },
+ {
+  "name": "tablet-1024x768-mouse: ยกจากบอร์ดออกมาวางบนโต๊ะ",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -8, \"z\": 13.5, \"rotation\": 0}"
+ },
+ {
+  "name": "tablet-1024x768-mouse: สายที่เสียบรูยังอยู่ในรูเดิม",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768-mouse: ขา 2 ไม่เชื่อมกับขั้วลบแล้ว (ยกออกแล้วตัดจริง)",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768-mouse: ยกเลิกระหว่างลาก (Esc) → ตำแหน่งเดิม ไม่เพิ่ม Undo",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768-mouse: วาง Raspberry Pi Pico บนโต๊ะข้างบอร์ด",
+  "pass": true,
+  "detail": "{\"kind\": \"table\", \"x\": -9.5, \"z\": -21.5, \"rotation\": 0} วาง PICO1 บนโต๊ะ"
+ },
+ {
+  "name": "tablet-1024x768-mouse: ต่อสาย Pico GP15 → รู j26 (เน็ตเดียวกับ f26)",
+  "pass": true,
+  "detail": "ต่อสาย PICO1 ขา 20 GP15 → รู j26"
+ },
+ {
+  "name": "tablet-1024x768-mouse: เลือกเบรดบอร์ดได้",
+  "pass": true,
+  "detail": "{\"t\": \"board\", \"id\": \"bb1\"}"
+ },
+ {
+  "name": "tablet-1024x768-mouse: ลากย้ายเบรดบอร์ดทั้งแผ่น",
+  "pass": true,
+  "detail": "{'id': 'bb1', 'model': 'CL-400', 'x': 0, 'z': 0} → {'id': 'bb1', 'model': 'CL-400', 'x': 3, 'z': -1} ย้ายเบรดบอร์ด"
+ },
+ {
+  "name": "tablet-1024x768-mouse: หลังย้ายบอร์ด สาย Pico GP15 ยังเชื่อม f26",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768-mouse: Save/Load: อุปกรณ์บนโต๊ะ บนบอร์ด สายทุกเส้น และตำแหน่งบอร์ดครบ",
+  "pass": true,
+  "detail": "parts 3/3 wires 4/4"
+ },
+ {
+  "name": "tablet-1024x768-mouse: แก้ค่าความต้านทานในแผงคุณสมบัติ",
+  "pass": true,
+  "detail": "2200"
+ },
+ {
+  "name": "tablet-1024x768-mouse: ช่องที่กำลังแก้อยู่ในส่วนที่มองเห็น",
+  "pass": true,
+  "detail": "[True, True]"
+ },
+ {
+  "name": "tablet-1024x768-mouse→หมุนจอ 768×1024: ไม่มี scroll แนวนอนทั้งหน้า",
+  "pass": true,
+  "detail": "768"
+ },
+ {
+  "name": "tablet-1024x768-mouse→หมุนจอ 768×1024: แถบเครื่องมือด้านบนไม่ล้น",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768-mouse→หมุนจอ 768×1024: ปุ่มที่มองเห็นทุกปุ่มมีไอคอน/ข้อความ",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "tablet-1024x768-mouse→หมุนจอ 768×1024: ปุ่มที่มองเห็นทุกปุ่มมีชื่อสำหรับผู้ใช้ (aria-label/title/ข้อความ)",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "tablet-1024x768-mouse→หมุนจอ 768×1024: คลังอุปกรณ์มีรายการ",
+  "pass": true,
+  "detail": "16"
+ },
+ {
+  "name": "tablet-1024x768-mouse→หมุนจอ 768×1024: แถบเครื่องมือในพื้นที่ทำงานอยู่ในกรอบและไม่ทับกัน",
+  "pass": true,
+  "detail": "[[8, 60, 254, 114], [658, 60, 760, 114], [0, 52, 768, 916.25]]"
+ },
+ {
+  "name": "tablet-1024x768-mouse: หมุนจอแล้ววงจร/ตำแหน่ง/สายเหมือนเดิม",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "tablet-1024x768-mouse: Run จำลองได้",
+  "pass": true,
+  "detail": "จำลองตามเวลา"
+ },
+ {
+  "name": "tablet-1024x768-mouse: ไม่มี JavaScript error",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "no-webgl [ไม่มี WebGL (--disable-webgl)]: แอปเริ่มได้ แสดงสาเหตุ \"ไม่รองรับ WebGL\"",
+  "pass": true,
+  "detail": "เบราว์เซอร์นี้ไม่รองรับ WebGL"
+ },
+ {
+  "name": "no-webgl [ไม่มี WebGL (--disable-webgl)]: คลังอุปกรณ์ยังแสดงรายการ",
+  "pass": true,
+  "detail": "16"
+ },
+ {
+  "name": "no-webgl [ไม่มี WebGL (--disable-webgl)]: ปุ่มแถบเครื่องมือมีไอคอน/ข้อความครบ",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "no-webgl [ไม่มี WebGL (--disable-webgl)]: เครื่องมือ 3 มิติถูกปิดพร้อมเหตุผล",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "no-webgl [ไม่มี WebGL (--disable-webgl)]: มีรายละเอียดวินิจฉัย",
+  "pass": true,
+  "detail": "สาเหตุ: webgl-unsupported\nWebGL2: ไม่มี · WebGL1: ไม่มี\nเบราว์เซอร์: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+ },
+ {
+  "name": "no-webgl [ไม่มี WebGL (--disable-webgl)]: แท็บบททดลองทำงาน",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "no-webgl [ไม่มี WebGL (--disable-webgl)]: แตะอุปกรณ์ → บอกเหตุผลที่วางไม่ได้",
+  "pass": true,
+  "detail": "วางอุปกรณ์ไม่ได้: พื้นที่ทำงาน 3 มิติใช้งานไม่ได้ในเบราว์เซอร์นี้ — ดูรายละเอียดและปุ่ม \"ลองอีกครั้ง\" ในพื้นที่ทำงาน"
+ },
+ {
+  "name": "no-webgl [ไม่มี WebGL (--disable-webgl)]: ปุ่มคุณภาพภาพตอบสนองพร้อมเหตุผล",
+  "pass": true,
+  "detail": "เปลี่ยนคุณภาพภาพไม่ได้: พื้นที่ทำงาน 3 มิติใช้งานไม่ได้ในเบราว์เซอร์นี้ — ดูรายละเอียดและปุ่ม \"ลองอีกครั้ง\" ในพื้นที่ทำงาน"
+ },
+ {
+  "name": "no-webgl [ไม่มี WebGL (--disable-webgl)]: Run ทำงาน (จำลองวงจรได้โดยไม่มี 3 มิติ)",
+  "pass": true,
+  "detail": "จำลองตามเวลา"
+ },
+ {
+  "name": "no-webgl [ไม่มี WebGL (--disable-webgl)]: ปุ่ม \"ลองอีกครั้ง\" ทำงานและยังบอกสาเหตุ",
+  "pass": true,
+  "detail": "ยังเปิดพื้นที่ 3 มิติไม่ได้ — ดูรายละเอียดด้านล่าง"
+ },
+ {
+  "name": "no-webgl [ไม่มี WebGL (--disable-webgl)]: ไม่มี JavaScript error",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "no-webgl [ปิด 3D API (--disable-3d-apis)]: แอปเริ่มได้ แสดงสาเหตุ \"ไม่รองรับ WebGL\"",
+  "pass": true,
+  "detail": "เบราว์เซอร์นี้ไม่รองรับ WebGL"
+ },
+ {
+  "name": "no-webgl [ปิด 3D API (--disable-3d-apis)]: คลังอุปกรณ์ยังแสดงรายการ",
+  "pass": true,
+  "detail": "16"
+ },
+ {
+  "name": "no-webgl [ปิด 3D API (--disable-3d-apis)]: ปุ่มแถบเครื่องมือมีไอคอน/ข้อความครบ",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "no-webgl [ปิด 3D API (--disable-3d-apis)]: เครื่องมือ 3 มิติถูกปิดพร้อมเหตุผล",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "no-webgl [ปิด 3D API (--disable-3d-apis)]: มีรายละเอียดวินิจฉัย",
+  "pass": true,
+  "detail": "สาเหตุ: webgl-unsupported\nWebGL2: ไม่มี · WebGL1: ไม่มี\nเบราว์เซอร์: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+ },
+ {
+  "name": "no-webgl [ปิด 3D API (--disable-3d-apis)]: แท็บบททดลองทำงาน",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "no-webgl [ปิด 3D API (--disable-3d-apis)]: แตะอุปกรณ์ → บอกเหตุผลที่วางไม่ได้",
+  "pass": true,
+  "detail": "วางอุปกรณ์ไม่ได้: พื้นที่ทำงาน 3 มิติใช้งานไม่ได้ในเบราว์เซอร์นี้ — ดูรายละเอียดและปุ่ม \"ลองอีกครั้ง\" ในพื้นที่ทำงาน"
+ },
+ {
+  "name": "no-webgl [ปิด 3D API (--disable-3d-apis)]: ปุ่มคุณภาพภาพตอบสนองพร้อมเหตุผล",
+  "pass": true,
+  "detail": "เปลี่ยนคุณภาพภาพไม่ได้: พื้นที่ทำงาน 3 มิติใช้งานไม่ได้ในเบราว์เซอร์นี้ — ดูรายละเอียดและปุ่ม \"ลองอีกครั้ง\" ในพื้นที่ทำงาน"
+ },
+ {
+  "name": "no-webgl [ปิด 3D API (--disable-3d-apis)]: Run ทำงาน (จำลองวงจรได้โดยไม่มี 3 มิติ)",
+  "pass": true,
+  "detail": "จำลองตามเวลา"
+ },
+ {
+  "name": "no-webgl [ปิด 3D API (--disable-3d-apis)]: ปุ่ม \"ลองอีกครั้ง\" ทำงานและยังบอกสาเหตุ",
+  "pass": true,
+  "detail": "ยังเปิดพื้นที่ 3 มิติไม่ได้ — ดูรายละเอียดด้านล่าง"
+ },
+ {
+  "name": "no-webgl [ปิด 3D API (--disable-3d-apis)]: ไม่มี JavaScript error",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "renderer-failed: แยกสาเหตุ \"สร้างพื้นที่ 3 มิติไม่สำเร็จ\" ออกจาก \"ไม่รองรับ WebGL\"",
+  "pass": true,
+  "detail": "['renderer-failed', 'สร้างพื้นที่ 3 มิติไม่สำเร็จ']"
+ },
+ {
+  "name": "renderer-failed: รายละเอียดมีข้อความ error จริง",
+  "pass": true,
+  "detail": "สาเหตุ: renderer-failed\nข้อผิดพลาด: Error: THREE.WebGLRenderer: Error creating WebGL context with your selected attributes.\nWebGL2: มี · WebGL1: มี\nGPU: ANGLE ("
+ },
+ {
+  "name": "renderer-failed: กด \"ลองอีกครั้ง\" หลังสาเหตุหายไป → เปิด 3 มิติได้โดยไม่ต้องโหลดหน้าใหม่",
+  "pass": true,
+  "detail": ""
+ },
+ {
+  "name": "renderer-failed: ไม่มี JavaScript error ที่ไม่ได้จัดการ",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "context-lost: แจ้ง \"การแสดงผล 3 มิติหยุดชั่วคราว\"",
+  "pass": true,
+  "detail": "['context-lost', 'การแสดงผล 3 มิติหยุดชั่วคราว']"
+ },
+ {
+  "name": "context-lost → restored: กลับมาแสดง 3 มิติเอง งานยังอยู่ครบ",
+  "pass": true,
+  "detail": "['ok', False, 3]"
+ },
+ {
+  "name": "context-lost → restored: วางอุปกรณ์ต่อได้",
+  "pass": true,
+  "detail": "วาง R2 บนโต๊ะ"
+ },
+ {
+  "name": "context-lost: ไม่มี JavaScript error",
+  "pass": true,
+  "detail": "[]"
+ },
+ {
+  "name": "ฟอนต์โหลดไม่ได้: แอปเริ่มได้ด้วยฟอนต์สำรอง",
+  "pass": true,
+  "detail": "1.0s"
+ },
+ {
+  "name": "สคริปต์โหลดไม่ได้: ปุ่มมีข้อความสำรอง และมีข้อความ \"กำลังโหลด\"",
+  "pass": true,
+  "detail": "['Run', 'กำลังโหลด Circuit Lab 3D…']"
+ },
+ {
+  "name": "สคริปต์โหลดไม่ได้: หลัง 15 วินาทีบอกว่าโหลดไม่สำเร็จ + ปุ่มโหลดใหม่",
+  "pass": true,
+  "detail": "โหลดโปรแกรมไม่สำเร็จ\n\nสคริปต์หลักยังไม่ทำงานหลังรอ 15 วินาที (อินเทอร์เน็ตช้า/ขา"
+ }
+]

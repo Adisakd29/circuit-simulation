@@ -1,0 +1,196 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 30,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "2026-10-21T03:43:30.741Z",
+ "title": "7 ส่วน เลข 1",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PS1",
+    "label": "PS1",
+    "kind": "dcsupply",
+    "placement": {
+     "kind": "table",
+     "x": -40,
+     "z": -102,
+     "rotation": 0
+    },
+    "params": {
+     "voltage": 5,
+     "currentLimit": 0.1,
+     "internalResistance": 0.01,
+     "outputOn": true
+    }
+   },
+   {
+    "id": "DS1",
+    "label": "DS1",
+    "kind": "sevenseg",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h20",
+     "rotation": 0
+    },
+    "params": {
+     "common": "cc",
+     "Is": 3.175188527038117e-19,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.01,
+     "maxCurrent": 0.02,
+     "maxReverseVoltage": 5
+    }
+   },
+   {
+    "id": "RB",
+    "label": "RB",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "tp24",
+     "rotation": 90
+    },
+    "params": {
+     "resistance": 330,
+     "powerRating": 0.25,
+     "span": 3
+    }
+   },
+   {
+    "id": "RC",
+    "label": "RC",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "i14",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 330,
+     "powerRating": 0.25,
+     "span": 9
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "w_mvhkht4k1ydtj3",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhkht4k2dcta8",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhkht4k3qrxmt",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhkht4k4qhug4",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhkht4k5vo751",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j22"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn22"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhkht4l6yqkkx",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j14"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp14"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": "sevenseg",
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

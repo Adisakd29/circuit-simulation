@@ -1,0 +1,123 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 33,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "",
+ "title": "แลป 36 NTC",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PS1",
+    "label": "PS1",
+    "kind": "dcsupply",
+    "placement": {
+     "kind": "table",
+     "x": -40,
+     "z": -102,
+     "rotation": 0
+    },
+    "params": {
+     "voltage": 5,
+     "currentLimit": 1,
+     "internalResistance": 0.01,
+     "outputOn": true
+    }
+   },
+   {
+    "id": "R1",
+    "label": "R1",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "a10",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 10000,
+     "powerRating": 0.25,
+     "span": 4
+    }
+   },
+   {
+    "id": "TH1",
+    "label": "TH1",
+    "kind": "ntc",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "b14",
+     "rotation": 0
+    },
+    "params": {
+     "temperature": 25,
+     "r25": 10000,
+     "beta": 3950,
+     "dissipation": 0.002,
+     "maxPower": 0.05,
+     "span": 2
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "wp",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "c10"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wn",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "d16"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": {
+    "kind": "hole",
+    "boardId": "bb1",
+    "hole": "c14"
+   },
+   "black": {
+    "kind": "hole",
+    "boardId": "bb1",
+    "hole": "e16"
+   }
+  }
+ },
+ "studentWork": {
+  "lessonId": "ntc",
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

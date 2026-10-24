@@ -1,0 +1,113 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 30,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "2026-10-21T09:08:39.135Z",
+ "title": "บทที่ 23 เซอร์โว SG90",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PICO1",
+    "label": "PICO1",
+    "kind": "pico",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h5",
+     "rotation": 0
+    },
+    "params": {
+     "code": "from machine import Pin, PWM\nimport time\ns=PWM(Pin(15))\ns.freq(50)\nwhile True:\n  s.duty_u16(1638)\n  time.sleep(1)\n  s.duty_u16(4751)\n  time.sleep(1)\n  s.duty_u16(7864)\n  time.sleep(1)\n",
+     "autorun": true
+    }
+   },
+   {
+    "id": "M1",
+    "label": "M1",
+    "kind": "servo",
+    "placement": {
+     "kind": "table",
+     "x": 0,
+     "z": -24,
+     "rotation": 0
+    },
+    "params": {
+     "pulseMin": 0.0005,
+     "pulseMax": 0.0024,
+     "speed": 600,
+     "vMin": 4,
+     "vMax": 6,
+     "idleCurrent": 0.006
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "w_mvhw3xwedtqlg4",
+    "a": {
+     "kind": "pin",
+     "partId": "M1",
+     "pin": "V"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a5"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhw3xwfejnqhh",
+    "a": {
+     "kind": "pin",
+     "partId": "M1",
+     "pin": "GND"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j22"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhw3xwffv1wxz",
+    "a": {
+     "kind": "pin",
+     "partId": "M1",
+     "pin": "SIG"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j24"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": "servo",
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

@@ -1,0 +1,276 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 35,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "",
+ "title": "แลป 38 TIP120",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PS1",
+    "label": "PS1",
+    "kind": "dcsupply",
+    "placement": {
+     "kind": "table",
+     "x": -40,
+     "z": -102,
+     "rotation": 0
+    },
+    "params": {
+     "voltage": 6,
+     "currentLimit": 3,
+     "internalResistance": 0.01,
+     "outputOn": true
+    }
+   },
+   {
+    "id": "Q1",
+    "label": "Q1",
+    "kind": "darlington",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "c20",
+     "rotation": 0
+    },
+    "params": {
+     "model": "TIP120",
+     "bf1": 40,
+     "bf2": 80,
+     "is1": 1e-14,
+     "is2": 1e-13,
+     "r1": 8000,
+     "r2": 120,
+     "rc": 0.1,
+     "re": 0.05,
+     "maxIc": 5,
+     "maxVce": 60,
+     "heatsink": false
+    }
+   },
+   {
+    "id": "M1",
+    "label": "M1",
+    "kind": "motor",
+    "placement": {
+     "kind": "table",
+     "x": 18,
+     "z": -28,
+     "rotation": 0
+    },
+    "params": {
+     "gearRatio": 48,
+     "ke": 0.00433,
+     "resistance": 3.5,
+     "inductance": 0.001,
+     "inertia": 2.1e-7,
+     "noLoadCurrent": 0.145,
+     "viscous": 5.2e-8,
+     "gearEff": 0.4,
+     "loadTorque": 0
+    }
+   },
+   {
+    "id": "RB",
+    "label": "RB",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "b14",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 10000,
+     "powerRating": 0.25,
+     "span": 6
+    }
+   },
+   {
+    "id": "S1",
+    "label": "S1",
+    "kind": "switch",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "a10",
+     "rotation": 0
+    },
+    "params": {
+     "closed": false,
+     "onResistance": 0.05
+    }
+   },
+   {
+    "id": "D1",
+    "label": "D1",
+    "kind": "diode",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "e21",
+     "rotation": 0
+    },
+    "params": {
+     "model": "1N4007",
+     "Is": 7.03e-9,
+     "n": 1.808,
+     "Rs": 0.034,
+     "Bv": 1000,
+     "Ibv": 0.000005,
+     "maxCurrent": 1,
+     "maxPower": 3,
+     "span": 4
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "wp",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wn",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn2"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w1",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a22"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn22"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wma",
+    "a": {
+     "kind": "pin",
+     "partId": "M1",
+     "pin": "A"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp5"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wmb",
+    "a": {
+     "kind": "pin",
+     "partId": "M1",
+     "pin": "B"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a21"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w2",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "c10"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp10"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w3",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "c12"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "c14"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w4",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b25"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp24"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": "darlington",
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

@@ -1,0 +1,230 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 32,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "",
+ "title": "แลป 35 LM317",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PS1",
+    "label": "PS1",
+    "kind": "dcsupply",
+    "placement": {
+     "kind": "table",
+     "x": -40,
+     "z": -102,
+     "rotation": 0
+    },
+    "params": {
+     "voltage": 15,
+     "currentLimit": 1,
+     "internalResistance": 0.01,
+     "outputOn": true
+    }
+   },
+   {
+    "id": "U1",
+    "label": "U1",
+    "kind": "lm317",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "c20",
+     "rotation": 0
+    },
+    "params": {
+     "model": "LM317",
+     "vref": 1.25,
+     "iadj": 0.00005,
+     "minLoad": 0.0035,
+     "dropout": 1.7,
+     "maxDiff": 40,
+     "maxLoad": 1.5,
+     "heatsink": false
+    }
+   },
+   {
+    "id": "R1",
+    "label": "R1",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "a16",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 240,
+     "powerRating": 0.25,
+     "span": 4
+    }
+   },
+   {
+    "id": "VR1",
+    "label": "VR1",
+    "kind": "potentiometer",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "a7",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 2000,
+     "position": 0.5,
+     "endResistance": 3,
+     "powerRating": 0.5
+    }
+   },
+   {
+    "id": "RL",
+    "label": "RL",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "g21",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 1000,
+     "powerRating": 0.25,
+     "span": 6
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "wp",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "e22"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wn",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a5"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w1",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b16"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "d21"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w2",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b7"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "d20"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w3",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b8"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b5"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w4",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "e21"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "f21"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w5",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h27"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "c5"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": "lm317",
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

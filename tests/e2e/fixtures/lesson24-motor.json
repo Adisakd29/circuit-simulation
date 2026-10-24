@@ -1,0 +1,262 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 30,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "2026-10-21T10:16:26.989Z",
+ "title": "บทที่ 24 มอเตอร์ DC",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PICO1",
+    "label": "PICO1",
+    "kind": "pico",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h5",
+     "rotation": 0
+    },
+    "params": {
+     "code": "from machine import Pin, PWM\nimport time\nm=PWM(Pin(15))\nm.freq(200)\nwhile True:\n  m.duty_u16(65535)\n  time.sleep(1.5)\n  m.duty_u16(26214)\n  time.sleep(1.5)\n  m.duty_u16(0)\n  time.sleep(1)\n",
+     "autorun": true
+    }
+   },
+   {
+    "id": "PS1",
+    "label": "PS1",
+    "kind": "dcsupply",
+    "placement": {
+     "kind": "table",
+     "x": -40,
+     "z": -102,
+     "rotation": 0
+    },
+    "params": {
+     "voltage": 6,
+     "currentLimit": 3,
+     "internalResistance": 0.01,
+     "outputOn": true
+    }
+   },
+   {
+    "id": "M1",
+    "label": "M1",
+    "kind": "motor",
+    "placement": {
+     "kind": "table",
+     "x": 18,
+     "z": -28,
+     "rotation": 0
+    },
+    "params": {
+     "gearRatio": 48,
+     "ke": 0.00433,
+     "resistance": 3.5,
+     "inductance": 0.001,
+     "inertia": 2.1e-7,
+     "noLoadCurrent": 0.145,
+     "viscous": 5.2e-8,
+     "gearEff": 0.4,
+     "loadTorque": 0
+    }
+   },
+   {
+    "id": "Q1",
+    "label": "Q1",
+    "kind": "mosfet",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "b26",
+     "rotation": 0
+    },
+    "params": {
+     "model": "IRLZ44N",
+     "polarity": "n",
+     "vth": 1.7,
+     "kp": 14,
+     "lambda": 0.01,
+     "body": {
+      "Is": 1e-9,
+      "n": 1.5,
+      "Rs": 0.02
+     },
+     "maxId": 47,
+     "maxVds": 55,
+     "maxVgs": 16,
+     "maxPower": 2.4
+    }
+   },
+   {
+    "id": "RG",
+    "label": "RG",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "tn26",
+     "rotation": 90
+    },
+    "params": {
+     "resistance": 10000,
+     "powerRating": 0.25,
+     "span": 2
+    }
+   },
+   {
+    "id": "D1",
+    "label": "D1",
+    "kind": "diode",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "a27",
+     "rotation": 270
+    },
+    "params": {
+     "model": "1N4007",
+     "Is": 7.03e-9,
+     "n": 1.808,
+     "Rs": 0.034,
+     "Bv": 1000,
+     "Ibv": 0.000005,
+     "maxCurrent": 1,
+     "maxPower": 3,
+     "span": 3
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "w_mvhyj4ob1714ly",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhyj4ob2f7ppu",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhyj4ob3u289m",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a7"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn8"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhyj4oc4grq11",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j24"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "c26"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhyj4oc556fem",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a28"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn28"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhyj4od6wwgvx",
+    "a": {
+     "kind": "pin",
+     "partId": "M1",
+     "pin": "A"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp30"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhyj4od7zji8q",
+    "a": {
+     "kind": "pin",
+     "partId": "M1",
+     "pin": "B"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "e27"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": "motor",
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

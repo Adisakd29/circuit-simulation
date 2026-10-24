@@ -1,0 +1,215 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 30,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "2026-10-21T04:37:52.592Z",
+ "title": "บทที่ 19 รีเลย์",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PICO1",
+    "label": "PICO1",
+    "kind": "pico",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h5",
+     "rotation": 0
+    },
+    "params": {
+     "code": "from machine import Pin\nimport time\nk=Pin(15,Pin.OUT)\nwhile True:\n  k.toggle()\n  time.sleep(0.5)\n",
+     "autorun": true
+    }
+   },
+   {
+    "id": "K1",
+    "label": "K1",
+    "kind": "relay",
+    "placement": {
+     "kind": "table",
+     "x": 0,
+     "z": -25,
+     "rotation": 0
+    },
+    "params": {
+     "coilResistance": 70,
+     "coilInductance": 0.1,
+     "vPick": 3.75,
+     "vDrop": 0.5,
+     "contactResistance": 0.1,
+     "contactRating": 10,
+     "baseResistance": 1000
+    }
+   },
+   {
+    "id": "PS1",
+    "label": "PS1",
+    "kind": "dcsupply",
+    "placement": {
+     "kind": "table",
+     "x": -40,
+     "z": -102,
+     "rotation": 0
+    },
+    "params": {
+     "voltage": 5,
+     "currentLimit": 0.1,
+     "internalResistance": 0.01,
+     "outputOn": true
+    }
+   },
+   {
+    "id": "R1",
+    "label": "R1",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "a26",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 330,
+     "powerRating": 0.25,
+     "span": 3
+    }
+   },
+   {
+    "id": "LED1",
+    "label": "LED1",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "c29",
+     "rotation": 0
+    },
+    "params": {
+     "color": "red",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "w_mvhmfpzj1ot8ox",
+    "a": {
+     "kind": "pin",
+     "partId": "K1",
+     "pin": "V"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a5"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhmfpzk2orob6",
+    "a": {
+     "kind": "pin",
+     "partId": "K1",
+     "pin": "G"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j22"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhmfpzk3j55xo",
+    "a": {
+     "kind": "pin",
+     "partId": "K1",
+     "pin": "S"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j24"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhmfpzk4r8yyp",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b26"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhmfpzk5qe0jg",
+    "a": {
+     "kind": "pin",
+     "partId": "K1",
+     "pin": "NO"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a30"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhmfpzk6bfwuj",
+    "a": {
+     "kind": "pin",
+     "partId": "K1",
+     "pin": "COM"
+    },
+    "b": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "neg"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": "relay",
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

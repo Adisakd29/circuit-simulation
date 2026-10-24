@@ -1,0 +1,260 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 31,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "2026-10-23T00:00:00.000Z",
+ "title": "แลป 34 SCR",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PS1",
+    "label": "PS1",
+    "kind": "dcsupply",
+    "placement": {
+     "kind": "table",
+     "x": -40,
+     "z": -102,
+     "rotation": 0
+    },
+    "params": {
+     "voltage": 12,
+     "currentLimit": 1,
+     "internalResistance": 0.01,
+     "outputOn": true
+    }
+   },
+   {
+    "id": "SCR1",
+    "label": "SCR1",
+    "kind": "scr",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "c20",
+     "rotation": 0
+    },
+    "params": {
+     "model": "2N5060",
+     "igt": 0.0002,
+     "ih": 0.005,
+     "vdrm": 30,
+     "maxCurrent": 0.8
+    }
+   },
+   {
+    "id": "LED1",
+    "label": "LED1",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "a23",
+     "rotation": 180
+    },
+    "params": {
+     "color": "red",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   },
+   {
+    "id": "RL",
+    "label": "RL",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "b23",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 1000,
+     "powerRating": 0.25,
+     "span": 4
+    }
+   },
+   {
+    "id": "RG",
+    "label": "RG",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "b15",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 10000,
+     "powerRating": 0.25,
+     "span": 6
+    }
+   },
+   {
+    "id": "S1",
+    "label": "S1",
+    "kind": "switch",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "a11",
+     "rotation": 0
+    },
+    "params": {
+     "closed": false,
+     "onResistance": 0.05
+    }
+   },
+   {
+    "id": "S2",
+    "label": "S2",
+    "kind": "switch",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "b20",
+     "rotation": 0
+    },
+    "params": {
+     "closed": false,
+     "onResistance": 0.05
+    }
+   },
+   {
+    "id": "RGK",
+    "label": "RGK",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "g17",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 1000,
+     "powerRating": 0.25,
+     "span": 4
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "wp",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "d27"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wn",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "d20"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w1",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "c11"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "e27"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w2",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "c13"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "c15"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w3",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "e21"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "f21"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w4",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h17"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "e20"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": "scr",
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

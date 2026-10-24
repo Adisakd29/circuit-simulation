@@ -1,0 +1,162 @@
+{
+  "format": "circuitlab3d",
+  "schemaVersion": 29,
+  "app": "Circuit Lab 3D 0.1",
+  "savedAt": "2026-10-22T13:48:25.238Z",
+  "title": "แลป 32 สเต็ปเปอร์ 28BYJ-48",
+  "circuit": {
+    "breadboards": [
+      {
+        "id": "bb1",
+        "model": "CL-400",
+        "x": 0,
+        "z": 0
+      }
+    ],
+    "parts": [
+      {
+        "id": "PICO1",
+        "label": "PICO1",
+        "kind": "pico",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "h1",
+          "rotation": 0
+        },
+        "params": {
+          "code": "from machine import Pin\nimport time\npins = [Pin(p, Pin.OUT) for p in (10, 11, 12, 13)]\nHALF = [(1,0,0,0), (1,1,0,0), (0,1,0,0), (0,1,1,0), (0,0,1,0), (0,0,1,1), (0,0,0,1), (1,0,0,1)]\n\ndef step(n, d=1, us=2000, seq=HALF):\n    global k\n    for _ in range(n):\n        k = (k + d) % len(seq)\n        for p, v in zip(pins, seq[k]):\n            p.value(v)\n        time.sleep_us(us)\n\ndef off():\n    for p in pins:\n        p.value(0)\n\nk = 0\nstep(1024, 1, 2000)\noff()\nprint(\"ไป 90 องศา\")\ntime.sleep_ms(300)\nstep(512, -1, 2000)\noff()\nprint(\"กลับ 45 องศา\")\n",
+          "autorun": true
+        }
+      },
+      {
+        "id": "M1",
+        "label": "M1",
+        "kind": "stepper",
+        "placement": {
+          "kind": "table",
+          "x": 36,
+          "z": 0,
+          "rotation": 0
+        },
+        "params": {
+          "model": "28BYJ-48",
+          "coilResistance": 50,
+          "stepsPerRev": 4096,
+          "pullIn": 600,
+          "pullOut": 1000,
+          "minCoilCurrent": 0.06,
+          "vRated": 5
+        }
+      }
+    ],
+    "wires": [
+      {
+        "id": "w_mvjljkt11k6mft",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j14"
+        },
+        "b": {
+          "kind": "pin",
+          "partId": "M1",
+          "pin": "IN1"
+        },
+        "color": "#1e63c6",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "w_mvjljkt127ojuj",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j15"
+        },
+        "b": {
+          "kind": "pin",
+          "partId": "M1",
+          "pin": "IN2"
+        },
+        "color": "#f48fb1",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "w_mvjljkt13798wz",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j16"
+        },
+        "b": {
+          "kind": "pin",
+          "partId": "M1",
+          "pin": "IN3"
+        },
+        "color": "#f4d03f",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "w_mvjljkt2433e5u",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j17"
+        },
+        "b": {
+          "kind": "pin",
+          "partId": "M1",
+          "pin": "IN4"
+        },
+        "color": "#f28c28",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "w_mvjljkt258gys7",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "a1"
+        },
+        "b": {
+          "kind": "pin",
+          "partId": "M1",
+          "pin": "V"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "w_mvjljkt26gohtf",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j18"
+        },
+        "b": {
+          "kind": "pin",
+          "partId": "M1",
+          "pin": "G"
+        },
+        "color": "#212121",
+        "arc": 2,
+        "bend": 0
+      }
+    ],
+    "probes": {
+      "red": null,
+      "black": null
+    }
+  },
+  "studentWork": {
+    "lessonId": "stepper",
+    "records": {},
+    "answers": {},
+    "achieved": {}
+  }
+}
