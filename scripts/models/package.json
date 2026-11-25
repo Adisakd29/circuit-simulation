@@ -1,0 +1,14 @@
+{
+  "name": "circuit-lab-3d-models",
+  "private": true,
+  "description": "เครื่องมือสร้างโมเดล GLB ของบอร์ดจากไฟล์ CAD ของผู้ผลิต (ใช้ตอนสร้างเท่านั้น ไม่แจกจ่ายในหน้าเว็บ)",
+  "type": "module",
+  "dependencies": {
+    "@gltf-transform/core": "4.5.1",
+    "@gltf-transform/extensions": "4.5.1",
+    "@gltf-transform/functions": "4.5.1",
+    "meshoptimizer": "0.22.0",
+    "occt-import-js": "0.0.23",
+    "pcb-stackup": "4.2.8"
+  }
+}

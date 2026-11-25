@@ -1,0 +1,45 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 42,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "",
+ "title": "แลป 45 จอ OLED",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PICO1",
+    "label": "PICO1",
+    "kind": "pico",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h1",
+     "rotation": 0
+    },
+    "params": {
+     "code": "from machine import Pin, I2C\nimport ssd1306, time\n\ni2c = I2C(0, sda=Pin(4), scl=Pin(5), freq=400000)\nprint(\"found:\", [hex(a) for a in i2c.scan()])\noled = ssd1306.SSD1306_I2C(128, 64, i2c)   # 0x3C\n\nn = 0\nwhile True:\n    oled.fill(0)\n    oled.text(\"Circuit Lab\", 20, 8)\n    oled.text(\"Pico + OLED\", 20, 24)\n    oled.text(\"count %d\" % n, 28, 44)\n    oled.show()\n    n += 1\n    time.sleep(0.5)\n",
+     "autorun": false
+    }
+   }
+  ],
+  "wires": [],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": null,
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

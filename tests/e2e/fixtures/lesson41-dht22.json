@@ -1,0 +1,213 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 39,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "",
+ "title": "แลป 41 DHT22",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PICO1",
+    "label": "PICO1",
+    "kind": "pico",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h1",
+     "rotation": 0
+    },
+    "params": {
+     "code": "import dht, time\nfrom machine import Pin\ns = dht.DHT22(Pin(15))\nled = Pin(14, Pin.OUT)\nwhile True:\n    try:\n        s.measure()\n        t = s.temperature()\n        h = s.humidity()\n        print(\"T =\", t, \"C  RH =\", h, \"%\")\n        led.value(1 if t > 35 or h > 85 else 0)\n    except OSError as e:\n        print(\"read error\", e)\n    time.sleep(2)\n",
+     "autorun": true
+    }
+   },
+   {
+    "id": "U1",
+    "label": "U1",
+    "kind": "dht22",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j22",
+     "rotation": 0
+    },
+    "params": {
+     "temperature": 30,
+     "humidity": 65,
+     "vMin": 3.3,
+     "vMax": 6,
+     "supplyCurrent": 0.001,
+     "standbyCurrent": 0.00005
+    }
+   },
+   {
+    "id": "R1",
+    "label": "R1",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h23",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 10000,
+     "powerRating": 0.25,
+     "span": 4
+    }
+   },
+   {
+    "id": "R2",
+    "label": "R2",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "a26",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 330,
+     "powerRating": 0.25,
+     "span": 3
+    }
+   },
+   {
+    "id": "LED1",
+    "label": "LED1",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "c29",
+     "rotation": 0
+    },
+    "params": {
+     "color": "red",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "wv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "f22"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a5"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "f25"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a3"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wd",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g23"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j20"
+    },
+    "color": "#fdd835",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wpu",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g27"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g22"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wl",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j19"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "d26"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wlg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "e30"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b3"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": null,
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

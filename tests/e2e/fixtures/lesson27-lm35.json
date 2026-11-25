@@ -1,0 +1,190 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 30,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "2026-10-21T15:31:13.065Z",
+ "title": "บทที่ 27 วัดอุณหภูมิ LM35",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PICO1",
+    "label": "PICO1",
+    "kind": "pico",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h5",
+     "rotation": 0
+    },
+    "params": {
+     "code": "from machine import ADC, Pin\nimport time\ns = ADC(26)\nled = Pin(15, Pin.OUT)\nwhile True:\n    t = s.read_u16() * 3.3 / 65535 * 100\n    print(\"T =\", round(t, 1))\n    led.value(1 if t > 30 else 0)\n    time.sleep(0.2)\n",
+     "autorun": true
+    }
+   },
+   {
+    "id": "TS1",
+    "label": "TS1",
+    "kind": "lm35",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "c26",
+     "rotation": 0
+    },
+    "params": {
+     "model": "LM35DZ",
+     "temperature": 25,
+     "quiescentCurrent": 0.000056,
+     "rOut": 0.5,
+     "vMin": 4,
+     "vMax": 30,
+     "maxOutputCurrent": 0.01
+    }
+   },
+   {
+    "id": "R1",
+    "label": "R1",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h26",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 330,
+     "powerRating": 0.25,
+     "span": 3
+    }
+   },
+   {
+    "id": "LED1",
+    "label": "LED1",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "g29",
+     "rotation": 0
+    },
+    "params": {
+     "color": "red",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "w_mvi9rx9j14bcasf",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a26"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a5"
+    },
+    "color": "#e53935",
+    "arc": 0.5,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi9rx9k153fnq5",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a27"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b14"
+    },
+    "color": "#fdd835",
+    "arc": 0.5,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi9rx9k16atlho",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a28"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b7"
+    },
+    "color": "#212121",
+    "arc": 0.5,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi9rx9k171x6ul",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j24"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j26"
+    },
+    "color": "#1e88e5",
+    "arc": 0.5,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi9rx9l188wanv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j30"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j22"
+    },
+    "color": "#212121",
+    "arc": 0.5,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": {
+    "kind": "hole",
+    "boardId": "bb1",
+    "hole": "d27"
+   },
+   "black": {
+    "kind": "hole",
+    "boardId": "bb1",
+    "hole": "c7"
+   }
+  }
+ },
+ "studentWork": {
+  "lessonId": "lm35",
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

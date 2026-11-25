@@ -1,0 +1,310 @@
+{
+ "source": "Arduino UNO Q ABX00162 CAD files (docs.arduino.cc/hardware/uno-q) \u2014 48DMVQAD1_SGDJV-20250922_1010.ipc (IPC-D-356), CC BY-SA 4.0",
+ "frame": "IPC board coordinates in mm: x across the board from the analog-header edge, y along the board from the end opposite USB-C; board 53.34 x 68.58",
+ "pads": [
+  {
+   "ref": "JANALO",
+   "pin": "1",
+   "net": "MCU_BOOT0",
+   "x": 2.54,
+   "y": 40.64,
+   "drill": 1.05
+  },
+  {
+   "ref": "JANALO",
+   "pin": "2",
+   "net": "PWR_3P3V",
+   "x": 2.54,
+   "y": 38.1,
+   "drill": 1.05
+  },
+  {
+   "ref": "JANALO",
+   "pin": "3",
+   "net": "MCU_NRST",
+   "x": 2.54,
+   "y": 35.56,
+   "drill": 1.05
+  },
+  {
+   "ref": "JANALO",
+   "pin": "4",
+   "net": "PWR_3P3V",
+   "x": 2.54,
+   "y": 33.02,
+   "drill": 1.05
+  },
+  {
+   "ref": "JANALO",
+   "pin": "5",
+   "net": "5V_SYS",
+   "x": 2.54,
+   "y": 30.48,
+   "drill": 1.05
+  },
+  {
+   "ref": "JANALO",
+   "pin": "6",
+   "net": "GND",
+   "x": 2.54,
+   "y": 27.94,
+   "drill": 1.05
+  },
+  {
+   "ref": "JANALO",
+   "pin": "7",
+   "net": "GND",
+   "x": 2.54,
+   "y": 25.4,
+   "drill": 1.05
+  },
+  {
+   "ref": "JANALO",
+   "pin": "8",
+   "net": "DC_IN",
+   "x": 2.54,
+   "y": 22.86,
+   "drill": 1.05
+  },
+  {
+   "ref": "JANALO",
+   "pin": "9",
+   "net": "MCU_PA4",
+   "x": 2.54,
+   "y": 17.78,
+   "drill": 1.05
+  },
+  {
+   "ref": "JANALO",
+   "pin": "10",
+   "net": "MCU_PA5",
+   "x": 2.54,
+   "y": 15.24,
+   "drill": 1.05
+  },
+  {
+   "ref": "JANALO",
+   "pin": "11",
+   "net": "MCU_PA6",
+   "x": 2.54,
+   "y": 12.7,
+   "drill": 1.05
+  },
+  {
+   "ref": "JANALO",
+   "pin": "12",
+   "net": "MCU_PA7",
+   "x": 2.54,
+   "y": 10.16,
+   "drill": 1.05
+  },
+  {
+   "ref": "JANALO",
+   "pin": "13",
+   "net": "MCU_PC1",
+   "x": 2.54,
+   "y": 7.62,
+   "drill": 1.05
+  },
+  {
+   "ref": "JANALO",
+   "pin": "14",
+   "net": "MCU_PC0",
+   "x": 2.54,
+   "y": 5.08,
+   "drill": 1.05
+  },
+  {
+   "ref": "JDIGIT",
+   "pin": "1",
+   "net": "m0087",
+   "x": 50.8,
+   "y": 5.08,
+   "drill": 1.05
+  },
+  {
+   "ref": "JDIGIT",
+   "pin": "2",
+   "net": "m0075",
+   "x": 50.8,
+   "y": 7.62,
+   "drill": 1.05
+  },
+  {
+   "ref": "JDIGIT",
+   "pin": "3",
+   "net": "m0032",
+   "x": 50.8,
+   "y": 10.16,
+   "drill": 1.05
+  },
+  {
+   "ref": "JDIGIT",
+   "pin": "4",
+   "net": "MCU_PB0",
+   "x": 50.8,
+   "y": 12.7,
+   "drill": 1.05
+  },
+  {
+   "ref": "JDIGIT",
+   "pin": "5",
+   "net": "MCU_PA12",
+   "x": 50.8,
+   "y": 15.24,
+   "drill": 1.05
+  },
+  {
+   "ref": "JDIGIT",
+   "pin": "6",
+   "net": "MCU_PA11",
+   "x": 50.8,
+   "y": 17.78,
+   "drill": 1.05
+  },
+  {
+   "ref": "JDIGIT",
+   "pin": "7",
+   "net": "MCU_PB1",
+   "x": 50.8,
+   "y": 20.32,
+   "drill": 1.05
+  },
+  {
+   "ref": "JDIGIT",
+   "pin": "8",
+   "net": "MCU_PB2",
+   "x": 50.8,
+   "y": 22.86,
+   "drill": 1.05
+  },
+  {
+   "ref": "JDIGIT",
+   "pin": "9",
+   "net": "m0019",
+   "x": 50.8,
+   "y": 26.92,
+   "drill": 1.05
+  },
+  {
+   "ref": "JDIGIT",
+   "pin": "10",
+   "net": "MCU_PB8",
+   "x": 50.8,
+   "y": 29.46,
+   "drill": 1.05
+  },
+  {
+   "ref": "JDIGIT",
+   "pin": "11",
+   "net": "m0048",
+   "x": 50.8,
+   "y": 32.0,
+   "drill": 1.05
+  },
+  {
+   "ref": "JDIGIT",
+   "pin": "12",
+   "net": "m0052",
+   "x": 50.8,
+   "y": 34.54,
+   "drill": 1.05
+  },
+  {
+   "ref": "JDIGIT",
+   "pin": "13",
+   "net": "m0046",
+   "x": 50.8,
+   "y": 37.08,
+   "drill": 1.05
+  },
+  {
+   "ref": "JDIGIT",
+   "pin": "14",
+   "net": "m0047",
+   "x": 50.8,
+   "y": 39.62,
+   "drill": 1.05
+  },
+  {
+   "ref": "JDIGIT",
+   "pin": "15",
+   "net": "GND",
+   "x": 50.8,
+   "y": 42.16,
+   "drill": 1.05
+  },
+  {
+   "ref": "JDIGIT",
+   "pin": "16",
+   "net": "MCU_VREF+",
+   "x": 50.8,
+   "y": 44.7,
+   "drill": 1.05
+  },
+  {
+   "ref": "JDIGIT",
+   "pin": "17",
+   "net": "m0049",
+   "x": 50.8,
+   "y": 47.24,
+   "drill": 1.05
+  },
+  {
+   "ref": "JDIGIT",
+   "pin": "18",
+   "net": "m0050",
+   "x": 50.8,
+   "y": 49.78,
+   "drill": 1.05
+  },
+  {
+   "ref": "JSPI1",
+   "pin": "1",
+   "net": "m0096",
+   "x": 30.491,
+   "y": 4.911,
+   "drill": 1.21
+  },
+  {
+   "ref": "JSPI1",
+   "pin": "2",
+   "net": "5V_SYS",
+   "x": 30.491,
+   "y": 2.371,
+   "drill": 1.21
+  },
+  {
+   "ref": "JSPI1",
+   "pin": "3",
+   "net": "m0094",
+   "x": 27.951,
+   "y": 4.911,
+   "drill": 1.21
+  },
+  {
+   "ref": "JSPI1",
+   "pin": "4",
+   "net": "m0095",
+   "x": 27.951,
+   "y": 2.371,
+   "drill": 1.21
+  },
+  {
+   "ref": "JSPI1",
+   "pin": "5",
+   "net": "MCU_NRST",
+   "x": 25.411,
+   "y": 4.911,
+   "drill": 1.21
+  },
+  {
+   "ref": "JSPI1",
+   "pin": "6",
+   "net": "GND",
+   "x": 25.411,
+   "y": 2.371,
+   "drill": 1.21
+  }
+ ]
+}

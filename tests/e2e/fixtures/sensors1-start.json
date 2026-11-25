@@ -1,0 +1,846 @@
+{
+  "format": "circuitlab3d",
+  "schemaVersion": 61,
+  "app": "Circuit Lab 3D 0.1",
+  "savedAt": "2026-11-25T10:38:59.873Z",
+  "title": "เซนเซอร์ชุด 1 (Pico)",
+  "circuit": {
+    "breadboards": [
+      {
+        "id": "bb1",
+        "model": "MB-102",
+        "x": 0,
+        "z": 0
+      }
+    ],
+    "parts": [
+      {
+        "id": "PICO1",
+        "label": "PICO1",
+        "kind": "pico",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "h1",
+          "rotation": 0
+        },
+        "params": {
+          "code": "from machine import Pin, ADC\nimport time\nfl = Pin(2, Pin.IN); tc = Pin(3, Pin.IN); hl = Pin(4, Pin.IN, Pin.PULL_UP)\nrd = Pin(5, Pin.IN, Pin.PULL_UP); tl = Pin(6, Pin.IN, Pin.PULL_UP)\nwp = Pin(7, Pin.OUT, value=0); sd = Pin(8, Pin.IN); vb = Pin(9, Pin.IN); ln = Pin(10, Pin.IN); rn = Pin(11, Pin.IN)\na_fl = ADC(26); a_w = ADC(27); a_f = ADC(28)\nn = 0\ndef cnt(p):\n    global n\n    n += 1\nsd.irq(trigger=Pin.IRQ_FALLING, handler=cnt)\nwhile True:\n    wp.value(1); time.sleep_ms(5); w = a_w.read_u16(); wp.value(0)\n    print('F', fl.value(), a_fl.read_u16(), 'T', tc.value(), 'H', hl.value(), 'K', rd.value(), 'D', tl.value(), 'W', w, 'P', a_f.read_u16(), 'S', n, 'V', vb.value(), 'L', ln.value(), 'R', rn.value())\n    n = 0\n    time.sleep_ms(100)\n",
+          "autorun": true
+        }
+      },
+      {
+        "id": "FL",
+        "label": "FL",
+        "kind": "flame",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "j24",
+          "rotation": 0
+        },
+        "params": {
+          "vMin": 3,
+          "vMax": 5.5,
+          "threshold": 0.5,
+          "flame": false,
+          "distance": 30,
+          "refDistance": 50,
+          "sunlight": false
+        }
+      },
+      {
+        "id": "TC",
+        "label": "TC",
+        "kind": "touch",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "j29",
+          "rotation": 0
+        },
+        "params": {
+          "touched": false,
+          "activeLow": false,
+          "toggleMode": false,
+          "toggled": false,
+          "vMin": 2,
+          "vMax": 5.5,
+          "rOut": 100
+        }
+      },
+      {
+        "id": "HL",
+        "label": "HL",
+        "kind": "hall",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "j33",
+          "rotation": 0
+        },
+        "params": {
+          "magnet": false,
+          "distance": 20,
+          "pole": "S",
+          "on": false,
+          "bop": 200,
+          "brp": 145,
+          "vMin": 4.5,
+          "vMax": 24,
+          "sinkMax": 0.025
+        }
+      },
+      {
+        "id": "RD",
+        "label": "RD",
+        "kind": "reed",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "a24",
+          "rotation": 0
+        },
+        "params": {
+          "magnet": false,
+          "distance": 20,
+          "closed": false,
+          "operate": 10,
+          "release": 14,
+          "contactResistance": 0.1,
+          "maxCurrent": 0.5,
+          "maxVoltage": 200,
+          "span": 5
+        }
+      },
+      {
+        "id": "TL",
+        "label": "TL",
+        "kind": "tilt",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "a32",
+          "rotation": 0
+        },
+        "params": {
+          "angle": 0,
+          "onAngle": 45,
+          "contactResistance": 1,
+          "maxCurrent": 0.02,
+          "maxVoltage": 12
+        }
+      },
+      {
+        "id": "WL",
+        "label": "WL",
+        "kind": "waterlevel",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "j37",
+          "rotation": 0
+        },
+        "params": {
+          "level": 0,
+          "fullRatio": 0.51,
+          "rOut": 10000,
+          "vMin": 3,
+          "vMax": 5.5
+        }
+      },
+      {
+        "id": "FS",
+        "label": "FS",
+        "kind": "fsr",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "j41",
+          "rotation": 0
+        },
+        "params": {
+          "force": 0,
+          "maxPower": 0.1
+        }
+      },
+      {
+        "id": "RF",
+        "label": "RF",
+        "kind": "resistor",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "g42",
+          "rotation": 0
+        },
+        "params": {
+          "resistance": 10000,
+          "powerRating": 0.25,
+          "span": 3
+        }
+      },
+      {
+        "id": "SD",
+        "label": "SD",
+        "kind": "soundsensor",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "j47",
+          "rotation": 0
+        },
+        "params": {
+          "vMin": 3,
+          "vMax": 5.5,
+          "threshold": 0.503,
+          "sound": false,
+          "level": 110,
+          "frequency": 500,
+          "sensitivity": -48
+        }
+      },
+      {
+        "id": "VB",
+        "label": "VB",
+        "kind": "vibsensor",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "j52",
+          "rotation": 0
+        },
+        "params": {
+          "vMin": 3,
+          "vMax": 5.5,
+          "threshold": 0.5,
+          "vibrating": false
+        }
+      },
+      {
+        "id": "LN",
+        "label": "LN",
+        "kind": "linetrack",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "j56",
+          "rotation": 0
+        },
+        "params": {
+          "vMin": 3,
+          "vMax": 5.5,
+          "threshold": 0.5,
+          "surface": "white",
+          "height": 2.5
+        }
+      },
+      {
+        "id": "RN",
+        "label": "RN",
+        "kind": "rainsensor",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "j60",
+          "rotation": 0
+        },
+        "params": {
+          "vMin": 3,
+          "vMax": 5.5,
+          "threshold": 0.5,
+          "wet": 0,
+          "rWet": 2000
+        }
+      }
+    ],
+    "wires": [
+      {
+        "id": "wv",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "b5"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "tp5"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "wg",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "b18"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "tn18"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "wvv",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "tp2"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bp2"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "wgg",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "tn3"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn3"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "FLv",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i24"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bp24"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "FLg",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i25"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn26"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "FLGP2",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j4"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "h26"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "FLGP26",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "b10"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "h27"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "TCg",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i29"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn29"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "TCv",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i30"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bp30"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "TCGP3",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j5"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "h31"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "HLv",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "a1"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i33"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "HLg",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i34"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn34"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "HLo",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j6"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "h35"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "RDa",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j7"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "e24"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "RDb",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "e29"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "tn29"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "TLa",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j9"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "e32"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "TLb",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "e33"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "tn33"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "WLs",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "b9"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "h37"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "WLv",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j10"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "h38"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "WLg",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i39"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn39"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "FSv",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i41"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bp41"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "FSo",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "b7"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "h42"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "RFg",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i45"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn45"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "SDv",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i47"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bp47"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "SDg",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i48"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn48"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "SDGP8",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j11"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "h49"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "VBv",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i52"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bp52"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "VBg",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i53"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn53"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "VBGP9",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j12"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "h54"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "LNv",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i56"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bp56"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "LNg",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i57"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn57"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "LNGP10",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j14"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "h58"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "RNv",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i60"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bp60"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "RNg",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i61"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn60"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "RNGP11",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j15"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "h62"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      }
+    ],
+    "probes": {
+      "red": null,
+      "black": null
+    }
+  },
+  "studentWork": {
+    "lessonId": null,
+    "records": {},
+    "answers": {},
+    "achieved": {}
+  }
+}

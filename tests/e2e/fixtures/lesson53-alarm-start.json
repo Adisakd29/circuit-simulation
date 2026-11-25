@@ -1,0 +1,480 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 47,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "",
+ "title": "alarm",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "MB-102",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PICO1",
+    "label": "PICO1",
+    "kind": "pico",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h1",
+     "rotation": 0
+    },
+    "params": {
+     "code": "",
+     "autorun": true
+    }
+   },
+   {
+    "id": "PIR1",
+    "label": "PIR1",
+    "kind": "pir",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j30",
+     "rotation": 0
+    },
+    "params": {
+     "motion": false,
+     "holdTime": 5,
+     "blockTime": 2.5,
+     "mode": "H",
+     "vMin": 4.5,
+     "vMax": 20,
+     "supplyCurrent": 0.00005
+    }
+   },
+   {
+    "id": "IR1",
+    "label": "IR1",
+    "kind": "irobstacle",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j40",
+     "rotation": 0
+    },
+    "params": {
+     "distance": 50,
+     "surface": "white",
+     "threshold": 10,
+     "vMin": 3,
+     "vMax": 5.5,
+     "supplyCurrent": 0.04
+    }
+   },
+   {
+    "id": "DHT1",
+    "label": "DHT1",
+    "kind": "dht11",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j50",
+     "rotation": 0
+    },
+    "params": {
+     "temperature": 28,
+     "humidity": 60,
+     "vMin": 3.3,
+     "vMax": 5.5,
+     "supplyCurrent": 0.0003,
+     "standbyCurrent": 0.00006
+    }
+   },
+   {
+    "id": "RPU",
+    "label": "RPU",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "f51",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 10000,
+     "powerRating": 0.25,
+     "span": 4
+    }
+   },
+   {
+    "id": "R16",
+    "label": "R16",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "b26",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 330,
+     "powerRating": 0.25,
+     "span": 4
+    }
+   },
+   {
+    "id": "LEDA",
+    "label": "LEDA",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "a30",
+     "rotation": 0
+    },
+    "params": {
+     "color": "red",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   },
+   {
+    "id": "R17",
+    "label": "R17",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "b36",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 330,
+     "powerRating": 0.25,
+     "span": 4
+    }
+   },
+   {
+    "id": "LEDD",
+    "label": "LEDD",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "a40",
+     "rotation": 0
+    },
+    "params": {
+     "color": "yellow",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "wv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b5"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp5"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b18"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn18"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wvv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp2"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wgg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn3"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn3"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wpv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a1"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g30"
+    },
+    "color": "#ff7043",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wpo",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j19"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h31"
+    },
+    "color": "#8e24aa",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wpg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i32"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn32"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wio",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j20"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h40"
+    },
+    "color": "#1e88e5",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wig",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i41"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn41"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wiv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i42"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp42"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wdv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i50"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp50"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wdg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i53"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn54"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wdd",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j17"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h51"
+    },
+    "color": "#fdd835",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wpu",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i55"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp56"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wl16",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b20"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "c26"
+    },
+    "color": "#43a047",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wk16",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "d31"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn32"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wl17",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b19"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "c36"
+    },
+    "color": "#43a047",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wk17",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "d41"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn42"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": null,
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

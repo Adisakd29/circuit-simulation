@@ -1,0 +1,7 @@
+node_modules
+dist
+artifact
+docs/visual
+tests/e2e/out
+*.zip
+.git

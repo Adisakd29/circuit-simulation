@@ -1,0 +1,358 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 51,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "",
+ "title": "แลป 57 จอ LCD แบบขนาน",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "UNO1",
+    "label": "UNO1",
+    "kind": "uno",
+    "placement": {
+     "kind": "table",
+     "x": -70,
+     "z": -10,
+     "rotation": 0
+    },
+    "params": {
+     "code": "// Blink + Serial Monitor\nconst int LED = 13;   // D13 = LED L บนบอร์ด\n\nvoid setup() {\n  pinMode(LED, OUTPUT);\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  digitalWrite(LED, HIGH);\n  Serial.println(\"LED ON\");\n  delay(500);\n  digitalWrite(LED, LOW);\n  Serial.println(\"LED OFF\");\n  delay(500);\n}\n",
+     "hex": null,
+     "hexSrc": "",
+     "flash": 0,
+     "ram": 0
+    }
+   },
+   {
+    "id": "LCD1",
+    "label": "LCD1",
+    "kind": "lcd1602p",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j8",
+     "rotation": 0
+    },
+    "params": {
+     "color": "blue",
+     "blR": 100,
+     "blVf": 3,
+     "blMax": 0.03,
+     "vMin": 2.7,
+     "vMax": 5.5,
+     "supplyCurrent": 0.0015
+    }
+   },
+   {
+    "id": "VR1",
+    "label": "VR1",
+    "kind": "potentiometer",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "f3",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 10000,
+     "position": 0.6,
+     "endResistance": 3,
+     "powerRating": 0.5
+    }
+   },
+   {
+    "id": "R1",
+    "label": "R1",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "g22",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 220,
+     "powerRating": 0.25,
+     "span": 4
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "p5",
+    "a": {
+     "kind": "pin",
+     "partId": "UNO1",
+     "pin": "5V"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "g0",
+    "a": {
+     "kind": "pin",
+     "partId": "UNO1",
+     "pin": "GND.1"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn2"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "gss",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i8"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn8"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "gk",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h23"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn23"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "vr1",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g3"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn3"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "vr3",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g5"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp5"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "v0",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h4"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h10"
+    },
+    "color": "#8e24aa",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "pdd",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i9"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp9"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "pa",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h26"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp26"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "grw",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i12"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn12"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "rs",
+    "a": {
+     "kind": "pin",
+     "partId": "UNO1",
+     "pin": "D12"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g11"
+    },
+    "color": "#fb8c00",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "e",
+    "a": {
+     "kind": "pin",
+     "partId": "UNO1",
+     "pin": "D11"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g13"
+    },
+    "color": "#fdd835",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "d4",
+    "a": {
+     "kind": "pin",
+     "partId": "UNO1",
+     "pin": "D5"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g18"
+    },
+    "color": "#1e88e5",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "d5",
+    "a": {
+     "kind": "pin",
+     "partId": "UNO1",
+     "pin": "D4"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g19"
+    },
+    "color": "#1e88e5",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "d6",
+    "a": {
+     "kind": "pin",
+     "partId": "UNO1",
+     "pin": "D3"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g20"
+    },
+    "color": "#1e88e5",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "d7",
+    "a": {
+     "kind": "pin",
+     "partId": "UNO1",
+     "pin": "D2"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g21"
+    },
+    "color": "#1e88e5",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": null,
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

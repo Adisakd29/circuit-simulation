@@ -1,0 +1,820 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 30,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "2026-10-21T14:24:51.787Z",
+ "title": "บทที่ 26 ไฟวิ่ง 555 + CD4017",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PS1",
+    "label": "PS1",
+    "kind": "dcsupply",
+    "placement": {
+     "kind": "table",
+     "x": -40,
+     "z": -102,
+     "rotation": 0
+    },
+    "params": {
+     "voltage": 9,
+     "currentLimit": 0.5,
+     "internalResistance": 0.01,
+     "outputOn": true
+    }
+   },
+   {
+    "id": "U1",
+    "label": "U1",
+    "kind": "timer555",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "f3",
+     "rotation": 0
+    },
+    "params": {
+     "model": "NE555",
+     "outHighDrop": 1.2,
+     "outHighResistance": 5,
+     "outLowResistance": 15,
+     "dischargeResistance": 18,
+     "quiescentResistance": 1800,
+     "minSupply": 4.5,
+     "maxSupply": 16,
+     "maxOutputCurrent": 0.2
+    }
+   },
+   {
+    "id": "RA",
+    "label": "RA",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "tp4",
+     "rotation": 90
+    },
+    "params": {
+     "resistance": 1000,
+     "powerRating": 0.25,
+     "span": 3
+    }
+   },
+   {
+    "id": "RB",
+    "label": "RB",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "c4",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 10000,
+     "powerRating": 0.25,
+     "span": 4
+    }
+   },
+   {
+    "id": "C1",
+    "label": "C1",
+    "kind": "capacitor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j4",
+     "rotation": 90
+    },
+    "params": {
+     "capacitance": 0.00001,
+     "ratedVoltage": 16,
+     "polarized": true,
+     "initialVoltage": 0,
+     "span": 2
+    }
+   },
+   {
+    "id": "U2",
+    "label": "U2",
+    "kind": "counter",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "f12",
+     "rotation": 0
+    },
+    "params": {
+     "model": "CD4017B",
+     "kp": 0.00052,
+     "vth": 1.5,
+     "lambda": 0.02,
+     "vMin": 3,
+     "vMax": 18,
+     "maxOutputCurrent": 0.01
+    }
+   },
+   {
+    "id": "L0",
+    "label": "LED1",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h21",
+     "rotation": 0
+    },
+    "params": {
+     "color": "red",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   },
+   {
+    "id": "L1",
+    "label": "LED2",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "i23",
+     "rotation": 180
+    },
+    "params": {
+     "color": "red",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   },
+   {
+    "id": "L2",
+    "label": "LED3",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h26",
+     "rotation": 0
+    },
+    "params": {
+     "color": "red",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   },
+   {
+    "id": "L3",
+    "label": "LED4",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "i28",
+     "rotation": 180
+    },
+    "params": {
+     "color": "red",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   },
+   {
+    "id": "L4",
+    "label": "LED5",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h29",
+     "rotation": 0
+    },
+    "params": {
+     "color": "red",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   },
+   {
+    "id": "L5",
+    "label": "LED6",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "c21",
+     "rotation": 0
+    },
+    "params": {
+     "color": "red",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   },
+   {
+    "id": "L6",
+    "label": "LED7",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "b23",
+     "rotation": 180
+    },
+    "params": {
+     "color": "red",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   },
+   {
+    "id": "L7",
+    "label": "LED8",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "c26",
+     "rotation": 0
+    },
+    "params": {
+     "color": "red",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   },
+   {
+    "id": "L8",
+    "label": "LED9",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "b28",
+     "rotation": 180
+    },
+    "params": {
+     "color": "red",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   },
+   {
+    "id": "L9",
+    "label": "LED10",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "c29",
+     "rotation": 0
+    },
+    "params": {
+     "color": "red",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   },
+   {
+    "id": "RL22b",
+    "label": "RL22b",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j22",
+     "rotation": 90
+    },
+    "params": {
+     "resistance": 1000,
+     "powerRating": 0.25,
+     "span": 2
+    }
+   },
+   {
+    "id": "RL27b",
+    "label": "RL27b",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j27",
+     "rotation": 90
+    },
+    "params": {
+     "resistance": 1000,
+     "powerRating": 0.25,
+     "span": 2
+    }
+   },
+   {
+    "id": "RL30b",
+    "label": "RL30b",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j30",
+     "rotation": 90
+    },
+    "params": {
+     "resistance": 1000,
+     "powerRating": 0.25,
+     "span": 2
+    }
+   },
+   {
+    "id": "RL22t",
+    "label": "RL22t",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "a22",
+     "rotation": 270
+    },
+    "params": {
+     "resistance": 1000,
+     "powerRating": 0.25,
+     "span": 2
+    }
+   },
+   {
+    "id": "RL27t",
+    "label": "RL27t",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "a27",
+     "rotation": 270
+    },
+    "params": {
+     "resistance": 1000,
+     "powerRating": 0.25,
+     "span": 2
+    }
+   },
+   {
+    "id": "RL30t",
+    "label": "RL30t",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "a30",
+     "rotation": 270
+    },
+    "params": {
+     "resistance": 1000,
+     "powerRating": 0.25,
+     "span": 2
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "w_mvi7ela58iuy1ei",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp2"
+    },
+    "color": "#e53935",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7ela58j6zgse",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn2"
+    },
+    "color": "#212121",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7ela58krt6tp",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp2"
+    },
+    "color": "#e53935",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7ela58lre3bu",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn2"
+    },
+    "color": "#212121",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7ela58mi1iei",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a3"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp3"
+    },
+    "color": "#e53935",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7ela58niy0jv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j3"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn3"
+    },
+    "color": "#212121",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7ela58o8j7hz",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b8"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b5"
+    },
+    "color": "#43a047",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7ela58p6hi2x",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "d5"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g4"
+    },
+    "color": "#1e88e5",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7ela58qchoek",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j6"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp8"
+    },
+    "color": "#e53935",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7ela68rq50e9",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i5"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a14"
+    },
+    "color": "#fdd835",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7ela68su7wro",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a12"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp12"
+    },
+    "color": "#e53935",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7ela68t6ud26",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j19"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn20"
+    },
+    "color": "#212121",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7ela68u67jwj",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b13"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn14"
+    },
+    "color": "#212121",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7ela68v9p07m",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "c15"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn15"
+    },
+    "color": "#212121",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7ela68wvh3p1",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g14"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g21"
+    },
+    "color": "#43a047",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7ela78xnqaj6",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g13"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g23"
+    },
+    "color": "#1e88e5",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7ela78y3jp2q",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g15"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g26"
+    },
+    "color": "#43a047",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7ela78zzvxnb",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g18"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g28"
+    },
+    "color": "#1e88e5",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7ela790p4jo9",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a18"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g29"
+    },
+    "color": "#43a047",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7elag912f7vy",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g12"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a21"
+    },
+    "color": "#1e88e5",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7elag92mtdft",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g16"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a23"
+    },
+    "color": "#43a047",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7elah93vldn7",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g17"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a26"
+    },
+    "color": "#1e88e5",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7elah94on1w7",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a19"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a28"
+    },
+    "color": "#43a047",
+    "arc": 0,
+    "bend": 0
+   },
+   {
+    "id": "w_mvi7elai956vyxk",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a17"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a29"
+    },
+    "color": "#1e88e5",
+    "arc": 0,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": "counter",
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

@@ -1,0 +1,215 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 52,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "",
+ "title": "แลป 58 ถอดรหัส I2C",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "UNO1",
+    "label": "UNO1",
+    "kind": "uno",
+    "placement": {
+     "kind": "table",
+     "x": -70,
+     "z": -10,
+     "rotation": 0
+    },
+    "params": {
+     "code": "// Blink + Serial Monitor\nconst int LED = 13;   // D13 = LED L บนบอร์ด\n\nvoid setup() {\n  pinMode(LED, OUTPUT);\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  digitalWrite(LED, HIGH);\n  Serial.println(\"LED ON\");\n  delay(500);\n  digitalWrite(LED, LOW);\n  Serial.println(\"LED OFF\");\n  delay(500);\n}\n",
+     "hex": null,
+     "hexSrc": "",
+     "flash": 0,
+     "ram": 0
+    }
+   },
+   {
+    "id": "U1",
+    "label": "U1",
+    "kind": "bh1750",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j10",
+     "rotation": 0
+    },
+    "params": {
+     "lux": 500,
+     "pullUp": 4700,
+     "vMin": 2.4,
+     "vMax": 5.5,
+     "supplyCurrent": 0.0002
+    }
+   },
+   {
+    "id": "LA1",
+    "label": "LA1",
+    "kind": "logicanalyzer",
+    "placement": {
+     "kind": "table",
+     "x": -40,
+     "z": 40,
+     "rotation": 0
+    },
+    "params": {
+     "timeDiv": 0.001,
+     "trigCh": -1,
+     "trigEdge": "rise",
+     "decoders": [
+      "none",
+      "none",
+      "none",
+      "none",
+      "none",
+      "none",
+      "none",
+      "none"
+     ],
+     "bauds": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "a",
+    "a": {
+     "kind": "pin",
+     "partId": "UNO1",
+     "pin": "5V"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "f10"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "b",
+    "a": {
+     "kind": "pin",
+     "partId": "UNO1",
+     "pin": "GND.2"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "f11"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "c",
+    "a": {
+     "kind": "pin",
+     "partId": "UNO1",
+     "pin": "A5"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "f12"
+    },
+    "color": "#1e88e5",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "d",
+    "a": {
+     "kind": "pin",
+     "partId": "UNO1",
+     "pin": "A4"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "f13"
+    },
+    "color": "#fdd835",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "la0",
+    "a": {
+     "kind": "pin",
+     "partId": "LA1",
+     "pin": "CH0"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g13"
+    },
+    "color": "#fdd835",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "la1",
+    "a": {
+     "kind": "pin",
+     "partId": "LA1",
+     "pin": "CH1"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g12"
+    },
+    "color": "#1e88e5",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "lag",
+    "a": {
+     "kind": "pin",
+     "partId": "LA1",
+     "pin": "GND"
+    },
+    "b": {
+     "kind": "pin",
+     "partId": "UNO1",
+     "pin": "GND.1"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": null,
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

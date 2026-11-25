@@ -1,0 +1,31 @@
+uart0 t=300.033 ms: ets Jul 29 2019 12:21:46
+uart0 t=300.034 ms: 
+uart0 t=300.047 ms: rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+uart0 t=300.070 ms: configsip: 0, SPIWP:0xee
+uart0 t=300.086 ms: clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+uart0 t=300.093 ms: mode:DIO, clock div:1
+uart0 t=300.104 ms: load:0x3fff0030,len:4640
+uart0 t=300.197 ms: load:0x40078000,len:15592
+uart0 t=300.482 ms: load:0x40080400,len:3164
+uart0 t=300.547 ms: entry 0x4008059c
+pin GPIO21=1 t=780.133984 ms
+dir GPIO21=1 t=780.133984 ms
+pin GPIO22=1 t=780.136028 ms
+dir GPIO22=1 t=780.136028 ms
+i2c0 STARTW addr=0x40 ack=1 t=781.536 ms
+i2c0 STOP
+i2c0 STARTW addr=0x41 ack=0 t=781.568 ms
+uart0 t=782.859 ms: I2C: 0x40
+i2c0 STARTW addr=0x40 ack=1 t=782.885 ms
+i2c0 WRITE 0x00
+i2c0 STOP
+i2c0 STARTR addr=0x40 ack=1 t=782.895 ms
+i2c0 READ -> 0x12
+i2c0 READ -> 0x34
+i2c0 STOP
+uart0 t=782.924 ms: reg0=0x1234
+pin GPIO4=0 t=782.967492 ms
+dir GPIO4=1 t=782.967492 ms
+ledc ch0 conf=0x4 duty=25.098%
+ledc timer0 freq=1000
+gpio_out_sel[4]=71 t=3687.854 ms

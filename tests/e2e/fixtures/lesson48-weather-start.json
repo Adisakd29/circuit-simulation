@@ -1,0 +1,361 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 44,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "",
+ "title": "weather",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "MB-102",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PICO1",
+    "label": "PICO1",
+    "kind": "pico",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h1",
+     "rotation": 0
+    },
+    "params": {
+     "code": "",
+     "autorun": true
+    }
+   },
+   {
+    "id": "BMP1",
+    "label": "BMP1",
+    "kind": "bmp280",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j30",
+     "rotation": 0
+    },
+    "params": {
+     "temperature": 30,
+     "pressure": 1008,
+     "pullUp": 10000,
+     "vMin": 1.71,
+     "vMax": 3.6,
+     "supplyCurrent": 0.0007
+    }
+   },
+   {
+    "id": "BH1",
+    "label": "BH1",
+    "kind": "bh1750",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j40",
+     "rotation": 0
+    },
+    "params": {
+     "lux": 300,
+     "pullUp": 4700,
+     "vMin": 2.4,
+     "vMax": 5.5,
+     "supplyCurrent": 0.0002
+    }
+   },
+   {
+    "id": "LCD1",
+    "label": "LCD1",
+    "kind": "lcd1602",
+    "placement": {
+     "kind": "table",
+     "x": 22,
+     "z": 34,
+     "rotation": 0
+    },
+    "params": {
+     "addr": 39,
+     "pullUps": true,
+     "contrast": 0.9,
+     "blJumper": true,
+     "color": "blue",
+     "pullUp": 4700,
+     "vMin": 2.5,
+     "vMax": 6,
+     "supplyCurrent": 0.025
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "wv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b5"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp5"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b18"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn18"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wvv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp2"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wgg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn3"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn3"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wbv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i30"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp30"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wbg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i31"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn32"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "whv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i40"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp40"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "whg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i41"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn41"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wsda",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j6"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g33"
+    },
+    "color": "#1e88e5",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wsda2",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h33"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g43"
+    },
+    "color": "#1e88e5",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wscl",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i7"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h32"
+    },
+    "color": "#fdd835",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wscl2",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g32"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h42"
+    },
+    "color": "#fdd835",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wlg",
+    "a": {
+     "kind": "pin",
+     "partId": "LCD1",
+     "pin": "GND"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn26"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wlv",
+    "a": {
+     "kind": "pin",
+     "partId": "LCD1",
+     "pin": "VCC"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a1"
+    },
+    "color": "#ff7043",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wlsda",
+    "a": {
+     "kind": "pin",
+     "partId": "LCD1",
+     "pin": "SDA"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "f33"
+    },
+    "color": "#1e88e5",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wlscl",
+    "a": {
+     "kind": "pin",
+     "partId": "LCD1",
+     "pin": "SCL"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "f32"
+    },
+    "color": "#fdd835",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": null,
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

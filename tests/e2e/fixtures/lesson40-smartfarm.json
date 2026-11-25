@@ -1,0 +1,256 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 38,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "",
+ "title": "แลป 40 สมาร์ตฟาร์ม",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PICO1",
+    "label": "PICO1",
+    "kind": "pico",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h5",
+     "rotation": 0
+    },
+    "params": {
+     "code": "from machine import ADC, Pin\nimport time\ns = ADC(26)\npump = Pin(15, Pin.OUT)\nDRY = 30\nWET = 60\nwhile True:\n    v = s.read_u16() * 3.3 / 65535\n    m = (2.5 - v) / 1.25 * 100\n    print(\"moisture\", round(m), \"%\")\n    if m < DRY:\n        pump.value(1)\n    elif m > WET:\n        pump.value(0)\n    time.sleep(0.2)\n",
+     "autorun": true
+    }
+   },
+   {
+    "id": "MS1",
+    "label": "MS1",
+    "kind": "soilsensor",
+    "placement": {
+     "kind": "table",
+     "x": -60,
+     "z": 30,
+     "rotation": 0
+    },
+    "params": {
+     "moisture": 25,
+     "dryRate": 0.5,
+     "potWater": 300,
+     "vDry": 2.5,
+     "vWet": 1.25,
+     "rOut": 10000,
+     "supplyCurrent": 0.005,
+     "vMin": 3.3,
+     "vMax": 5.5
+    }
+   },
+   {
+    "id": "K1",
+    "label": "K1",
+    "kind": "relay",
+    "placement": {
+     "kind": "table",
+     "x": 10,
+     "z": -28,
+     "rotation": 0
+    },
+    "params": {
+     "coilResistance": 70,
+     "coilInductance": 0.1,
+     "vPick": 3.75,
+     "vDrop": 0.5,
+     "contactResistance": 0.1,
+     "contactRating": 10,
+     "baseResistance": 1000
+    }
+   },
+   {
+    "id": "P1",
+    "label": "P1",
+    "kind": "pump",
+    "placement": {
+     "kind": "table",
+     "x": 60,
+     "z": 30,
+     "rotation": 0
+    },
+    "params": {
+     "target": "MS1",
+     "resistance": 8,
+     "inductance": 0.0005,
+     "ke": 0.00567,
+     "inertia": 1e-7,
+     "noLoadCurrent": 0.069,
+     "viscous": 0.000001,
+     "flowMax": 120,
+     "headMax": 110,
+     "lift": 10,
+     "vMax": 6
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "ws1",
+    "a": {
+     "kind": "pin",
+     "partId": "MS1",
+     "pin": "VCC"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a9"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "ws2",
+    "a": {
+     "kind": "pin",
+     "partId": "MS1",
+     "pin": "GND"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a7"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "ws3",
+    "a": {
+     "kind": "pin",
+     "partId": "MS1",
+     "pin": "AOUT"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a14"
+    },
+    "color": "#fdd835",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wk1",
+    "a": {
+     "kind": "pin",
+     "partId": "K1",
+     "pin": "V"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b5"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wk2",
+    "a": {
+     "kind": "pin",
+     "partId": "K1",
+     "pin": "G"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j22"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wk3",
+    "a": {
+     "kind": "pin",
+     "partId": "K1",
+     "pin": "S"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j24"
+    },
+    "color": "#43a047",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wp2",
+    "a": {
+     "kind": "pin",
+     "partId": "P1",
+     "pin": "N"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i22"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wk4",
+    "a": {
+     "kind": "pin",
+     "partId": "K1",
+     "pin": "COM"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a5"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wp1",
+    "a": {
+     "kind": "pin",
+     "partId": "K1",
+     "pin": "NO"
+    },
+    "b": {
+     "kind": "pin",
+     "partId": "P1",
+     "pin": "P"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": null,
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

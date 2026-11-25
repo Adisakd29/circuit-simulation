@@ -1,0 +1,130 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 30,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "2026-10-21T02:25:15.015Z",
+ "title": "บัซเซอร์ active",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PS1",
+    "label": "PS1",
+    "kind": "dcsupply",
+    "placement": {
+     "kind": "table",
+     "x": -40,
+     "z": -102,
+     "rotation": 0
+    },
+    "params": {
+     "voltage": 5,
+     "currentLimit": 1,
+     "internalResistance": 0.01,
+     "outputOn": true
+    }
+   },
+   {
+    "id": "BZ1",
+    "label": "BZ1",
+    "kind": "buzzer",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "e10",
+     "rotation": 0
+    },
+    "params": {
+     "type": "active",
+     "ratedVoltage": 5,
+     "ratedCurrent": 0.03,
+     "frequency": 2400,
+     "coilResistance": 42
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "w_mvhhp5vr1plrjy",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhhp5vr2fk5rm",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhhp5vr3w1de5",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a10"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp10"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhhp5vr44rflb",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a13"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn14"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": "buzzer",
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

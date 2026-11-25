@@ -1,0 +1,567 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 42,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "",
+ "title": "แลป 46 Smart Watch",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "MB-102",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PICO1",
+    "label": "PICO1",
+    "kind": "pico",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h1",
+     "rotation": 0
+    },
+    "params": {
+     "code": "from machine import Pin, I2C\nimport time, ssd1306\n\ni2c = I2C(0, sda=Pin(4), scl=Pin(5), freq=400000)\nprint(\"I2C:\", [hex(a) for a in i2c.scan()])\noled = ssd1306.SSD1306_I2C(128, 64, i2c)   # 0x3C\nRTC = 0x68                                  # DS3231\nMPU = 0x69                                  # MPU6050 (AD0 -> 3V3)\nbtn = Pin(15, Pin.IN, Pin.PULL_UP)\nvib = Pin(16, Pin.OUT)\n\ndef bcd(b):\n    return (b >> 4) * 10 + (b & 0x0F)\n\ndef clock():\n    s, m, h = i2c.readfrom_mem(RTC, 0x00, 3)\n    return bcd(h & 0x3F), bcd(m), bcd(s & 0x7F)\n\ndef accel():\n    d = i2c.readfrom_mem(MPU, 0x3B, 6)\n    g = []\n    for k in (0, 2, 4):\n        v = d[k] << 8 | d[k + 1]\n        if v > 32767:\n            v -= 65536\n        g.append(v / 16384)                 # สเกล ±2 g\n    return (g[0] ** 2 + g[1] ** 2 + g[2] ** 2) ** 0.5\n\ni2c.writeto_mem(MPU, 0x6B, b\"\\x00\")       # ปลุก MPU6050 (หลังจ่ายไฟอยู่ในโหมดหลับ)\n\nsteps = 0\nhigh = False\npage = 0\nlast = 1\nbuzz = 0\nGOAL = 10\n\nwhile True:\n    a = accel()\n    if a > 1.2 and not high:                # ยอดความเร่ง = 1 ก้าว\n        high = True\n        steps += 1\n        if steps % GOAL == 0:               # ครบทุก 10 ก้าว สั่น 0.4 s (ไม่หยุดรอ)\n            vib.on()\n            buzz = time.ticks_add(time.ticks_ms(), 400)\n    elif a < 1.05:\n        high = False\n    if vib.value() and time.ticks_diff(time.ticks_ms(), buzz) > 0:\n        vib.off()\n    b = btn.value()\n    if b == 0 and last == 1:                # กดปุ่ม = สลับหน้า\n        page = 1 - page\n    last = b\n    oled.fill(0)\n    if page == 0:\n        h, m, s = clock()\n        oled.text(\"%02d:%02d:%02d\" % (h, m, s), 32, 16)\n        oled.text(\"Steps %d\" % steps, 32, 40)\n    else:\n        t = i2c.readfrom_mem(RTC, 0x11, 1)[0]\n        oled.text(\"Temp %d C\" % t, 28, 28)\n    oled.show()\n    time.sleep_ms(20)\n",
+     "autorun": false
+    }
+   },
+   {
+    "id": "OLED1",
+    "label": "DSP1",
+    "kind": "ssd1306",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j24",
+     "rotation": 0
+    },
+    "params": {
+     "addr": 60,
+     "pullUp": 4700,
+     "vMin": 3,
+     "vMax": 5.5,
+     "supplyCurrent": 0.01
+    }
+   },
+   {
+    "id": "RTC1",
+    "label": "RTC1",
+    "kind": "ds3231",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j30",
+     "rotation": 0
+    },
+    "params": {
+     "clock": "2026-10-26 09:00:00",
+     "temperature": 25,
+     "pullUp": 4700,
+     "vMin": 2.3,
+     "vMax": 5.5,
+     "supplyCurrent": 0.003
+    }
+   },
+   {
+    "id": "IMU1",
+    "label": "IMU1",
+    "kind": "mpu6050",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j38",
+     "rotation": 0
+    },
+    "params": {
+     "motion": "still",
+     "spm": 100,
+     "temperature": 25,
+     "pullUp": 4700,
+     "vMin": 3,
+     "vMax": 5.5,
+     "supplyCurrent": 0.005
+    }
+   },
+   {
+    "id": "SW1",
+    "label": "SW1",
+    "kind": "pushbutton",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "f50",
+     "rotation": 0
+    },
+    "params": {
+     "pressed": false,
+     "contactResistance": 0.1,
+     "maxCurrent": 0.05,
+     "maxVoltage": 24
+    }
+   },
+   {
+    "id": "Q1",
+    "label": "Q1",
+    "kind": "bjt",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "a54",
+     "rotation": 0
+    },
+    "params": {
+     "model": "2N3904",
+     "polarity": "npn",
+     "Is": 6.734e-15,
+     "bf": 200,
+     "br": 0.737,
+     "maxIc": 0.2,
+     "maxVce": 40,
+     "maxPower": 0.625
+    }
+   },
+   {
+    "id": "RB",
+    "label": "RB",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "c55",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 1000,
+     "powerRating": 0.25,
+     "span": 3
+    }
+   },
+   {
+    "id": "D1",
+    "label": "D1",
+    "kind": "diode",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "e56",
+     "rotation": 0
+    },
+    "params": {
+     "model": "1N4148",
+     "Is": 2.52e-9,
+     "n": 1.752,
+     "Rs": 0.568,
+     "Bv": 100,
+     "Ibv": 0.0001,
+     "maxCurrent": 0.3,
+     "maxPower": 0.5,
+     "span": 3
+    }
+   },
+   {
+    "id": "M1",
+    "label": "M1",
+    "kind": "vibmotor",
+    "placement": {
+     "kind": "table",
+     "x": 46,
+     "z": 4,
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 35,
+     "inductance": 0.0001,
+     "ke": 0.0012370679667597323,
+     "inertia": 2e-9,
+     "noLoadCurrent": 0.045,
+     "ratedVoltage": 3,
+     "maxVoltage": 4.2
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "wv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b5"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp5"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b18"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn18"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wvv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp2"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wgg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn3"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn3"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wog",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i24"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn18"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wov",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h25"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp17"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wrg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i35"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn35"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wrv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i34"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp34"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wmg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i39"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn39"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wmv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i38"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp38"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wsda",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j6"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g27"
+    },
+    "color": "#1e88e5",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wsda2",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "f27"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g33"
+    },
+    "color": "#1e88e5",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wsda3",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "f33"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g41"
+    },
+    "color": "#1e88e5",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wscl",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i7"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h26"
+    },
+    "color": "#fdd835",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wscl2",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g26"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h32"
+    },
+    "color": "#fdd835",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wscl3",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g32"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h40"
+    },
+    "color": "#fdd835",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wbtn",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j20"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g50"
+    },
+    "color": "#43a047",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wbg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g52"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn52"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wvb",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b20"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "d58"
+    },
+    "color": "#8e24aa",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wqe",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b54"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn54"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wmb",
+    "a": {
+     "kind": "pin",
+     "partId": "M1",
+     "pin": "B"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b56"
+    },
+    "color": "#1e88e5",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wma",
+    "a": {
+     "kind": "pin",
+     "partId": "M1",
+     "pin": "A"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp57"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wdk",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "d59"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp59"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": null,
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

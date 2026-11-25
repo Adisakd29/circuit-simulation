@@ -1,0 +1,157 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 60,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "2026-11-25T03:00:00.000Z",
+ "title": "บอร์ดเฉพาะโมเดล — Blue Pill, Teensy 4.1, Pico 2",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "MB-102",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "U1",
+    "label": "U1",
+    "kind": "bluepill",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "i2",
+     "rotation": 0
+    },
+    "params": {
+     "model": "STM32F103C8T6 Blue Pill"
+    }
+   },
+   {
+    "id": "U2",
+    "label": "U2",
+    "kind": "teensy41",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "i36",
+     "rotation": 0
+    },
+    "params": {
+     "model": "Teensy 4.1"
+    }
+   },
+   {
+    "id": "U3",
+    "label": "U3",
+    "kind": "pico2",
+    "placement": {
+     "kind": "table",
+     "x": 20,
+     "z": 34,
+     "rotation": 0
+    },
+    "params": {
+     "model": "Raspberry Pi Pico 2"
+    }
+   },
+   {
+    "id": "R1",
+    "label": "R1",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "a24",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 330,
+     "powerRating": 0.25,
+     "span": 4
+    }
+   },
+   {
+    "id": "LED1",
+    "label": "LED1",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "b28",
+     "rotation": 0
+    },
+    "params": {
+     "color": "red",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "w1",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a20"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b24"
+    },
+    "color": "#43a047",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w2",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a29"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn29"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w3",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a2"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn2"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": null,
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

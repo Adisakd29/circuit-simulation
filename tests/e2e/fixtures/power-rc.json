@@ -1,0 +1,114 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 51,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "",
+ "title": "RC กำลังไฟฟ้า",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PS1",
+    "label": "PS1",
+    "kind": "dcsupply",
+    "placement": {
+     "kind": "table",
+     "x": -40,
+     "z": -102,
+     "rotation": 0
+    },
+    "params": {
+     "voltage": 5,
+     "currentLimit": 0.1,
+     "internalResistance": 0.01,
+     "outputOn": true
+    }
+   },
+   {
+    "id": "R1",
+    "label": "R1",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j10",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 1000,
+     "powerRating": 0.25,
+     "span": 4
+    }
+   },
+   {
+    "id": "C1",
+    "label": "C1",
+    "kind": "capacitor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "i14",
+     "rotation": 0
+    },
+    "params": {
+     "capacitance": 0.001,
+     "ratedVoltage": 16,
+     "polarized": false,
+     "initialVoltage": 0,
+     "span": 3
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "w_mvwl4h6b1347lw",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h10"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvwl4h6c2qmar5",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h17"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": null,
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

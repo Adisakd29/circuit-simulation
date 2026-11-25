@@ -1,0 +1,214 @@
+{
+  "format": "circuitlab3d",
+  "schemaVersion": 49,
+  "app": "Circuit Lab 3D 0.1",
+  "savedAt": "2026-10-30T04:14:36.799Z",
+  "title": "แลป 55 Arduino Nano",
+  "circuit": {
+    "breadboards": [
+      {
+        "id": "bb1",
+        "model": "CL-400",
+        "x": 0,
+        "z": 0
+      }
+    ],
+    "parts": [
+      {
+        "id": "NANO1",
+        "label": "NANO1",
+        "kind": "nano",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "h3",
+          "rotation": 0
+        },
+        "params": {
+          "code": "// Blink + Serial Monitor\nconst int LED = 13;   // D13 = LED L บนบอร์ด\n\nvoid setup() {\n  pinMode(LED, OUTPUT);\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  digitalWrite(LED, HIGH);\n  Serial.println(\"LED ON\");\n  delay(500);\n  digitalWrite(LED, LOW);\n  Serial.println(\"LED OFF\");\n  delay(500);\n}\n",
+          "hex": null,
+          "hexSrc": "",
+          "flash": 0,
+          "ram": 0
+        }
+      },
+      {
+        "id": "VR1",
+        "label": "VR1",
+        "kind": "potentiometer",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "a22",
+          "rotation": 0
+        },
+        "params": {
+          "resistance": 10000,
+          "position": 0.5,
+          "endResistance": 3,
+          "powerRating": 0.5
+        }
+      },
+      {
+        "id": "R1",
+        "label": "R1",
+        "kind": "resistor",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "j14",
+          "rotation": 0
+        },
+        "params": {
+          "resistance": 220,
+          "powerRating": 0.25,
+          "span": 5
+        }
+      },
+      {
+        "id": "LED1",
+        "label": "LED1",
+        "kind": "led",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "i19",
+          "rotation": 0
+        },
+        "params": {
+          "color": "red",
+          "Is": 2.196506741865884e-18,
+          "n": 2,
+          "Rs": 5,
+          "ratedCurrent": 0.02,
+          "maxCurrent": 0.03,
+          "maxReverseVoltage": 5
+        }
+      }
+    ],
+    "wires": [
+      {
+        "id": "g1",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "a4"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "tn4"
+        },
+        "color": "#212121",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "p1",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "a6"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "tp6"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "g2",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j6"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn6"
+        },
+        "color": "#212121",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "v1",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "b22"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "tn22"
+        },
+        "color": "#212121",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "v2",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "b24"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "tp24"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "v3",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "c23"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "b7"
+        },
+        "color": "#fb8c00",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "k1",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j20"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn20"
+        },
+        "color": "#212121",
+        "arc": 2,
+        "bend": 0
+      }
+    ],
+    "probes": {
+      "red": null,
+      "black": null
+    }
+  },
+  "studentWork": {
+    "lessonId": "nano",
+    "records": {},
+    "answers": {},
+    "achieved": {}
+  }
+}

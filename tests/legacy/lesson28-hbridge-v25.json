@@ -1,0 +1,312 @@
+{
+  "format": "circuitlab3d",
+  "schemaVersion": 25,
+  "app": "Circuit Lab 3D 0.1",
+  "savedAt": "2026-10-22T06:02:32.415Z",
+  "title": "บทที่ 28 H-bridge L293D",
+  "circuit": {
+    "breadboards": [
+      {
+        "id": "bb1",
+        "model": "CL-400",
+        "x": 0,
+        "z": 0
+      }
+    ],
+    "parts": [
+      {
+        "id": "PICO1",
+        "label": "PICO1",
+        "kind": "pico",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "h1",
+          "rotation": 0
+        },
+        "params": {
+          "code": "from machine import Pin, PWM\nimport time\na1 = Pin(14, Pin.OUT)   # 1A\na2 = Pin(15, Pin.OUT)   # 2A\nen = PWM(Pin(16))       # 1,2EN\nen.freq(200)\n\ndef run(d1, d2, duty, t):\n    a1.value(d1)\n    a2.value(d2)\n    en.duty_u16(duty)\n    time.sleep(t)\n\nwhile True:\n    run(1, 0, 65535, 1.5)   # เดินหน้า\n    run(0, 0, 65535, 0.5)   # เบรก\n    run(0, 1, 65535, 1.5)   # ถอยหลัง\n    run(0, 1, 30000, 1.5)   # ถอยหลังช้า\n    run(0, 0, 0, 0.5)       # หยุด\n",
+          "autorun": true
+        }
+      },
+      {
+        "id": "PS1",
+        "label": "PS1",
+        "kind": "dcsupply",
+        "placement": {
+          "kind": "table",
+          "x": -30,
+          "z": -22,
+          "rotation": 0
+        },
+        "params": {
+          "voltage": 6,
+          "currentLimit": 3,
+          "internalResistance": 0.01,
+          "outputOn": true
+        }
+      },
+      {
+        "id": "U1",
+        "label": "U1",
+        "kind": "hbridge",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "f22",
+          "rotation": 0
+        },
+        "params": {
+          "model": "L293D",
+          "maxOutputCurrent": 0.6,
+          "peakOutputCurrent": 1.2,
+          "vMin": 4.5,
+          "vMax": 7,
+          "vMotorMax": 36
+        }
+      },
+      {
+        "id": "M1",
+        "label": "M1",
+        "kind": "motor",
+        "placement": {
+          "kind": "table",
+          "x": 28,
+          "z": -26,
+          "rotation": 0
+        },
+        "params": {
+          "gearRatio": 48,
+          "ke": 0.00433,
+          "resistance": 3.5,
+          "inductance": 0.001,
+          "inertia": 2.1e-7,
+          "noLoadCurrent": 0.145,
+          "viscous": 5.2e-8,
+          "gearEff": 0.4,
+          "loadTorque": 0
+        }
+      }
+    ],
+    "wires": [
+      {
+        "id": "w_mvj4wg9o39u9fnd",
+        "a": {
+          "kind": "pin",
+          "partId": "PS1",
+          "pin": "pos"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bp2"
+        },
+        "color": "#e53935",
+        "arc": 0.5,
+        "bend": 0
+      },
+      {
+        "id": "w_mvj4wg9o3a19ie6",
+        "a": {
+          "kind": "pin",
+          "partId": "PS1",
+          "pin": "neg"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn2"
+        },
+        "color": "#212121",
+        "arc": 0.5,
+        "bend": 0
+      },
+      {
+        "id": "w_mvj4wg9o3bxuy57",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j18"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn18"
+        },
+        "color": "#212121",
+        "arc": 0.5,
+        "bend": 0
+      },
+      {
+        "id": "w_mvj4wg9o3caxg82",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "tn30"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn30"
+        },
+        "color": "#212121",
+        "arc": 0.5,
+        "bend": 0
+      },
+      {
+        "id": "w_mvj4wg9o3dxcdrp",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j26"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn26"
+        },
+        "color": "#212121",
+        "arc": 0.5,
+        "bend": 0
+      },
+      {
+        "id": "w_mvj4wg9p3empgtp",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "a22"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "tp22"
+        },
+        "color": "#e53935",
+        "arc": 0.5,
+        "bend": 0
+      },
+      {
+        "id": "w_mvj4wg9p3foig4v",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j23"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j19"
+        },
+        "color": "#1e88e5",
+        "arc": 0.5,
+        "bend": 0
+      },
+      {
+        "id": "w_mvj4wg9p3geos7f",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j28"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j20"
+        },
+        "color": "#43a047",
+        "arc": 0.5,
+        "bend": 0
+      },
+      {
+        "id": "w_mvj4wg9p3hhswqk",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j22"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "a20"
+        },
+        "color": "#fdd835",
+        "arc": 0.5,
+        "bend": 0
+      },
+      {
+        "id": "w_mvj4wg9p3i55abo",
+        "a": {
+          "kind": "pin",
+          "partId": "M1",
+          "pin": "A"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i24"
+        },
+        "color": "#e53935",
+        "arc": 0.5,
+        "bend": 0
+      },
+      {
+        "id": "w_mvj4wg9q3j5p83o",
+        "a": {
+          "kind": "pin",
+          "partId": "M1",
+          "pin": "B"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i27"
+        },
+        "color": "#212121",
+        "arc": 0.5,
+        "bend": 0
+      },
+      {
+        "id": "w_mvj4wg9q3kuhbmj",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j29"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bp29"
+        },
+        "color": "#e53935",
+        "arc": 0.5,
+        "bend": 0
+      },
+      {
+        "id": "w_mvj4wg9q3lg1v2k",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "a1"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "tp2"
+        },
+        "color": "#e53935",
+        "arc": 0.5,
+        "bend": 0
+      }
+    ],
+    "probes": {
+      "red": null,
+      "black": null
+    }
+  },
+  "studentWork": {
+    "lessonId": "hbridge",
+    "records": {},
+    "answers": {},
+    "achieved": {}
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "format": "circuitlab3d",
+  "schemaVersion": 58,
+  "app": "Circuit Lab 3D 0.1",
+  "savedAt": "2026-11-24T16:56:48.986Z",
+  "title": "Nano RP2040 Connect — LED ภายนอก D2 + IMU บนบอร์ด",
+  "circuit": {
+    "breadboards": [
+      {
+        "id": "bb1",
+        "model": "MB-102",
+        "x": 0,
+        "z": 0
+      }
+    ],
+    "parts": [
+      {
+        "id": "NRP1",
+        "label": "NRP1",
+        "kind": "nanoconnect",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "h1",
+          "rotation": 0
+        },
+        "params": {
+          "code": "from machine import Pin, I2C\nfrom lsm6dsox import LSM6DSOX\nimport time\n# Nano RP2040 Connect: LED ภายนอกที่ D2 · LED บนบอร์ด (D13) · IMU LSM6DSOX บนบอร์ด (บัส I²C ของ A4/A5)\nled = Pin(\"D2\", Pin.OUT)\nonb = Pin(\"LED\", Pin.OUT)\nimu = LSM6DSOX(I2C(0, scl=Pin(13), sda=Pin(12)))\nwhile True:\n    led.toggle()\n    onb.value(led.value())\n    ax, ay, az = imu.accel()\n    print(\"D2 = %d  accel g: %.2f %.2f %.2f\" % (led.value(), ax, ay, az))\n    time.sleep(0.4)\n",
+          "autorun": true,
+          "motion": "still",
+          "spm": 100
+        }
+      },
+      {
+        "id": "R1",
+        "label": "R1",
+        "kind": "resistor",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "g30",
+          "rotation": 0
+        },
+        "params": {
+          "resistance": 330,
+          "powerRating": 0.25,
+          "span": 4
+        }
+      },
+      {
+        "id": "LED1",
+        "label": "LED1",
+        "kind": "led",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "f34",
+          "rotation": 0
+        },
+        "params": {
+          "color": "red",
+          "Is": 2.196506741865884e-18,
+          "n": 2,
+          "Rs": 5,
+          "ratedCurrent": 0.02,
+          "maxCurrent": 0.03,
+          "maxReverseVoltage": 5
+        }
+      }
+    ],
+    "wires": [
+      {
+        "id": "wg1",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j4"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn4"
+        },
+        "color": "#212121",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "wg2",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "c2"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "tn2"
+        },
+        "color": "#212121",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "wv",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "c14"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "tp14"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "wl",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j5"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j30"
+        },
+        "color": "#43a047",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "wk",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "i35"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn36"
+        },
+        "color": "#212121",
+        "arc": 2,
+        "bend": 0
+      }
+    ],
+    "probes": {
+      "red": null,
+      "black": null
+    }
+  },
+  "studentWork": {
+    "lessonId": null,
+    "records": {},
+    "answers": {},
+    "achieved": {}
+  }
+}

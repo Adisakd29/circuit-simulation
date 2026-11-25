@@ -1,0 +1,373 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 37,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "",
+ "title": "แลป 39 LM386",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PS1",
+    "label": "PS1",
+    "kind": "dcsupply",
+    "placement": {
+     "kind": "table",
+     "x": -40,
+     "z": -102,
+     "rotation": 0
+    },
+    "params": {
+     "voltage": 9,
+     "currentLimit": 1,
+     "internalResistance": 0.01,
+     "outputOn": true
+    }
+   },
+   {
+    "id": "FG1",
+    "label": "FG1",
+    "kind": "fgen",
+    "placement": {
+     "kind": "table",
+     "x": 45,
+     "z": -103,
+     "rotation": 0
+    },
+    "params": {
+     "wave": "sine",
+     "frequency": 1000,
+     "vpp": 0.02,
+     "offset": 0,
+     "outputImpedance": 50,
+     "outputOn": true
+    }
+   },
+   {
+    "id": "SC1",
+    "label": "OSC1",
+    "kind": "scope",
+    "placement": {
+     "kind": "table",
+     "x": -128.5,
+     "z": -70,
+     "rotation": 0
+    },
+    "params": {
+     "inputResistance": 1000000,
+     "timeDiv": 0.0002,
+     "vdiv1": 0.5,
+     "vdiv2": 0.5,
+     "ch1On": true,
+     "ch2On": true,
+     "trigSource": "ch1",
+     "trigLevel": 0,
+     "trigSlope": "rise",
+     "bodeStart": 10,
+     "bodeStop": 100000,
+     "bodePpd": 20,
+     "bodeRef": "ch1"
+    }
+   },
+   {
+    "id": "U1",
+    "label": "U1",
+    "kind": "lm386",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "f20",
+     "rotation": 0
+    },
+    "params": {
+     "model": "LM386N-1",
+     "rf": 28360,
+     "ra": 142.5,
+     "rb": 1350,
+     "rin": 50000,
+     "gbw": 6000000,
+     "headroom": 0.7,
+     "quiescentCurrent": 0.004,
+     "vMin": 4,
+     "vMax": 12
+    }
+   },
+   {
+    "id": "LS1",
+    "label": "LS1",
+    "kind": "speaker",
+    "placement": {
+     "kind": "table",
+     "x": -40,
+     "z": 30,
+     "rotation": 0
+    },
+    "params": {
+     "impedance": 8,
+     "maxPower": 0.5
+    }
+   },
+   {
+    "id": "C1",
+    "label": "C1",
+    "kind": "capacitor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "b23",
+     "rotation": 0
+    },
+    "params": {
+     "capacitance": 0.00022,
+     "ratedVoltage": 16,
+     "polarized": true,
+     "initialVoltage": 0,
+     "span": 4
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "wp",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "pos"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wn",
+    "a": {
+     "kind": "pin",
+     "partId": "PS1",
+     "pin": "neg"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn2"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w1",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp3"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp3"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w2",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn4"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn4"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w3",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp22"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a22"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w4",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j23"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn23"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w5",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j21"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn21"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w6",
+    "a": {
+     "kind": "pin",
+     "partId": "FG1",
+     "pin": "OUT"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j22"
+    },
+    "color": "#fdd835",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w7",
+    "a": {
+     "kind": "pin",
+     "partId": "FG1",
+     "pin": "COM"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn24"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w9",
+    "a": {
+     "kind": "pin",
+     "partId": "LS1",
+     "pin": "N"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn27"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wc1",
+    "a": {
+     "kind": "pin",
+     "partId": "SC1",
+     "pin": "CH1"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h22"
+    },
+    "color": "#fdd835",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wc2",
+    "a": {
+     "kind": "pin",
+     "partId": "SC1",
+     "pin": "CH2"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "d27"
+    },
+    "color": "#1e88e5",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wc3",
+    "a": {
+     "kind": "pin",
+     "partId": "SC1",
+     "pin": "GND"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn26"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w8",
+    "a": {
+     "kind": "pin",
+     "partId": "LS1",
+     "pin": "P"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "c27"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": "lm386",
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

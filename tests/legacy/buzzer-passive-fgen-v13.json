@@ -1,0 +1,100 @@
+{
+  "format": "circuitlab3d",
+  "schemaVersion": 13,
+  "app": "Circuit Lab 3D 0.1",
+  "savedAt": "2026-10-21T02:25:15.016Z",
+  "title": "บัซเซอร์ passive",
+  "circuit": {
+    "breadboards": [
+      {
+        "id": "bb1",
+        "model": "CL-400",
+        "x": 0,
+        "z": 0
+      }
+    ],
+    "parts": [
+      {
+        "id": "FG1",
+        "label": "FG1",
+        "kind": "fgen",
+        "placement": {
+          "kind": "table",
+          "x": -25,
+          "z": 0,
+          "rotation": 0
+        },
+        "params": {
+          "wave": "square",
+          "frequency": 2000,
+          "vpp": 3,
+          "offset": 1.5,
+          "outputImpedance": 50,
+          "outputOn": true
+        }
+      },
+      {
+        "id": "BZ1",
+        "label": "BZ1",
+        "kind": "buzzer",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "e10",
+          "rotation": 0
+        },
+        "params": {
+          "type": "passive",
+          "ratedVoltage": 3.5,
+          "ratedCurrent": 0.035,
+          "frequency": 2048,
+          "coilResistance": 42
+        }
+      }
+    ],
+    "wires": [
+      {
+        "id": "w_mvhhp5vs5uqxxo",
+        "a": {
+          "kind": "pin",
+          "partId": "FG1",
+          "pin": "OUT"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "a10"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "w_mvhhp5vs6e7o81",
+        "a": {
+          "kind": "pin",
+          "partId": "FG1",
+          "pin": "COM"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "a13"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      }
+    ],
+    "probes": {
+      "red": null,
+      "black": null
+    }
+  },
+  "studentWork": {
+    "lessonId": "buzzer",
+    "records": {},
+    "answers": {},
+    "achieved": {}
+  }
+}

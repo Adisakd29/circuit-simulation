@@ -1,0 +1,133 @@
+{
+  "format": "circuitlab3d",
+  "schemaVersion": 49,
+  "app": "Circuit Lab 3D 0.1",
+  "savedAt": "2026-10-30T08:19:21.758Z",
+  "title": "แลป 56 เครื่องวิเคราะห์ลอจิก",
+  "circuit": {
+    "breadboards": [
+      {
+        "id": "bb1",
+        "model": "CL-400",
+        "x": 0,
+        "z": 0
+      }
+    ],
+    "parts": [
+      {
+        "id": "UNO1",
+        "label": "UNO1",
+        "kind": "uno",
+        "placement": {
+          "kind": "table",
+          "x": -70,
+          "z": -10,
+          "rotation": 0
+        },
+        "params": {
+          "code": "// Blink + Serial Monitor\nconst int LED = 13;   // D13 = LED L บนบอร์ด\n\nvoid setup() {\n  pinMode(LED, OUTPUT);\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  digitalWrite(LED, HIGH);\n  Serial.println(\"LED ON\");\n  delay(500);\n  digitalWrite(LED, LOW);\n  Serial.println(\"LED OFF\");\n  delay(500);\n}\n",
+          "hex": null,
+          "hexSrc": "",
+          "flash": 0,
+          "ram": 0
+        }
+      },
+      {
+        "id": "LA1",
+        "label": "LA1",
+        "kind": "logicanalyzer",
+        "placement": {
+          "kind": "table",
+          "x": -40,
+          "z": 40,
+          "rotation": 0
+        },
+        "params": {
+          "timeDiv": 0.001,
+          "trigCh": -1,
+          "trigEdge": "rise",
+          "decoders": [
+            "none",
+            "none",
+            "none",
+            "none",
+            "none",
+            "none",
+            "none",
+            "none"
+          ],
+          "bauds": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "wires": [
+      {
+        "id": "w0",
+        "a": {
+          "kind": "pin",
+          "partId": "LA1",
+          "pin": "CH0"
+        },
+        "b": {
+          "kind": "pin",
+          "partId": "UNO1",
+          "pin": "D9"
+        },
+        "color": "#fdd835",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "w1",
+        "a": {
+          "kind": "pin",
+          "partId": "LA1",
+          "pin": "CH1"
+        },
+        "b": {
+          "kind": "pin",
+          "partId": "UNO1",
+          "pin": "D1"
+        },
+        "color": "#1e88e5",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "wg",
+        "a": {
+          "kind": "pin",
+          "partId": "LA1",
+          "pin": "GND"
+        },
+        "b": {
+          "kind": "pin",
+          "partId": "UNO1",
+          "pin": "GND.1"
+        },
+        "color": "#212121",
+        "arc": 2,
+        "bend": 0
+      }
+    ],
+    "probes": {
+      "red": null,
+      "black": null
+    }
+  },
+  "studentWork": {
+    "lessonId": "analyzer",
+    "records": {},
+    "answers": {},
+    "achieved": {}
+  }
+}

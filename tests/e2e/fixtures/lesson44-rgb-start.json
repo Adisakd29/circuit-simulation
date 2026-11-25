@@ -1,0 +1,225 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 41,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "",
+ "title": "แลป 44 LED RGB",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "UNO1",
+    "label": "UNO1",
+    "kind": "uno",
+    "placement": {
+     "kind": "table",
+     "x": -70,
+     "z": -10,
+     "rotation": 0
+    },
+    "params": {
+     "code": "// LED RGB แคโทดร่วม: R → D9, G → D10, B → D11 (ขา ~PWM)\nconst int PIN_R = 9, PIN_G = 10, PIN_B = 11;\n\nvoid setColor(int r, int g, int b) {\n  analogWrite(PIN_R, r);\n  analogWrite(PIN_G, g);\n  analogWrite(PIN_B, b);\n}\n\nvoid setup() {\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  setColor(255, 0, 0);   Serial.println(\"red\");     delay(500);\n  setColor(0, 255, 0);   Serial.println(\"green\");   delay(500);\n  setColor(0, 0, 255);   Serial.println(\"blue\");    delay(500);\n  setColor(255, 255, 0); Serial.println(\"yellow\");  delay(500);\n  setColor(255, 0, 255); Serial.println(\"magenta\"); delay(500);\n  setColor(64, 0, 0);    Serial.println(\"dim red\"); delay(500);\n  setColor(0, 0, 0);     Serial.println(\"off\");     delay(500);\n}\n",
+     "hex": null,
+     "hexSrc": "// LED RGB แคโทดร่วม: R → D9, G → D10, B → D11 (ขา ~PWM)\nconst int PIN_R = 9, PIN_G = 10, PIN_B = 11;\n\nvoid setColor(int r, int g, int b) {\n  analogWrite(PIN_R, r);\n  analogWrite(PIN_G, g);\n  analogWrite(PIN_B, b);\n}\n\nvoid setup() {\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  setColor(255, 0, 0);   Serial.println(\"red\");     delay(500);\n  setColor(0, 255, 0);   Serial.println(\"green\");   delay(500);\n  setColor(0, 0, 255);   Serial.println(\"blue\");    delay(500);\n  setColor(255, 255, 0); Serial.println(\"yellow\");  delay(500);\n  setColor(255, 0, 255); Serial.println(\"magenta\"); delay(500);\n  setColor(64, 0, 0);    Serial.println(\"dim red\"); delay(500);\n  setColor(0, 0, 0);     Serial.println(\"off\");     delay(500);\n}\n",
+     "flash": 0,
+     "ram": 0
+    }
+   },
+   {
+    "id": "RR",
+    "label": "RR",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "f5",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 220,
+     "powerRating": 0.25,
+     "span": 3
+    }
+   },
+   {
+    "id": "RG",
+    "label": "RG",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "f10",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 220,
+     "powerRating": 0.25,
+     "span": 3
+    }
+   },
+   {
+    "id": "RB",
+    "label": "RB",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "f15",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 220,
+     "powerRating": 0.25,
+     "span": 3
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "wpR",
+    "a": {
+     "kind": "pin",
+     "partId": "UNO1",
+     "pin": "D9"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j5"
+    },
+    "color": "#43a047",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wlR",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g8"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a20"
+    },
+    "color": "#fdd835",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wpG",
+    "a": {
+     "kind": "pin",
+     "partId": "UNO1",
+     "pin": "D10"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j10"
+    },
+    "color": "#43a047",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wlG",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g13"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a22"
+    },
+    "color": "#fdd835",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wpB",
+    "a": {
+     "kind": "pin",
+     "partId": "UNO1",
+     "pin": "D11"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j15"
+    },
+    "color": "#43a047",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wlB",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g18"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a23"
+    },
+    "color": "#fdd835",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wc",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a21"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn21"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wg",
+    "a": {
+     "kind": "pin",
+     "partId": "UNO1",
+     "pin": "GND.1"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn3"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": null,
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

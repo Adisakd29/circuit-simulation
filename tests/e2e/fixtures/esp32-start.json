@@ -1,0 +1,227 @@
+{
+  "format": "circuitlab3d",
+  "schemaVersion": 59,
+  "app": "Circuit Lab 3D 0.1",
+  "savedAt": "2026-11-24T18:49:56.291Z",
+  "title": "ESP32-DevKitC — LED ภายนอก IO2 + ตัวต้านทานปรับค่า IO34",
+  "circuit": {
+    "breadboards": [
+      {
+        "id": "bb1",
+        "model": "MB-102",
+        "x": 0,
+        "z": 0
+      }
+    ],
+    "parts": [
+      {
+        "id": "ESP1",
+        "label": "ESP1",
+        "kind": "esp32devkitc",
+        "placement": {
+          "kind": "table",
+          "x": 10,
+          "z": 40,
+          "rotation": 0
+        },
+        "params": {
+          "code": "from machine import Pin, ADC\nimport time\n# ESP32-DevKitC: LED ภายนอกที่ IO2 · ตัวต้านทานปรับค่าที่ IO34\nled = Pin(2, Pin.OUT)\npot = ADC(Pin(34))\npot.atten(ADC.ATTN_11DB)\nwhile True:\n    led.value(not led.value())\n    print(\"IO2 =\", led.value(), \" IO34 =\", pot.read())\n    time.sleep(0.4)\n",
+          "autorun": true
+        }
+      },
+      {
+        "id": "R1",
+        "label": "R1",
+        "kind": "resistor",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "b30",
+          "rotation": 0
+        },
+        "params": {
+          "resistance": 330,
+          "powerRating": 0.25,
+          "span": 4
+        }
+      },
+      {
+        "id": "LED1",
+        "label": "LED1",
+        "kind": "led",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "c34",
+          "rotation": 0
+        },
+        "params": {
+          "color": "red",
+          "Is": 2.196506741865884e-18,
+          "n": 2,
+          "Rs": 5,
+          "ratedCurrent": 0.02,
+          "maxCurrent": 0.03,
+          "maxReverseVoltage": 5
+        }
+      },
+      {
+        "id": "VR1",
+        "label": "VR1",
+        "kind": "potentiometer",
+        "placement": {
+          "kind": "board",
+          "boardId": "bb1",
+          "anchor": "h40",
+          "rotation": 0
+        },
+        "params": {
+          "resistance": 10000,
+          "position": 0.5,
+          "endResistance": 3,
+          "powerRating": 0.5
+        }
+      }
+    ],
+    "wires": [
+      {
+        "id": "wv",
+        "a": {
+          "kind": "pin",
+          "partId": "ESP1",
+          "pin": "3V3"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bp3"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "wg1",
+        "a": {
+          "kind": "pin",
+          "partId": "ESP1",
+          "pin": "GND.1"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn4"
+        },
+        "color": "#212121",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "wg2",
+        "a": {
+          "kind": "pin",
+          "partId": "ESP1",
+          "pin": "GND.2"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "tn4"
+        },
+        "color": "#212121",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "wl",
+        "a": {
+          "kind": "pin",
+          "partId": "ESP1",
+          "pin": "IO2"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "a30"
+        },
+        "color": "#43a047",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "wk",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "a35"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "tn35"
+        },
+        "color": "#212121",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "wpg",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j40"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bn40"
+        },
+        "color": "#212121",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "wpv",
+        "a": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j42"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "bp42"
+        },
+        "color": "#e53935",
+        "arc": 2,
+        "bend": 0
+      },
+      {
+        "id": "wpo",
+        "a": {
+          "kind": "pin",
+          "partId": "ESP1",
+          "pin": "IO34"
+        },
+        "b": {
+          "kind": "hole",
+          "boardId": "bb1",
+          "hole": "j41"
+        },
+        "color": "#fb8c00",
+        "arc": 2,
+        "bend": 0
+      }
+    ],
+    "probes": {
+      "red": null,
+      "black": null
+    }
+  },
+  "studentWork": {
+    "lessonId": null,
+    "records": {},
+    "answers": {},
+    "achieved": {}
+  }
+}

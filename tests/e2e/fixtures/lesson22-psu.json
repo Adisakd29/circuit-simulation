@@ -1,0 +1,379 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 30,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "2026-10-21T08:14:27.220Z",
+ "title": "บทที่ 22 แหล่งจ่ายไฟ DC",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "T1",
+    "label": "T1",
+    "kind": "transformer",
+    "placement": {
+     "kind": "table",
+     "x": -36,
+     "z": 0,
+     "rotation": 0
+    },
+    "params": {
+     "vRated": 12,
+     "iRated": 1,
+     "regulation": 0.16,
+     "frequency": 50,
+     "on": true
+    }
+   },
+   {
+    "id": "D1",
+    "label": "D1",
+    "kind": "diode",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "g5",
+     "rotation": 0
+    },
+    "params": {
+     "model": "1N4007",
+     "Is": 7.03e-9,
+     "n": 1.808,
+     "Rs": 0.034,
+     "Bv": 1000,
+     "Ibv": 0.000005,
+     "maxCurrent": 1,
+     "maxPower": 3,
+     "span": 4
+    }
+   },
+   {
+    "id": "D2",
+    "label": "D2",
+    "kind": "diode",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h13",
+     "rotation": 180
+    },
+    "params": {
+     "model": "1N4007",
+     "Is": 7.03e-9,
+     "n": 1.808,
+     "Rs": 0.034,
+     "Bv": 1000,
+     "Ibv": 0.000005,
+     "maxCurrent": 1,
+     "maxPower": 3,
+     "span": 4
+    }
+   },
+   {
+    "id": "D3",
+    "label": "D3",
+    "kind": "diode",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "i1",
+     "rotation": 0
+    },
+    "params": {
+     "model": "1N4007",
+     "Is": 7.03e-9,
+     "n": 1.808,
+     "Rs": 0.034,
+     "Bv": 1000,
+     "Ibv": 0.000005,
+     "maxCurrent": 1,
+     "maxPower": 3,
+     "span": 4
+    }
+   },
+   {
+    "id": "D4",
+    "label": "D4",
+    "kind": "diode",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j17",
+     "rotation": 180
+    },
+    "params": {
+     "model": "1N4007",
+     "Is": 7.03e-9,
+     "n": 1.808,
+     "Rs": 0.034,
+     "Bv": 1000,
+     "Ibv": 0.000005,
+     "maxCurrent": 1,
+     "maxPower": 3,
+     "span": 4
+    }
+   },
+   {
+    "id": "C1",
+    "label": "C1",
+    "kind": "capacitor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j9",
+     "rotation": 90
+    },
+    "params": {
+     "capacitance": 0.001,
+     "ratedVoltage": 25,
+     "polarized": true,
+     "initialVoltage": 0,
+     "span": 2
+    }
+   },
+   {
+    "id": "U1",
+    "label": "U1",
+    "kind": "vreg",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "c20",
+     "rotation": 0
+    },
+    "params": {
+     "model": "L7805",
+     "vout": 5,
+     "dropout": 2,
+     "quiescentCurrent": 0.005,
+     "rOut": 0.02,
+     "maxInput": 35,
+     "maxLoad": 1.5,
+     "heatsink": false
+    }
+   },
+   {
+    "id": "RL",
+    "label": "RL",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "b22",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 100,
+     "powerRating": 1,
+     "span": 4
+    }
+   },
+   {
+    "id": "OSC1",
+    "label": "OSC1",
+    "kind": "scope",
+    "placement": {
+     "kind": "table",
+     "x": 0,
+     "z": -70,
+     "rotation": 0
+    },
+    "params": {
+     "inputResistance": 1000000,
+     "timeDiv": 0.005,
+     "vdiv1": 0.2,
+     "vdiv2": 0.5,
+     "ch1On": true,
+     "ch2On": true,
+     "trigSource": "ch1",
+     "trigLevel": 0,
+     "trigSlope": "rise",
+     "bodeStart": 10,
+     "bodeStop": 100000,
+     "bodePpd": 20,
+     "bodeRef": "ch1",
+     "ac1": true
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "w_mvhu68pf26nn06b",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn3"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn3"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhu68pf27q5ycw",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j1"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhu68pf28jsaep",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "f17"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn17"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhu68pf299ct40",
+    "a": {
+     "kind": "pin",
+     "partId": "T1",
+     "pin": "A"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "f5"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhu68pf2amqnty",
+    "a": {
+     "kind": "pin",
+     "partId": "T1",
+     "pin": "CT"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "f13"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhu68pg2bvwo0n",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i9"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a20"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhu68pg2cly9s4",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a21"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn21"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhu68pg2d2zil1",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a26"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn26"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhu68pg2e4g6kv",
+    "a": {
+     "kind": "pin",
+     "partId": "OSC1",
+     "pin": "CH1"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "f9"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "w_mvhu68pg2fozbw4",
+    "a": {
+     "kind": "pin",
+     "partId": "OSC1",
+     "pin": "GND"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn10"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": "psu",
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

@@ -1,0 +1,250 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 54,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "2026-11-24T08:44:21.492Z",
+ "title": "Arduino Pro Mini 3.3 V",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "CL-400",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PM1",
+    "label": "PM1",
+    "kind": "promini",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h3",
+     "rotation": 0
+    },
+    "params": {
+     "code": "// Pro Mini: Blink D13 + PWM D9 + อ่าน A7 (รูบนบอร์ด)\nvoid setup() {\n  pinMode(13, OUTPUT);\n  Serial.begin(9600);\n  analogWrite(9, 64);\n}\n\nvoid loop() {\n  digitalWrite(13, HIGH);\n  Serial.print(\"LED ON A7=\");\n  Serial.println(analogRead(A7));\n  delay(500);\n  digitalWrite(13, LOW);\n  Serial.println(\"LED OFF\");\n  delay(500);\n}\n",
+     "hex": null,
+     "hexSrc": "",
+     "flash": 0,
+     "ram": 0,
+     "volt": 3.3
+    }
+   },
+   {
+    "id": "R1",
+    "label": "R1",
+    "kind": "resistor",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "b18",
+     "rotation": 0
+    },
+    "params": {
+     "resistance": 220,
+     "powerRating": 0.25,
+     "span": 3
+    }
+   },
+   {
+    "id": "LED1",
+    "label": "LED1",
+    "kind": "led",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "c21",
+     "rotation": 0
+    },
+    "params": {
+     "color": "red",
+     "Is": 2.196506741865884e-18,
+     "n": 2,
+     "Rs": 5,
+     "ratedCurrent": 0.02,
+     "maxCurrent": 0.03,
+     "maxReverseVoltage": 5
+    }
+   },
+   {
+    "id": "LA1",
+    "label": "LA1",
+    "kind": "logicanalyzer",
+    "placement": {
+     "kind": "table",
+     "x": -40,
+     "z": 45,
+     "rotation": 0
+    },
+    "params": {
+     "timeDiv": 0.001,
+     "trigCh": -1,
+     "trigEdge": "rise",
+     "decoders": [
+      "none",
+      "none",
+      "none",
+      "none",
+      "none",
+      "none",
+      "none",
+      "none"
+     ],
+     "bauds": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ]
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "pv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a6"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp6"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "pg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a4"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn4"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "l1",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "c11"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "a18"
+    },
+    "color": "#43a047",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "l2",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "e22"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn22"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "a7",
+    "a": {
+     "kind": "pin",
+     "partId": "PM1",
+     "pin": "A7"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp28"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "c0",
+    "a": {
+     "kind": "pin",
+     "partId": "LA1",
+     "pin": "CH0"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j3"
+    },
+    "color": "#fdd835",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "c1",
+    "a": {
+     "kind": "pin",
+     "partId": "LA1",
+     "pin": "CH1"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j14"
+    },
+    "color": "#1e88e5",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "cg",
+    "a": {
+     "kind": "pin",
+     "partId": "LA1",
+     "pin": "GND"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j6"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": null,
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}

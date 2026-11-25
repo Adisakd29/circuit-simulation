@@ -1,0 +1,387 @@
+{
+ "format": "circuitlab3d",
+ "schemaVersion": 46,
+ "app": "Circuit Lab 3D 0.1",
+ "savedAt": "",
+ "title": "encoder",
+ "circuit": {
+  "breadboards": [
+   {
+    "id": "bb1",
+    "model": "MB-102",
+    "x": 0,
+    "z": 0
+   }
+  ],
+  "parts": [
+   {
+    "id": "PICO1",
+    "label": "PICO1",
+    "kind": "pico",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "h1",
+     "rotation": 0
+    },
+    "params": {
+     "code": "",
+     "autorun": true
+    }
+   },
+   {
+    "id": "DS1",
+    "label": "DS1",
+    "kind": "tm1637",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j55",
+     "rotation": 0
+    },
+    "params": {
+     "color": "red",
+     "pullUp": 10000,
+     "vMin": 3,
+     "vMax": 5.5,
+     "supplyCurrent": 0.02
+    }
+   },
+   {
+    "id": "JS1",
+    "label": "JS1",
+    "kind": "joystick",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j30",
+     "rotation": 0
+    },
+    "params": {
+     "x": 0.5,
+     "y": 0.5,
+     "pressed": false,
+     "resistance": 10000,
+     "contactResistance": 1
+    }
+   },
+   {
+    "id": "ENC1",
+    "label": "ENC1",
+    "kind": "encoder",
+    "placement": {
+     "kind": "board",
+     "boardId": "bb1",
+     "anchor": "j40",
+     "rotation": 0
+    },
+    "params": {
+     "pressed": false,
+     "pullUp": 10000,
+     "contactResistance": 1,
+     "detentMs": 12
+    }
+   }
+  ],
+  "wires": [
+   {
+    "id": "wv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b5"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp5"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b18"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn18"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wvv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tp2"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp2"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wgg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "tn3"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn3"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wtv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i57"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp57"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wtg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i58"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn58"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wclk",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "j19"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g55"
+    },
+    "color": "#8e24aa",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wdio",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i20"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h56"
+    },
+    "color": "#43a047",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wjg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i30"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn30"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wjv",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i31"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp32"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wjx",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b10"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h32"
+    },
+    "color": "#fdd835",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wjy",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b9"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g33"
+    },
+    "color": "#fb8c00",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wjs",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b16"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h34"
+    },
+    "color": "#8e24aa",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "weg",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i44"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bn45"
+    },
+    "color": "#212121",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wev",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "i43"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "bp44"
+    },
+    "color": "#e53935",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wes",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b15"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h42"
+    },
+    "color": "#8e24aa",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wed",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b14"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "g41"
+    },
+    "color": "#1e88e5",
+    "arc": 2,
+    "bend": 0
+   },
+   {
+    "id": "wec",
+    "a": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "b12"
+    },
+    "b": {
+     "kind": "hole",
+     "boardId": "bb1",
+     "hole": "h40"
+    },
+    "color": "#43a047",
+    "arc": 2,
+    "bend": 0
+   }
+  ],
+  "probes": {
+   "red": null,
+   "black": null
+  }
+ },
+ "studentWork": {
+  "lessonId": null,
+  "records": {},
+  "answers": {},
+  "achieved": {}
+ }
+}
